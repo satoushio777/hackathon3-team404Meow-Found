@@ -356,9 +356,87 @@ Q&A_よくある質問
     }
 }
 
+.move-area1,
+.move-area2 {
+    width: 100%;
+    overflow: hidden;
+    /* はみ出す部分を隠す */
+    position: relative;
+    height: 200px;
+}
+
+.move-img {
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -200px;
+    /* 開始位置（画面外） */
+
+    animation: goLeft 6s linear infinite;
+}
+
+/* テキスト */
+.move-text1 {
+    top: 63px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+    /* 折り返し防止 */
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -400px;
+    /* 開始位置（画面外） */
+    animation: goLeft 6s linear infinite;
+}
 
 
-/*-------------------------------------------
+.move-text2 {
+    top: 63px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+    /* 折り返し防止 */
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -550px;
+    /* 開始位置（画面外） */
+    animation: goLeft 6s linear infinite;
+}
+
+.move-area1 p {
+    width: 200px;
+    border: 3px solid #E97c27;
+    border-radius: 25px;
+    padding: 5px 10px;
+
+}
+
+.move-area2 p {
+    width: 340px;
+    border: 3px solid #E97c27;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+@keyframes goLeft {
+    0% {
+        transform: translatex(0);
+        /* 左の外から */
+    }
+
+    100% {
+        transform: translatex(-180vw);
+        /* 画面右の外へ */
+    }
+}
+
+    
+
+    /*-------------------------------------------
 フッター
 -------------------------------------------*/
 
@@ -370,10 +448,11 @@ Q&A_よくある質問
 
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 SP---スマホ表示ここから
 -------------------------------------------*/
-@media (max-width: 900px) {
+    @media (max-width: 900px) {
+
 
 
 
@@ -437,6 +516,23 @@ sp  voice_受講生・卒業生の声・作品
     /*-------------------------------------------
 sp  Q&A_よくある質問
 -------------------------------------------*/
+        .title-qa h2 {
+            font-size: 5rem;
+        }
+
+        .question-answer ul {
+            display: block;
+        }
+
+        .question-answer ul li {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .question-answer ul .content {
+            box-shadow: 6px 5px 11px 5px raba(0, 0, 0.25);
+        }
+    
 
 
 
@@ -449,4 +545,4 @@ sp  フッター
 
 
 
-}
+    /* } */
