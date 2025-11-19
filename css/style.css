@@ -11,7 +11,7 @@ body {
     font-size: 1.6rem;
     /*16px */
     color: #333;
-    font-family: "Yu Gothic", "游ゴシック", "YuGothic", sans-serif;
+    font-family: "Noto Sans JP", "Yu Gothic", "游ゴシック", "YuGothic", sans-serif;
     font-weight: 500;
     /* または normal */
     letter-spacing: 0.1em;
@@ -39,7 +39,7 @@ img {
 
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-inline: 3%;
 }
@@ -53,11 +53,11 @@ img {
     text-align: center;
 }
 /*<h2 section-title>英語への指定*/
-.section-title  .en {
+.section-title .en {
     font-size: 6.4rem;
 }
 /*<h2 section-title>日本語への指定*/
-.section-title  .ja {
+.section-title .ja {
     font-size: 3.2rem;
 }
 
@@ -168,12 +168,14 @@ support_サポート体制
     align-items: center;
     margin-bottom: 20px;
     background-color: #F9F2EA;
+    border-radius: 20px;
 }
 .support-img {
     width: 30%;
 }
 .support-img img {
     width: 100%;
+    border-radius: 20px 0 0 20px;
 }
 .support-text {
     width: 70%;
@@ -192,13 +194,6 @@ support_サポート体制
 .text {
     padding-block: 16px;
 }
-
-
-
-
-
-
-
 
 
 /* .support-point {
@@ -253,6 +248,7 @@ flow_受講の流れ
     display: flex;
     justify-content: center;
     padding-top: 5px;
+    margin-bottom: 80px;
 }
 
 .steps-list-up li {
@@ -277,19 +273,19 @@ flow_受講の流れ
     background-color: #fff;
     border: 1px solid #333;
     border-radius:  0 0 20px 20px;
-    padding: 20px;
+    padding: 16px;
     height: 200px;
 }
 .step-title {
     text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
-.step-title {
-    margin-bottom: 5px;
-}
 .step-desc {
     font-size: 1.4rem;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 /*STEP1～STEP5ここから*/
@@ -324,10 +320,54 @@ flow_受講の流れ
 /*-------------------------------------------
 flow-video_受講の様子を動画で確認
 -------------------------------------------*/
-/* .flow-video {
-    
-} */
+#flow-video {
+    margin-block: 100px;
+    text-align: center;
+}
+.flow-video-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+video {
+    max-width: 560px;
+    border-radius: 20px;
+}
 
+.video-card {
+  display: flex;
+  align-items: center;
+  background: #F69D51;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+/* 左の変形ボックス */
+.video-label {
+  background: #657ebe;
+  padding: 40px 30px;
+  border-radius: 10px;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  width: 600px;
+}
+
+/* 真ん中の線 */
+.video-divider {
+  width: 200px;
+  height: 1px;
+  background: #000;
+}
+.play-button::before {
+  content:"";
+  width: 0;
+  height: 0;
+  border-left: 14px solid white;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  left: 22px;
+  top: 12px;
+}
 
 
 /*-------------------------------------------
@@ -595,6 +635,9 @@ sp  support_サポート体制
 .support-img {
     width: 100%;
 }
+.support-img img {
+    border-radius: 20px 20px 0 0;
+}
 .support-text {
     width: 100%;
     padding-inline: 16px;
@@ -646,6 +689,31 @@ sp  flow_受講の流れ
     font-size: 2rem;
 }
 
+/*-------------------------------------------
+flow-video_受講の様子を動画で確認
+-------------------------------------------*/
+video {
+    max-width: 480px;
+}
+.video-card {
+    flex-direction: column;
+}
+/* 真ん中の線 */
+.video-divider {
+  width: 1px;
+  height: 20px;
+}
+/* 上の変形ボックス */
+.video-label {
+  background: #657ebe;
+  padding: 24px 24px;
+  border-radius: 0px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  width: 280px;
+}
+.video-label p{
+    text-align: center;
+}
 
     /*-------------------------------------------
 sp  price_料金
