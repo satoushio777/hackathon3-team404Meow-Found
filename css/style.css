@@ -468,7 +468,7 @@ voice_受講生・卒業生の声・作品
 /*-------------------------------------------
 Q&A_よくある質問
 -------------------------------------------*/
-.title-qa {
+/* .title-qa {
     text-align: center;
 }
 
@@ -491,7 +491,7 @@ Q&A_よくある質問
     width: 200px;
     margin: 0 auto;
     font-weight: 800;
-}
+} */
 
 .li-title {
     color: #333;
@@ -678,7 +678,13 @@ Q&A_よくある質問
 
 .move-area p {
     position: absolute;
-    right: -350px;
+    top: 60px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border: 3px solid  #6283C2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    right: -500px;
     
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
@@ -688,7 +694,7 @@ Q&A_よくある質問
     width: 150px;
     /* イラストサイズは自由に */
     position: absolute;
-    right: -500px;
+    right: -650px;
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
