@@ -659,6 +659,53 @@ Q&A_よくある質問
     }
 }
 
+.move-area {
+    width: 100%;
+    overflow: hidden;
+    /* はみ出す部分を隠す */
+    position: relative;
+    height: 200px;
+}
+
+.move-img {
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -100px;
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+.move-area p {
+    position: absolute;
+    right: -350px;
+    
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+.move-img2 {
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -500px;
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+
+
+@keyframes goLeft {
+    0% {
+        transform: translateX(500px);
+        /* 左の外から */
+    }
+
+    100% {
+        transform: translateX(-160vw);
+        /* 画面右の外へ */
+    }
+
 
 
 /*-------------------------------------------
