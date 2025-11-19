@@ -17,6 +17,11 @@ body {
     letter-spacing: 0.1em;
 }
 
+main {
+    margin-top: 100px;
+}
+
+
 li {
     list-style: none;
 }
@@ -34,12 +39,32 @@ img {
 
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding-inline: 3%;
 }
 
-main {
-    margin-top: 100px;
+.section-title {
+    padding-block: 20px;
+}
+/*<h2 section-title>spanの改行指示*/
+.section-title span {
+    display: block;
+    text-align: center;
+}
+/*<h2 section-title>英語への指定*/
+.section-title  .en {
+    font-size: 6.4rem;
+}
+/*<h2 section-title>日本語への指定*/
+.section-title  .ja {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 40px 0 20px;
 }
 
 /**********共通項目ここまで******************/
@@ -77,7 +102,7 @@ main {
 
 #nav {
     margin-left: auto;
-    background: lightsalmon;/* 確認用 */
+    background: #F69D51;/* 確認用 */
     border-radius: 50px;
 }
 
@@ -129,8 +154,74 @@ reason_選ばれる理由
 /*-------------------------------------------
 support_サポート体制
 -------------------------------------------*/
+#support {
+    margin-bottom: 80px;
+}
+#support .support-subtitile {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.support-flex-items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #F9F2EA;
+}
+.support-img {
+    width: 30%;
+}
+.support-img img {
+    width: 100%;
+}
+.support-text {
+    width: 70%;
+    margin-inline: 30px;
+}
+.text-heading {
+    font-weight: bold;
+    padding-top: 10px;
+    border-bottom: 1px solid #657ebe;
+}
+.text-heading span {
+    margin-right: 16px;
+    color: #657ebe;
+    font-size: 2.4rem;
+}
+.text {
+    padding-block: 16px;
+}
 
 
+
+
+
+
+
+
+
+/* .support-point {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #F69D51;
+  border-radius: 50%;
+  font-size: 0;
+}
+.support-point::before {
+  content: "Point\A1";
+  white-space: pre;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+} */
 
 
 /*-------------------------------------------
@@ -145,7 +236,8 @@ flow_受講の流れ
 -------------------------------------------*/
 #flow {
     background-color: #F9F2EA;/*確認用*/
-    padding-block: 60px;
+    padding-block: 80px;
+    margin-bottom: 80px;
 }
 
 #flow .steps-list {
@@ -202,8 +294,8 @@ flow_受講の流れ
 
 /*STEP1～STEP5ここから*/
 .step-badge {
-    width: 50px;            /* 円の直径 */
-    height: 50px;
+    width: 70px;            /* 円の直径 */
+    height: 70px;
     background-color: #F69D51; /* 紫色 */
     color: #fff;              /* 文字色 */
     border-radius: 50%;       /* 円にする */
@@ -228,6 +320,14 @@ flow_受講の流れ
     font-size: 1.4rem;
 }
 /*STEP1～STEP5ここまで*/
+
+/*-------------------------------------------
+flow-video_受講の様子を動画で確認
+-------------------------------------------*/
+/* .flow-video {
+    
+} */
+
 
 
 /*-------------------------------------------
@@ -459,6 +559,9 @@ SP---スマホ表示ここから
     .wrapper {
         padding-inline: 3%;
     }
+    h3 {
+        font-size: 2rem;
+    }
 
 
     /*-------------------------------------------
@@ -486,7 +589,16 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-
+.support-flex-items {
+    flex-direction: column;
+}
+.support-img {
+    width: 100%;
+}
+.support-text {
+    width: 100%;
+    padding-inline: 16px;
+}
 
 
 
