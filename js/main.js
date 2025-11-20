@@ -1,6 +1,6 @@
 $(function () {
 
-
+  
 // Q&A
 
     $(".openbtn1").click(function () {

@@ -678,7 +678,12 @@ Q&A_よくある質問
 
 .move-area p {
     position: absolute;
-    right: -350px;
+    right: -400px;
+    top: 50px;
+    font-size: 2rem;
+    border: #6283C2 solid 3px;
+    border-radius: 20px;
+    padding: 20px 20px;
     
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
@@ -688,7 +693,7 @@ Q&A_よくある質問
     width: 150px;
     /* イラストサイズは自由に */
     position: absolute;
-    right: -500px;
+    right: -550px;
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
@@ -793,6 +798,7 @@ sp  flow_受講の流れ
     .steps-list-down li {
         width: 100%;
         margin-bottom: 30px;
+        
     }
     .step-textbox {
         height: auto;
