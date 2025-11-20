@@ -139,6 +139,60 @@ h3 {
     font-size: 1rem;
 }
 
+/*  LINEリンク  */
+
+.center-wrap {
+    position: relative;
+    width: 150px;
+    /* 好きな大きさに調整OK */
+    height: 300px;
+    margin: 0 auto;
+}
+
+.center-img {
+    width: 300px;
+    /* 中央の画像の大きさ */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.rotate-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    /* リングのサイズ */
+    height: 260px;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite;
+    z-index: 1;
+}
+
+.ring-img {
+    width: 100%;
+    height: 100%;
+}
+
+.center-wrap {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
@@ -761,6 +815,7 @@ Q&A_よくある質問
     /* はみ出す部分を隠す */
     position: relative;
     height: 300px;
+    top: 40px;
 }
 
 .move-img {
@@ -771,6 +826,15 @@ Q&A_よくある質問
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
+
+/* .move-img { animation-delay: 0s;}
+
+.move-area p { animation-delay: s;}
+
+.move-img2 { animation-delay: s;}
+
+.move-img3 { animation-delay: s;} */
+
 
 .move-area p {
     position: absolute;
@@ -849,8 +913,8 @@ Q&A_よくある質問
     }
 
     100% {
-        transform: scale(1);
-        opacity: 1;
+        transform: translateX(-190vw);
+        /* 画面右の外へ */
     }
 }
 
@@ -1086,6 +1150,7 @@ sp  Q&A_よくある質問
     .question-answer ul .content {
         box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
     }
+
     /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
