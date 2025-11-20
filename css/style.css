@@ -295,6 +295,9 @@ support_サポート体制
 -------------------------------------------*/
 #support {
     margin-bottom: 80px;
+    background-color: #f4f7fb;
+    border-radius: 0 50px 0 50px;
+    padding-block: 80px;
 }
 
 #support .support-subtitile {
@@ -380,6 +383,7 @@ flow_受講の流れ
     /*確認用*/
     padding-block: 80px;
     margin-bottom: 80px;
+    border-radius: 0 50px 0 50px;
 }
 
 #flow .steps-list {
@@ -509,6 +513,10 @@ video {
     gap: 20px;
 }
 
+.video-card p {
+    color: #F9F2EA;
+}
+
 /* 左の変形ボックス */
 .video-label {
     background: #657ebe;
@@ -541,9 +549,58 @@ video {
 /*-------------------------------------------
 price_料金
 -------------------------------------------*/
+#price {
+    margin-bottom: 80px;
+}
+.price-content {
+    display: flex;
+    align-items: center;
+}
+.price-title {
+    margin-bottom: 24px;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    line-height: 2.4;
+}
+.price-left {
+    background-color: #F9F2EA;
+    width: 65%;
+    padding: 100px 0 100px 6%;
+}
+.price-left li{
+    margin-bottom: 5px;
+}
+.fa {
+    margin-right: 8px;
+    color: #657ebe;
+}
+.price-right {
+    background-color: #F69D51;
+    width: 48%;
+    height: 300px;
+    margin-left: -85px;
+    padding: 5%;
+}
 
+.all {
+    font-size: 2rem;
+    margin-right: 10px;
+    
+}
+.price-right .price {
+    font-size: 4rem;
+    border-bottom: 1px solid #000;
+    margin-top: 50px;
+}
+.tax {
+    font-size: 1.8rem;
+}
 
-
+.price-notes {
+    font-size: 1rem;
+}
 
 /*-------------------------------------------
 voice_受講生・卒業生の声・作品
@@ -555,7 +612,7 @@ voice_受講生・卒業生の声・作品
 /*-------------------------------------------
 Q&A_よくある質問
 -------------------------------------------*/
-/* .title-qa {
+.title-qa {
     text-align: center;
 }
 
@@ -578,7 +635,7 @@ Q&A_よくある質問
     width: 200px;
     margin: 0 auto;
     font-weight: 800;
-} */
+}
 
 .li-title {
     color: #333;
@@ -730,7 +787,6 @@ Q&A_よくある質問
     top: 10px;
 }
 
-/* 最初の状態（小さくて透明） */
 .inview-balloon {
     transform: scale(0.1);
     opacity: 0;
@@ -852,14 +908,15 @@ Q&A_よくある質問
 
 @keyframes goLeft {
     0% {
-        transform: translateX(500px);
-        /* 左の外から */
+        transform: scale(0.1);
+        opacity: 0;
     }
 
     100% {
         transform: translateX(-190vw);
         /* 画面右の外へ */
     }
+}
 
 }
 
@@ -881,6 +938,15 @@ Q&A_よくある質問
 SP---スマホ表示ここから
 -------------------------------------------*/
 @media (max-width: 930px) {
+/*<h2 section-title>英語への指定*/
+    .section-title .en {
+    font-size: 5rem;
+    }
+/*<h2 section-title>日本語への指定*/
+    .section-title .ja {
+    font-size: 2rem;
+    }
+
     .wrapper {
         padding-inline: 3%;
     }
@@ -915,23 +981,30 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-    .support-flex-items {
-        flex-direction: column;
-    }
-
-    .support-img {
-        width: 100%;
-    }
-
-    .support-img img {
-        border-radius: 20px 20px 0 0;
-    }
-
-    .support-text {
-        width: 100%;
-        padding-inline: 16px;
-    }
-
+.support-flex-items {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+.support-img {
+    width: 100%;
+}
+.support-img img {
+    border-radius: 20px 20px 0 0;
+}
+.text-heading {
+    text-align: center;
+}
+.text-heading span {
+margin-bottom: 8px;
+display: block;
+text-align: center;
+line-height: 2;
+}
+.support-text {
+    width: 100%;
+    padding: 20px 16px;
+}
 
 
     /*-------------------------------------------
@@ -950,13 +1023,15 @@ sp  flow_受講の流れ
     }
 
     .steps-list-up li {
-        width: 100%;
+        width: 90%;
         margin-bottom: 30px;
+        margin-inline:auto;
     }
 
     .steps-list-down li {
-        width: 100%;
+        width: 90%;
         margin-bottom: 30px;
+        margin-inline:auto;
     }
 
     .step-textbox {
@@ -964,18 +1039,20 @@ sp  flow_受講の流れ
     }
 
     .step-title {
-        font-size: 2.4rem;
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
     .step-desc {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        font-weight: normal;
     }
 
     .step-badge {
         top: 0;
         left: 0;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .step-badge-label {
@@ -989,39 +1066,60 @@ sp  flow_受講の流れ
     /*-------------------------------------------
 flow-video_受講の様子を動画で確認
 -------------------------------------------*/
-    video {
-        max-width: 480px;
-    }
-
-    .video-card {
-        flex-direction: column;
-    }
-
-    /* 真ん中の線 */
-    .video-divider {
-        width: 1px;
-        height: 20px;
-    }
-
-    /* 上の変形ボックス */
-    .video-label {
-        background: #657ebe;
-        padding: 24px 24px;
-        border-radius: 0px;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-        width: 280px;
-    }
-
-    .video-label p {
-        text-align: center;
-    }
+video {
+    max-width: 300px;
+}
+.video-card {
+    flex-direction: column;
+}
+/* 真ん中の線 */
+.video-divider {
+  width: 1px;
+  height: 20px;
+}
+/* 上の変形ボックス */
+.video-label {
+  background: #657ebe;
+  padding: 24px 24px;
+  border-radius: 0px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  width: 280px;
+}
+.video-label p{
+    text-align: center;
+}
 
     /*-------------------------------------------
 sp  price_料金
 -------------------------------------------*/
-
-
-
+.price-content {
+    flex-direction: column;
+}
+.price-left {
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 0 20px 0 0;
+}
+.price-title {
+    line-height: 1.8;
+}
+.price-lists {
+    font-size: 1.4rem;
+}
+.price-right {
+    width: 100%;
+    height: 150px;
+    /* margin-top: 5px; */
+    margin-left: 0;
+    padding: 38px 30px;
+    border-radius: 0 0 0 20px;
+}
+.price-right .price {
+    font-size: 3rem;
+    line-height: 1.8;
+    display: inline-block;
+    margin-top: 0;
+}
 
     /*-------------------------------------------
 sp  voice_受講生・卒業生の声・作品
