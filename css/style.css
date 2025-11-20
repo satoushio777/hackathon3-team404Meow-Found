@@ -758,7 +758,7 @@ Q&A_よくある質問
 .move-area p:after {
     top: -37px;
     left: -425px;
-    right: ;
+    /* right: ; */
     border-style: solid;
     border-color: transparent transparent #fff transparent;
     border-width: 42px 0px 33px 35px;
@@ -797,9 +797,11 @@ Q&A_よくある質問
         /* 画面右の外へ */
     }
 
+}
 
 
-    /*-------------------------------------------
+
+/*-------------------------------------------
 フッター
 -------------------------------------------*/
 
@@ -811,26 +813,26 @@ Q&A_よくある質問
 
 
 
-    /*-------------------------------------------
+/*-------------------------------------------
 SP---スマホ表示ここから
 -------------------------------------------*/
-    @media (max-width: 930px) {
-        .wrapper {
-            padding-inline: 3%;
-        }
+@media (max-width: 930px) {
+    .wrapper {
+        padding-inline: 3%;
+    }
 
-        h3 {
-            font-size: 2rem;
-        }
+    h3 {
+        font-size: 2rem;
+    }
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 SP ヘッダー
 -------------------------------------------*/
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  about_プロナビとは
 -------------------------------------------*/
 
@@ -838,7 +840,7 @@ sp  about_プロナビとは
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  reason_選ばれる理由
 -------------------------------------------*/
 
@@ -846,132 +848,147 @@ sp  reason_選ばれる理由
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-        .support-flex-items {
-            flex-direction: column;
-        }
+    .support-flex-items {
+        flex-direction: column;
+    }
 
-        .support-img {
-            width: 100%;
-        }
+    .support-img {
+        width: 100%;
+    }
 
-        .support-img img {
-            border-radius: 20px 20px 0 0;
-        }
+    .support-img img {
+        border-radius: 20px 20px 0 0;
+    }
 
-        .support-text {
-            width: 100%;
-            padding-inline: 16px;
-        }
+    .support-text {
+        width: 100%;
+        padding-inline: 16px;
+    }
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
 
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  flow_受講の流れ
 -------------------------------------------*/
-        #flow .steps-list-up,
-        .steps-list-down {
-            flex-direction: column;
-        }
+    #flow .steps-list-up,
+    .steps-list-down {
+        flex-direction: column;
+    }
 
-        .steps-list-up li {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+    .steps-list-up li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-        .steps-list-down li {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+    .steps-list-down li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-        .step-textbox {
-            height: auto;
-        }
+    .step-textbox {
+        height: auto;
+    }
 
-        .step-title {
-            font-size: 2.4rem;
-        }
+    .step-title {
+        font-size: 2.4rem;
+    }
 
-        .step-desc {
-            font-size: 1.8rem;
-        }
+    .step-desc {
+        font-size: 1.8rem;
+    }
 
-        .step-badge {
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-        }
+    .step-badge {
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+    }
 
-        .step-badge-label {
-            font-size: 2rem;
-        }
+    .step-badge-label {
+        font-size: 2rem;
+    }
 
-        .step-badge-num {
-            font-size: 2rem;
-        }
+    .step-badge-num {
+        font-size: 2rem;
+    }
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 flow-video_受講の様子を動画で確認
 -------------------------------------------*/
-        video {
-            max-width: 480px;
-        }
+    video {
+        max-width: 480px;
+    }
 
-        .video-card {
-            flex-direction: column;
-        }
+    .video-card {
+        flex-direction: column;
+    }
 
-        /* 真ん中の線 */
-        .video-divider {
-            width: 1px;
-            height: 20px;
-        }
+    /* 真ん中の線 */
+    .video-divider {
+        width: 1px;
+        height: 20px;
+    }
 
-        /* 上の変形ボックス */
-        .video-label {
-            background: #657ebe;
-            padding: 24px 24px;
-            border-radius: 0px;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-            width: 280px;
-        }
+    /* 上の変形ボックス */
+    .video-label {
+        background: #657ebe;
+        padding: 24px 24px;
+        border-radius: 0px;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        width: 280px;
+    }
 
-        .video-label p {
-            text-align: center;
-        }
+    .video-label p {
+        text-align: center;
+    }
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  price_料金
 -------------------------------------------*/
 
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  voice_受講生・卒業生の声・作品
 -------------------------------------------*/
 
 
 
 
-        /*-------------------------------------------
+    /*-------------------------------------------
 sp  Q&A_よくある質問
 -------------------------------------------*/
 
+    .question-answer {
+        padding: 3%;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    .question-answer ul {
+        display: block;
+    }
+
+    .question-answer ul li {
+        margin-bottom: 20px
+    }
 
 
-
-        /*-------------------------------------------
+    .question-answer ul .content {
+        box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
+    }
+    /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
 
@@ -979,4 +996,4 @@ sp  フッター
 
 
 
-    }
+}
