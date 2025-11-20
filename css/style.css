@@ -643,20 +643,27 @@ Q&A_よくある質問
     top: 10px;
 }
 
+/* 最初の状態（小さくて透明） */
 .inview-balloon {
-    animation: balloon 0.8s ease-out 0s 1 forwards;
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+/* JSでつけるクラス。ここにアニメーションを書く */
+.balloon {
+  animation: balloon 0.8s ease-out 0s 1 forwards;
 }
 
 @keyframes balloon {
-    0% {
-        transform: scale(0.1);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .move-area {
