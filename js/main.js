@@ -1,72 +1,82 @@
 $(function () {
-  
-// line リンク
-  let pagetop = $(".center-wrap");
-  pagetop.hide();
 
-  // フッターの位置を取得
-  let footerPos = $("footer").offset().top;
+  // LINEリンクボタントップとフッターで消える
 
-  $(window).scroll(function () {
+  const pagetop = $(".center-wrap");
+  const $footer = $("footer");
 
-    let scroll = $(this).scrollTop();
-    let windowHeight = $(this).height();
+  if (!$footer.length) return;
 
-    // 画面が500px以上スクロール → 出す
-    if (scroll > 500) {
-      pagetop.fadeIn();
+  $(window).on("scroll resize", function () {
+    const scroll = $(this).scrollTop();
+    const winH = $(this).height();
+    const footerTop = $footer.offset().top;
+
+    const over500 = scroll > 500;
+    const hitFooter = scroll + winH > footerTop;
+
+    if (over500 && !hitFooter) {
+      // 表示
+      pagetop.addClass("is-show");
     } else {
-      pagetop.fadeOut();
+      // 非表示
+      pagetop.removeClass("is-show");
     }
+  }).trigger("scroll");
 
-    // 画面下端がフッターに到達したら → 消す
-    if (scroll + windowHeight >= footerPos) {
-      pagetop.fadeOut();
-    }
+
+  // Q&A
+
+  $(".openbtn1").click(function () {
+    $(".close-text").css("visibility", "visible");
+    $(this).parent(".close-text").css("visibility", "hidden");
+    $(".open-text").css("visibility", "hidden");
+    $(this).parents(".content").find(".open-text").css("visibility", "visible");
+  });
+
+  $(".openbtn2").click(function () {
+    $(this).parents(".open-text").css("visibility", "hidden");
+  });
+
+  // クリックの処理はそのままでOK
+
+  // スクロールでふきだし表示
+  $(window).on("scroll", function () {
+
+    $(".inview-balloon").each(function (i) {
+
+      var scroll = $(window).scrollTop();
+      var target = $(this).offset().top;
+      var windowHeight = $(window).height();
+
+      if (scroll > target - windowHeight + $(this).outerHeight()) {
+
+        // i 番目ごとに 0.2秒ずつ遅らせる
+        $(this).delay(i * 1).queue(function (next) {
+          $(this).addClass("balloon");
+          next();
+        });
+
+      }
+    });
 
   });
 
-  
+  // footer btn
 
+  $(function () {
+    $("#ft-totop").on("click", function (e) {
+      e.preventDefault(); // リンクのデフォルト動作（瞬間ジャンプ）を止める
 
-
-
-
-
-$(".openbtn1").click(function () {
-  $(".close-text").css("visibility", "visible");
-  $(this).parent(".close-text").css("visibility", "hidden");
-  $(".open-text").css("visibility", "hidden");
-  $(this).parents(".content").find(".open-text").css("visibility", "visible");
-});
-
-$(".openbtn2").click(function () {
-  $(this).parents(".open-text").css("visibility", "hidden");
-});
-
-// クリックの処理はそのままでOK
-
-// スクロールでふきだし表示
-$(window).on("scroll", function () {
-
-  $(".inview-balloon").each(function (i) {
-
-    var scroll = $(window).scrollTop();
-    var target = $(this).offset().top;
-    var windowHeight = $(window).height();
-
-    if (scroll > target - windowHeight + $(this).outerHeight()) {
-
-      // i 番目ごとに 0.2秒ずつ遅らせる
-      $(this).delay(i * 1).queue(function (next) {
-        $(this).addClass("balloon");
-        next();
-      });
-
-    }
+      $("html, body").animate(
+        { scrollTop: 0 },  // 一番上まで
+        700,               // 時間：600ミリ秒（0.6秒） 好きな速さに変えてOK
+        "swing"            // 動きのカーブ（そのままでOK）
+      );
+    });
   });
 
-});
+
 
 });
 
