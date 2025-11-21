@@ -10,6 +10,10 @@
     <link rel="shortcut icon" href="img/favicon2.png">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- slick の CSS（CDN） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
 </head>
 
 <body>
@@ -23,8 +27,8 @@
         <nav id="nav" class="active">
             <!-- <img class="logo" src="img/logo.png" alt="pronavi-logo"> -->
             <ul class="nav-menu">
-                <li><a href="#about"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
-                <li><a href="#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
+                <li><a href="index.html"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
+                <li><a href="index.html"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
                 <li><a href="support.html"><span class="en">Support</span><span class="ja">サポート体制</span></a></li>
                 <li><a href="support.html"><span class="en">Teacher</span><span class="ja">講師紹介</span></a></li>
                 <li><a href="support.html"><span class="en">Flow</span><span class="ja">受講の流れ</span></a></li>
@@ -43,14 +47,97 @@
 
     <main>
         <!--Voice--受講生の声-->
+        <section id="voice" class="wrapper">
+            <h2 class="section-title">
+                <span class="en">Voice</span>
+                <span class="ja">受講生の声</span>
+            </h2>
+            <ul class="slide-items">
+                <li>
+                    <img src="img/student1.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">M.M</span>30代前半｜2023年5月入会</p>
+                        <p>1体1での質問が出来ると聞いてプロナビに入り、実際2ヶ月間ほど1対1で毎週教えて頂きました。案件獲得も3度ほど打ち合わせに同行いただいたため、案件の進め方も教えて頂きました。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student2.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">N.Y</span>20代後半｜2022年6月入会</p>
+                        <p>マンツーマンで授業をしてもらい、疑問を一緒に解決してもらえるだけでなく、課題があるので自分で調べたり考えたりする力もついたと思います。案件に向けてもきめ細かいサポートがあるので、プロナビで学習できてよかったと実感します。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student3.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">W.K</span>20代後半｜2023年4月入会</p>
+                        <p>何人かとお話をしてみて、信用できる！と感じだとので入会しましたが、案件獲得までこんなにサポートしてもらえるなんてびっくりです！みなさんと出会えて本当にしあわせです！
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student4.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">W.K</span>20代後半｜2023年4月入会</p>
+                        <p>副業からフリーランスになりたいと思って入会しました。優しく向上心が高い方が多いので、初心者の私でも挫折せずに進められましたし、今までの自分からは考えれない全く別の職種が広がり、考え方や人生観も変わりました。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student5.png" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">K.S</span>40代前半｜2025年2月入会</p>
+                        <p>転勤族で家庭と仕事の両立を目指して入会しました。講師の先生の説明は的確で丁寧、時間を問わず相談やアドバイスをいただけるので、とても信頼できます。子供の急な発熱時など、授業の調整も柔軟に対応してくれるため、モチベーションを維持して学習が続けられる体制が整っているのも魅力だと感じています。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student6.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">M.M</span>30代後半｜2025年5月入会</p>
+                        <p>息子の「小1の壁」や長期休暇、体調不良など、場所に囚われず働ける術を求めてプログラミングを学び始めました。プロナビは、案件獲得までのサポートが非常に手厚く、他のスクールとは違う独自の営業方法まで教えてくれる点に惹かれて入会。優しい先生方や仲間のおかげで、忙しい中でも楽しく、挫折せずに学習を進められています。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/student1.jpg" alt="受講生">
+                    <div class="item-text">
+                        <p class="item-name"><span class="initial">M.M</span>30代前半｜2023年8月入会</p>
+                        <p>島出身のため、将来的な親の介護などで帰郷する可能性を考え、場所を選ばない在宅ワークの環境を築きたくプログラミングを独学していました。しかし、難しさを感じたため入会を決意。先生や他の受講生との交流を通じて、新たな知識や発見が格段に増え、目標達成に向けて大きく前進できています。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!--受講生インタビュー動画-->
+            <div class="video-card">
+                <div class="video-label">
+                    <p>受講生<br>インタビュー</p>
+                </div>
+
+                <div class="video-divider"></div>
+
+                <div class="video-box">
+                    <video src="video/インタビュー動画.mp4" controls="" playsinline="" muted="" preload="metadata"
+                        poster="img/flow-video.png"></video>
+                </div>
+            </div>
+        </section>
         <!--Student--卒業生作品-->
+
         <!--Q&A--よくある質問-->
     </main>
 
     <footer></footer>
 
 
-
+    <!-- jQuery（CDN） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick（CDN） -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 自分のスクリプト -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

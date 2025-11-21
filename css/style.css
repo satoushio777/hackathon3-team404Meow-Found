@@ -230,7 +230,6 @@ reason_選ばれる理由
 
 .reason-item {
     width: 30%;
-    border-radius: ;
 }
 
 
@@ -460,12 +459,19 @@ video {
 }
 
 .video-card p {
-    color: #F9F2EA;
+    /* color: #F9F2EA; */
+    color: #333;
 }
 
 /* 左の変形ボックス */
 .video-label {
-    background: #657ebe;
+    /* background: #657ebe; */
+    background: linear-gradient(
+        135deg,
+        #657ebe,
+        #F9F2EA,
+        #F69D51
+    );
     padding: 40px 30px;
     border-radius: 10px;
     clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
@@ -514,6 +520,7 @@ price_料金
     background-color: #F9F2EA;
     width: 65%;
     padding: 100px 0 100px 6%;
+    border-radius: 20px;
 }
 .price-left li{
     margin-bottom: 5px;
@@ -528,6 +535,7 @@ price_料金
     height: 300px;
     margin-left: -85px;
     padding: 5%;
+    border-radius: 20px;
 }
 
 .all {
@@ -551,6 +559,60 @@ price_料金
 /*-------------------------------------------
 voice_受講生・卒業生の声・作品
 -------------------------------------------*/
+/* リスト自体のリセット */
+#voice .slide-items {
+    /* margin: 0; */
+    margin-bottom: 80px;
+    padding: 0;
+    list-style: none;
+}
+
+/* 1枚のカード */
+#voice .slide-items li {
+    box-sizing: border-box;
+    background-color: #F9F2EA;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    overflow: hidden;
+    margin: 0 10px;        /* カード同士のすき間 */
+    transition: transform .3s ease;
+}
+
+/* 写真 */
+#voice .slide-items img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+#voice .initial {
+    color: #F69D51;
+    padding-right: 5px;
+}
+/* テキスト部分 */
+#voice .item-text {
+  padding: 18px;
+}
+
+#voice .item-name {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+#voice .initial {
+  color: #F69D51;
+  padding-right: 5px;
+}
+/* センターモード用：真ん中だけ少し大きく */
+#voice .slide-items .slick-center {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/*受講生インタビュー動画*/
+#voice .video-card {
+    margin-bottom: 80px;
+}
 
 
 
@@ -854,7 +916,7 @@ Q&A_よくある質問
     }
 }
 
-}
+
 
 
 
@@ -1000,7 +1062,7 @@ sp  flow_受講の流れ
     }
 
     /*-------------------------------------------
-flow-video_受講の様子を動画で確認
+sp  flow-video_受講の様子を動画で確認
 -------------------------------------------*/
 video {
     max-width: 300px;
@@ -1015,9 +1077,8 @@ video {
 }
 /* 上の変形ボックス */
 .video-label {
-  background: #657ebe;
   padding: 24px 24px;
-  border-radius: 0px;
+  border-radius: 20px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   width: 280px;
 }
