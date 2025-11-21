@@ -612,6 +612,14 @@ voice_受講生・卒業生の声・作品
 /*-------------------------------------------
 Q&A_よくある質問
 -------------------------------------------*/
+
+.question-wrapper {
+    margin-bottom: 80px;
+    background-color: #f4f7fb;
+    border-radius: 50px 50px;
+    padding: 70px 40px;
+}
+
 .title-qa {
     text-align: center;
 }
