@@ -842,6 +842,8 @@ Q&A_よくある質問
     }
 }
 
+/* 動くキャラクター達 */
+
 .move-area {
     width: 100%;
     overflow: hidden;
@@ -855,7 +857,7 @@ Q&A_よくある質問
     width: 150px;
     /* イラストサイズは自由に */
     position: absolute;
-    right: -100px;
+    right: -90px;
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
@@ -966,11 +968,33 @@ Q&A_よくある質問
     font-size: 1rem;
 }
 
+/* フッタートップボタン */
 
+#navbavkToTop {
+    width: 100%;
+    display: block;
+    
+    background-color:#f8ab67;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    margin-top: 0px;
+}
 
+.totop {
+    display: block;
+    color: #fff;
+    border: 3px solid #feccab;
+    border-radius: 20px;
+    width: 150px;
+    margin: 5px auto;
+}
 
-
-
+.totop:hover {
+    color: #464343;
+    border: 3px solid #f49c61;
+    background: #f7e2d1;
+}
 
 /*-------------------------------------------
 SP---スマホ表示ここから
