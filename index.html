@@ -10,6 +10,9 @@
     <link rel="shortcut icon" href="img/favicon2.png">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -39,6 +42,16 @@
             <span></span>
             <span></span>
         </div>
+
+        <!-- ラインアクセスボタン -->
+        <div class="center-wrap">
+            <a href="/googletag/"><img src="img/LINE-LOGO.png" class="center-img"></a>
+
+            <div class="rotate-ring">
+                <img src="img/LINE-LOGO2025.png" class="ring-img">
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -67,91 +80,119 @@
         <!--about--Pronaviとは-->
         <section id="about" class="wrapper">
             <div class="about-content">
-                <div class="about-text">
-                    <h3>ProNaviとは<br>
-                        『家族も仕事も、自分の未来も大切にしたい方』に選ばれている<br>
-                        <span class="highright">6ヶ月集中のプログラミングスクールです。</span>
-                    </h3>
-                    <img src="img/Frame 6.png" alt="アンダーライン">
-                    <p>
-                        プロナビは従来のプログラミングスクールではありません。
-                        1日1時間以上の自宅学習を6ヶ月。<span class="attention">あなたのレベルや生活スタイルに合わせた “あなた専用の学習プラン”を一緒につくります。</span>
-                    </p>
+                <h3>ProNaviとは<br>
+                    『家族も仕事も、自分の未来も大切にしたい方』に選ばれている<br>
+                    <span class="highright">6ヶ月集中のプログラミングスクールです。</span>
+                </h3>
+                <img src="img/Frame 6.png" alt="アンダーライン">
+                <div class="about-inner">
+                    <div class="about-img">
+                        <img src="img/about.jpg" alt="プロナビとは">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            プロナビは従来のプログラミングスクールではありません。
+                            1日1時間以上の自宅学習を6ヶ月。<span class="attention">あなたのレベルや生活スタイルに合わせた “あなた専用の学習プラン”を一緒につくります。</span>
+                        </p>
 
-                    <p>
-                        この6ヶ月間は決して楽な道のりではありません。しかし、つまずいたときも、
-                        迷ったときも、あなたと同じ方向を向いて伴走してくれるコーチがいます。
-                        そして、同じ目標に向かって学ぶ仲間もいます。励まし合い、支え合いながら、
-                        誰ひとり取り残さない環境です。
-                    </p>
+                        <p>
+                            この6ヶ月間は決して楽な道のりではありません。しかし、つまずいたときも、
+                            迷ったときも、あなたと同じ方向を向いて伴走してくれるコーチがいます。
+                            そして、同じ目標に向かって学ぶ仲間もいます。励まし合い、支え合いながら、
+                            誰ひとり取り残さない環境です。
+                        </p>
 
-                    <p>
-                        半年後には、「こんなにできるようになったんだ！」という驚きとワクワクが
-                        あなたを待っています。一歩踏み出したい気持ちが少しでもあるなら、大丈夫。
-                        ここは、思いきって相談できる場所です。あなたの挑戦を、本気で応援するチームがそばにいます。
-                    </p>
-                </div>
-                <div class="about-img">
-                    <img src="img/about.jpg" alt="プロナビとは">
+                        <p>
+                            半年後には、「こんなにできるようになったんだ！」という驚きとワクワクが
+                            あなたを待っています。一歩踏み出したい気持ちが少しでもあるなら、大丈夫。
+                            ここは、思いきって相談できる場所です。あなたの挑戦を、本気で応援するチームがそばにいます。
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!--Reason--選ばれる理由-->
-        <span class="reason-circle"></span>
 
-        <section id="reason" class="wrapper">
+        <!--Reason--選ばれる理由-->
+        <span class="reason-trigger js-reason-trigger"></span>
+
+        <section id="reason" class="wrapper reason js-reason">
             <h2 class="section-title">
                 <span class="en">REASON</span>
                 <span class="ja">プロナビが選ばれる３つの理由</span>
             </h2>
 
+            <div class="reason-circle"></div>
+
             <div class="reason-items">
                 <div class="reason-item">
-                    <p>Reason 1</p>
-                    <h4>独自のカリキュラムで<br>求められるスキルを習得</h4>
-                    <div class="reason-img">
-                        <img src="img/reasons1.jpg" alt="スタートミーティング">
+                    <p class="number">Reason <span>1</span></p>
+                    <h4>独自のカリキュラムで求められるスキルを習得</h4>
+                    <div class="reason-inner">
+                        <div class="reason-img">
+                            <img src="img/reasons1.jpg" alt="スタートミーティング">
+                        </div>
+                        <div class="reason-text">
+                            <p>
+                                プロナビでは、エンジニアとして求められるスキルを確実に身につけられるよう、
+                                独自に組み立てた学習カリキュラムをご用意しています。<br>
+                                スタートミーティングでは、あなたの生活リズムや目指す方向を丁寧に伺い、
+                                その内容をもとに、学習を支えるコーチをこちらで選任します。<br>
+                                学習が始まってからは、担当コーチが目標設定や進め方を一緒に整えながら、
+                                不安やつまずきをそっと支えてくれます。</p>
+                        </div>
                     </div>
-                    <div class="reason-text">
-                        プロナビでは、エンジニアとして求められるスキルを確実に身につけられるよう、
-                        独自に組み立てた学習カリキュラムをご用意しています。<br>
-                        スタートミーティングでは、あなたの生活リズムや目指す方向を丁寧に伺い、
-                        その内容をもとに、学習を支えるコーチをこちらで選任します。<br>
-                        学習が始まってからは、担当コーチが目標設定や進め方を一緒に整えながら、
-                        不安やつまずきをそっと支えてくれます。
+                </div>
+                <div class="reason-item">
+                    <p class="number">Reason <span>2</span></p>
+                    <h4>プロのコーチがあなたのレベルに合う学習方法を提案</h4>
+                    <div class="reason-inner">
+                        <div class="reason-img">
+                            <img src="img/reasons2.jpg" alt="スタートミーティング">
+                        </div>
+                        <div class="reason-text">
+                            <p>
+                                あなたの現状や目標に合わせて、プロのコーチが“効率よく力を伸ばすための最適な学習方法”をご提案します。
+                                闇雲に進めるのではなく、あなたに合った順序で取り組むことで、短い時間でもしっかり成果につながる学びを実現します。
+                            </p>
+
+                            <p>
+                                毎週の課題では、必要なスキルを無理なく積み上げられるペースをつくり、
+                                わからないところは24時間いつでも公式LINEから質問OK。
+                                つまずいたときも、不安が生まれたときも、その都度すぐに解決できるから、ひとりで立ち止まらなくて大丈夫です。
+                            </p>
+
+                            <p>
+                                “結果につながる学び” と “続けられる安心” の両方を大切に、
+                                あなたの挑戦をプロの視点でしっかり支えながら、確実なスキルアップをサポートします。
+                            </p>
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="reason-item">
-                    <p>Reason 2</p>
-                    <h4>独自のカリキュラムで<br>求められるスキルを習得</h4>
-                    <div class="reason-img">
-                        <img src="img/reasons2.jpg" alt="現役エンジニア">
-                    </div>
-                    <div class="reason-text">
-                        プロナビでは、エンジニアとして求められるスキルを確実に身につけられるよう、
-                        独自に組み立てた学習カリキュラムをご用意しています。<br>
-                        スタートミーティングでは、あなたの生活リズムや目指す方向を丁寧に伺い、
-                        その内容をもとに、学習を支えるコーチをこちらで選任します。<br>
-                        学習が始まってからは、担当コーチが目標設定や進め方を一緒に整えながら、
-                        不安やつまずきをそっと支えてくれます。
-                    </div>
-                </div>
+                    <p class="number">Reason <span>3</span></p>
+                    <h4>案件獲得を自走できるよう基本を徹底サポート</h4>
+                    <div class="reason-inner">
+                        <div class="reason-img">
+                            <img src="img/reasons3.jpg" alt="スタートミーティング">
+                        </div>
+                        <div class="reason-text">
+                            <p>
+                                スキルを身につけた後は、実際に案件を獲得するためのステップまでしっかりサポートします。現役で活躍するプロの営業マンが同行しながら、営業の進め方や話し方、案件獲得までの流れをリアルに体験できるので、独学では得られない“実践力”が身につきます。
+                            </p>
 
-                <div class="reason-item">
-                    <p>Reason 3</p>
-                    <h4>独自のカリキュラムで<br>求められるスキルを習得</h4>
-                    <div class="reason-img">
-                        <img src="img/reasons3.jpg" alt="案件獲得">
-                    </div>
-                    <div class="reason-text">
-                        プロナビでは、エンジニアとして求められるスキルを確実に身につけられるよう、
-                        独自に組み立てた学習カリキュラムをご用意しています。<br>
-                        スタートミーティングでは、あなたの生活リズムや目指す方向を丁寧に伺い、
-                        その内容をもとに、学習を支えるコーチをこちらで選任します。<br>
-                        学習が始まってからは、担当コーチが目標設定や進め方を一緒に整えながら、
-                        不安やつまずきをそっと支えてくれます。
+                            <p>
+                                さらに、獲得した案件についての質問や不安にも丁寧に対応。「どう進めればいいの？」「この場合はどうしたらいい？」といった実務ならではの悩みも、その都度相談しながら進められる体制を整えています。
+                            </p>
+
+                            <p>
+                                はじめての案件獲得は誰でも不安が大きいもの。その一歩をひとりで背負わせない、“最後まで伴走するスクール” だからこそ、安心して挑戦できます。
+                            </p>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,7 +207,19 @@
         <!--Instagram--かかしさんといるかさん紹介-->
         <!--snsリンク-->
     </main>
-    <footer></footer>
+
+    <button id="navbavkToTop" class="navFooterBackToTopText" aria-label="トップへ戻る">
+        <a href="#" id="ft-totop" class="totop">To Top</a>
+    </button>
+
+    <footer id="footer">
+        <p>&copy;Pronavi & 404 Meow Found</p>
+    </footer>
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>

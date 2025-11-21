@@ -61,7 +61,7 @@ img {
 
 /*<h2 section-title>日本語への指定*/
 .section-title .ja {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 }
 
 h3 {
@@ -83,11 +83,11 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding-inline: 3%;
     /* 左右に余白*/
     /* margin-top: 3%; */
-    margin: 20px 0 20px 0;
+    /* margin: 20px 0 20px 0; */
     position: fixed;
     /*1,2,3と合わせて全画面表示*/
     top: 0;
@@ -97,6 +97,9 @@ h3 {
     z-index: 15;
     /*3*/
     /* background: lightsalmon; */
+    background: #fff;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+    /* 影つけてもかわいいかも！ */
 }
 
 .site-title {
@@ -106,7 +109,11 @@ h3 {
 
 #nav {
     margin-left: auto;
-    background: #F69D51;
+    /* background: #F9F2EA; */
+    /* background: linear-gradient(135deg, #F69D51 0%, #F69D51 40%, #F9F2EA 100%); */
+    background: linear-gradient(to bottom, #F69D51 0%, #F69D51 10%, #F9F2EA 100%);
+
+
     /* 確認用 */
     border-radius: 50px;
 }
@@ -124,24 +131,103 @@ h3 {
 }
 
 #nav .nav-menu li:hover {
-    border-bottom: 1.6px solid #333;
+    border-bottom: 1.6px solid #F69D51;
 }
 
 #nav ul li a span {
     display: block;
+    /* color: #F9F2EA; */
 }
 
 #nav .en {
     font-weight: bolder;
+    /* color: #6283C2; */
 }
 
 #nav .ja {
     font-size: 1rem;
+    /* color: #F9F2EA; */
+}
+
+/*  LINEリンク  */
+
+.center-wrap {
+    position: relative;
+    width: 150px;
+    /* 好きな大きさに調整OK */
+    height: 300px;
+    margin: 0 auto;
+}
+
+.center-img {
+    width: 250px;
+    /* 中央の画像の大きさ */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.rotate-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    /* リングのサイズ */
+    height: 260px;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite;
+    z-index: 1;
+}
+
+.ring-img {
+    width: 100%;
+    height: 100%;
+}
+
+.center-wrap {
+    position: fixed;
+    bottom: 20px;
+    right: 70px;
+
+    /* 追加 */
+
+    opacity: 0;
+    transform: translateY(20px);
+    /* 少し下から出てくる */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+    /* 非表示中はクリック無効 */
+}
+
+.center-wrap.is-show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    /* 表示中だけクリック可 */
+}
+
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
+.main-visual {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .main-visual img {
     margin-top: 20px;
 }
@@ -184,32 +270,36 @@ h3 {
 about_プロナビとは
 -------------------------------------------*/
 #about {
-    margin-bottom: 150px;
+    margin-top: 150px;
+    border: 1px solid red;
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
+.about-content h3 {
+    width: 62%;
+    padding-left: 10px;
 }
 
 .about-text {
-    width: 50%;
+    width: 63%;
+    padding-inline: 3%;
 }
 
 .about-img {
-    width: 40%;
+    width: 36%;
+}
+
+.about-inner {
+    display: flex;
+    margin-top: 20px;
 }
 
 #about h3 {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 #about .highright {
     color: #6283C2;
-}
-
-.about-text img {
-    margin-bottom: 20px;
 }
 
 .about-text p {
@@ -223,16 +313,58 @@ about_プロナビとは
 /*-------------------------------------------
 reason_選ばれる理由
 -------------------------------------------*/
-.reason-items {
+#reason {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.reason-item {
+    border-radius: 20px;
+    background-color: #F9F2EA;
+    padding: 40px 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.reason-inner {
     display: flex;
     justify-content: space-between;
 }
 
-.reason-item {
-    width: 30%;
+#reason .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6283C2;
+    /* font-family: "josefin sans"; */
 }
 
+#reason .number span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6283C2;
+}
 
+#reason h4 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reason-text {
+    font-weight: 500;
+    padding-inline: 20px;
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+.reason-img {
+    width: 37%;
+}
+
+/* reason サークル */
 
 
 /*-------------------------------------------
@@ -504,10 +636,12 @@ price_料金
 #price {
     margin-bottom: 80px;
 }
+
 .price-content {
     display: flex;
     align-items: center;
 }
+
 .price-title {
     margin-bottom: 24px;
     font-size: 2.4rem;
@@ -516,19 +650,23 @@ price_料金
     display: inline-block;
     line-height: 2.4;
 }
+
 .price-left {
     background-color: #F9F2EA;
     width: 65%;
     padding: 100px 0 100px 6%;
     border-radius: 20px;
 }
-.price-left li{
+
+.price-left li {
     margin-bottom: 5px;
 }
+
 .fa {
     margin-right: 8px;
     color: #657ebe;
 }
+
 .price-right {
     background-color: #F69D51;
     width: 48%;
@@ -541,13 +679,15 @@ price_料金
 .all {
     font-size: 2rem;
     margin-right: 10px;
-    
+
 }
+
 .price-right .price {
     font-size: 4rem;
     border-bottom: 1px solid #000;
     margin-top: 50px;
 }
+
 .tax {
     font-size: 1.8rem;
 }
@@ -620,6 +760,14 @@ voice_受講生・卒業生の声・作品
 /*-------------------------------------------
 Q&A_よくある質問
 -------------------------------------------*/
+
+.question-wrapper {
+    margin-bottom: 80px;
+    background-color: #f4f7fb;
+    border-radius: 50px 50px;
+    padding: 70px 40px;
+}
+
 .title-qa {
     text-align: center;
 }
@@ -817,22 +965,34 @@ Q&A_よくある質問
     }
 }
 
+/* 動くキャラクター達 */
+
 .move-area {
     width: 100%;
     overflow: hidden;
     /* はみ出す部分を隠す */
     position: relative;
     height: 300px;
+    top: 40px;
 }
 
 .move-img {
     width: 150px;
     /* イラストサイズは自由に */
     position: absolute;
-    right: -100px;
+    right: -90px;
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
+
+/* .move-img { animation-delay: 0s;}
+
+.move-area p { animation-delay: s;}
+
+.move-img2 { animation-delay: s;}
+
+.move-img3 { animation-delay: s;} */
+
 
 .move-area p {
     position: absolute;
@@ -906,15 +1066,14 @@ Q&A_よくある質問
 
 @keyframes goLeft {
     0% {
-        transform: scale(0.1);
-        opacity: 0;
+        transform: translateX(500px);
+        /* 左の外から */
     }
 
     100% {
-        transform: scale(1);
-        opacity: 1;
+        transform: translateX(-190vw);
+        /* 画面右の外へ */
     }
-}
 
 
 
@@ -924,25 +1083,54 @@ Q&A_よくある質問
 フッター
 -------------------------------------------*/
 
+#footer {
+    color: #fff;
+    background-color: #F69D51;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
 
+/* フッタートップボタン */
 
+#navbavkToTop {
+    width: 100%;
+    display: block;
+    background-color:#f8ab67;
+    text-align: center;
+    margin: 0;
+    padding: 1px 0;
+    margin-top: 0px;
+}
 
+.totop {
+    display: block;
+    color: #fff;
+    border: 3px solid #feccab;
+    border-radius: 20px;
+    width: 150px;
+    margin: 5px auto;
+}
 
-
-
-
+.totop:hover {
+    color: #464343;
+    border: 3px solid #f49c61;
+    background: #f7e2d1;
+}
 
 /*-------------------------------------------
 SP---スマホ表示ここから
 -------------------------------------------*/
 @media (max-width: 930px) {
-/*<h2 section-title>英語への指定*/
+
+    /*<h2 section-title>英語への指定*/
     .section-title .en {
-    font-size: 5rem;
+        font-size: 5rem;
     }
-/*<h2 section-title>日本語への指定*/
+
+    /*<h2 section-title>日本語への指定*/
     .section-title .ja {
-    font-size: 2rem;
+        font-size: 2rem;
     }
 
     .wrapper {
@@ -979,30 +1167,35 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-.support-flex-items {
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto 50px auto;
-}
-.support-img {
-    width: 100%;
-}
-.support-img img {
-    border-radius: 20px 20px 0 0;
-}
-.text-heading {
-    text-align: center;
-}
-.text-heading span {
-margin-bottom: 8px;
-display: block;
-text-align: center;
-line-height: 2;
-}
-.support-text {
-    width: 100%;
-    padding: 20px 16px;
-}
+    .support-flex-items {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto 50px auto;
+    }
+
+    .support-img {
+        width: 100%;
+    }
+
+    .support-img img {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .text-heading {
+        text-align: center;
+    }
+
+    .text-heading span {
+        margin-bottom: 8px;
+        display: block;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .support-text {
+        width: 100%;
+        padding: 20px 16px;
+    }
 
 
     /*-------------------------------------------
@@ -1023,13 +1216,13 @@ sp  flow_受講の流れ
     .steps-list-up li {
         width: 90%;
         margin-bottom: 30px;
-        margin-inline:auto;
+        margin-inline: auto;
     }
 
     .steps-list-down li {
         width: 90%;
         margin-bottom: 30px;
-        margin-inline:auto;
+        margin-inline: auto;
     }
 
     .step-textbox {
@@ -1064,59 +1257,69 @@ sp  flow_受講の流れ
     /*-------------------------------------------
 sp  flow-video_受講の様子を動画で確認
 -------------------------------------------*/
-video {
-    max-width: 300px;
-}
-.video-card {
-    flex-direction: column;
-}
-/* 真ん中の線 */
-.video-divider {
-  width: 1px;
-  height: 20px;
-}
-/* 上の変形ボックス */
-.video-label {
-  padding: 24px 24px;
-  border-radius: 20px;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  width: 280px;
-}
-.video-label p{
-    text-align: center;
-}
+    video {
+        max-width: 300px;
+    }
+
+    .video-card {
+        flex-direction: column;
+    }
+
+    /* 真ん中の線 */
+    .video-divider {
+        width: 1px;
+        height: 20px;
+    }
+
+    /* 上の変形ボックス */
+    .video-label {
+        background: #657ebe;
+        padding: 24px 24px;
+        border-radius: 0px;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        width: 280px;
+    }
+
+    .video-label p {
+        text-align: center;
+    }
 
     /*-------------------------------------------
 sp  price_料金
 -------------------------------------------*/
-.price-content {
-    flex-direction: column;
-}
-.price-left {
-    width: 100%;
-    padding: 20px 20px;
-    border-radius: 0 20px 0 0;
-}
-.price-title {
-    line-height: 1.8;
-}
-.price-lists {
-    font-size: 1.4rem;
-}
-.price-right {
-    width: 100%;
-    height: 150px;
-    /* margin-top: 5px; */
-    margin-left: 0;
-    padding: 38px 30px;
-    border-radius: 0 0 0 20px;
-}
-.price-right .price {
-    font-size: 3rem;
-    line-height: 1.8;
-    display: inline-block;
-    margin-top: 0;
-}
+    .price-content {
+        flex-direction: column;
+    }
+
+    .price-left {
+        width: 100%;
+        padding: 20px 20px;
+        border-radius: 0 20px 0 0;
+    }
+
+    .price-title {
+        line-height: 1.8;
+    }
+
+    .price-lists {
+        font-size: 1.4rem;
+    }
+
+    .price-right {
+        width: 100%;
+        height: 150px;
+        /* margin-top: 5px; */
+        margin-left: 0;
+        padding: 38px 30px;
+        border-radius: 0 0 0 20px;
+    }
+
+    .price-right .price {
+        font-size: 3rem;
+        line-height: 1.8;
+        display: inline-block;
+        margin-top: 0;
+    }
 
     /*-------------------------------------------
 sp  voice_受講生・卒業生の声・作品
@@ -1147,6 +1350,7 @@ sp  Q&A_よくある質問
     .question-answer ul .content {
         box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
     }
+
     /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
