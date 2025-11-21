@@ -1,32 +1,30 @@
 $(function () {
-  
-// line リンク
-  let pagetop = $(".center-wrap");
-  pagetop.hide();
 
-  // フッターの位置を取得
-  let footerPos = $("footer").offset().top;
+  const pagetop = $(".center-wrap");
+  const $footer = $("footer");
 
-  $(window).scroll(function () {
+  if (!$footer.length) return;
 
-    let scroll = $(this).scrollTop();
-    let windowHeight = $(this).height();
+  $(window).on("scroll resize", function () {
+    const scroll = $(this).scrollTop();
+    const winH = $(this).height();
+    const footerTop = $footer.offset().top;
 
-    // 画面が500px以上スクロール → 出す
-    if (scroll > 500) {
-      pagetop.fadeIn();
+    const over500 = scroll > 500;
+    const hitFooter = scroll + winH > footerTop;
+
+    if (over500 && !hitFooter) {
+      // 表示
+      pagetop.addClass("is-show");
     } else {
-      pagetop.fadeOut();
+      // 非表示
+      pagetop.removeClass("is-show");
     }
+  }).trigger("scroll");
 
-    // 画面下端がフッターに到達したら → 消す
-    if (scroll + windowHeight >= footerPos) {
-      pagetop.fadeOut();
-    }
 
-  });
 
-  
+
 
 
 
