@@ -8,6 +8,8 @@
     <meta name="description"
         content="未経験からエンジニアを目指す方へ。現役エンジニアが直接指導する案件獲得特化型オンライン対応のプログラミングスクール。HTML・CSS・JavaScript等が実践的に学べます。">
     <link rel="shortcut icon" href="img/favicon2.png">
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +26,7 @@
             <!-- <img class="logo" src="img/logo.png" alt="pronavi-logo"> -->
             <ul class="nav-menu">
                 <li><a href="index.html"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
-                <li><a href="#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
+                <li><a href="index.html"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
                 <li><a href="#support"><span class="en">Support</span><span class="ja">サポート体制</span></a></li>
                 <li><a href="#teacher"><span class="en">Teacher</span><span class="ja">講師紹介</span></a></li>
                 <li><a href="#flow"><span class="en">Flow</span><span class="ja">受講の流れ</span></a></li>
@@ -39,6 +41,16 @@
             <span></span>
             <span></span>
         </div>
+
+        <!-- ラインアクセスボタン -->
+        <div class="center-wrap">
+            <a href="/googletag/"><img src="img/LINE-LOGO.png" class="center-img"></a>
+
+            <div class="rotate-ring">
+                <img src="img/LINE-LOGO2025.png" class="ring-img">
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -52,7 +64,6 @@
             <p class="support-subtitile">多忙な働き世代が抱える「時間・仕事・生活との両立」の壁を乗り越え<br>実務レベルのスキルを身に付けて自己実現へ</p>
 
             <div class="support-flex">
-                <!--STEP1-->
                 <div class="support-flex-items">
                     <div class="support-img">
                         <img src="img/support1.jpg" alt="ノートパソコンの画面上に表示されたチェックリストを指し示す手元のイメージ">
@@ -66,7 +77,6 @@
                     </div>
                 </div>
 
-                <!--STEP2-->
                 <div class="support-flex-items">
                     <div class="support-img">
                         <img src="img/support2.jpg" alt="スマートフォンを操作しながら微笑む女性">
@@ -80,7 +90,6 @@
                     </div>
                 </div>
 
-                <!--STEP3-->
                 <div class="support-flex-items">
                     <div class="support-img">
                         <img src="img/support3.png" alt="作業会">
@@ -94,7 +103,6 @@
                     </div>
                 </div>
 
-                <!--STEP4-->
                 <div class="support-flex-items">
                     <div class="support-img">
                         <img src="img/support4.jpg" alt="step-4.案件獲得の為、面談で笑顔で話す講師とパソコンで話を聞く受講生">
@@ -125,11 +133,29 @@
                             <img src="img/teacher.jpg" alt="トップ講師">
                         </div>
                         <div class="teacher-content-text">
+                            <p class="teacher-name">トップ講師</p>
                             <p class="text-title">お客様1人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。</p>
-                            <p>プロナビは複数の最適化されたプログラミング学習トレーニングの中から、お客さま一人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。それぞれのトレーニングを構築する際は、学術的な調査はもちろんのこと、学習の中で本当に効果があるのかをコンサルタント・お客さまなど様々な視点から十分な時間をかけて検証した上で展開しています。四半期に一度、カリキュラムを全社的にアップデートするイベントを設けており、トレーニングやカリキュラムを常に進化させ続けています。
+                            <p class="teacher-text">
+                                プロナビは複数の最適化されたプログラミング学習トレーニングの中から、お客さま一人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。それぞれのトレーニングを構築する際は、学術的な調査はもちろんのこと、学習の中で本当に効果があるのかをコンサルタント・お客さまなど様々な視点から十分な時間をかけて検証した上で展開しています。四半期に一度、カリキュラムを全社的にアップデートするイベントを設けており、トレーニングやカリキュラムを常に進化させ続けています。
                             </p>
                         </div>
+                        <!-- <div class="login-modal-wrapper" id="login-modal"> -->
+                        <!-- コメントのモーダル -->
+                        <!-- <div class="modal">
+<div id="login-form">
+<h2>Emailログイン</h2>
+<form action="#">
+<input class="form-control" type="text" placeholder="メールアドレス">
+<input class="form-control" type="password" placeholder="パスワード">
+<div id="submit-btn">ログイン</div>
+</form>
+</div>
+</div> -->
+
+                        <!-- </div> -->
                     </li>
+
+
                 </ul>
             </div>
         </section>
@@ -157,7 +183,7 @@
                             </figure>
 
                             <div class="step-textbox" role="note">
-                                <h3 class="step-title">スタートミーティング</h3>
+                                <p class="step-title">スタートミーティング</p>
                                 <p class="step-desc">
                                     現在のスキルレベルの確認と学習方針を決めた後、あなたに合った専属コーチが選ばれます。
                                 </p>
@@ -176,7 +202,7 @@
                             </figure>
 
                             <div class="step-textbox" role="note">
-                                <h3 class="step-title">毎日の学習</h3>
+                                <p class="step-title">毎日の学習</p>
                                 <p class="step-desc">
                                     プログラミングスキルの向上には毎日の学習が欠かせません。<br>専属コーチと公式LINEでやりとりをしながら、効率的に学習を進めていただけます。
                                 </p>
@@ -196,7 +222,7 @@
 
 
                             <div class="step-textbox" role="note">
-                                <h3 class="step-title">週1回の授業</h3>
+                                <p class="step-title">週1回の授業</p>
                                 <p class="step-desc">
                                     週1回の専属コーチとの授業であなたの成長度合いや成長ポイントをチェック。課題で理解できなかった箇所もしっかり解説し、次回の授業までの課題を設定します。
                                 </p>
@@ -218,7 +244,7 @@
 
 
                             <div class="step-textbox" role="note">
-                                <h3 class="step-title">学習を継続するサポート</h3>
+                                <p class="step-title">学習を継続するサポート</p>
                                 <p class="step-desc">
                                     毎日の学習と授業を繰り返していきます。習慣化しスキルが身につけば、その後には案件獲得のフェーズに入っていきます。
                                 </p>
@@ -237,7 +263,7 @@
                             </figure>
 
                             <div class="step-textbox" role="note">
-                                <h3 class="step-title">案件獲得も徹底サポート</h3>
+                                <p class="step-title">案件獲得も徹底サポート</p>
                                 <p class="step-desc">
                                     スキルが身についた後は、案件獲得を目指して実際に動いていきます。営業の同行、代行もプロの営業マンが行いあなたの案件獲得をお手伝いします。
                                 </p>
@@ -247,123 +273,17 @@
                 </ol>
             </div>
 
+            <div class="video-card">
+                <div class="video-label">
+                    <p>受講の様子を<br>動画でご確認いただけます</p>
+                </div>
 
-            <!-- <div class="steps" aria-label="学習の流れ">
-                <ol class="steps-list">
-                    <li class="step" id="step-01">
-                        <div class="step-inner">
-                            
-                            <p class="step-badge">
-                                <span class="step-badge-label">STEP</span>
-                                <span class="step-badge-num">01</span>
-                            </p>
+                <div class="video-divider"></div>
 
-                            <figure class="step-media">
-                                <img src="img/flow_1.png" alt="オンラインでコーチと話す様子">
-                            </figure>
-
-                            <div class="step-textbox" role="note">
-                                <h3 class="step-title">スタートミーティング</h3>
-                                <p class="step-desc">
-                                    現在のスキルレベルの確認と学習方針を決めた後、実際に授業を
-                                    スタートするための専属コーチが選ばれます。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step" id="step-02">
-                        <div class="step-inner">
-                        
-                            <p class="step-badge">
-                                <span class="step-badge-label">STEP</span>
-                                <span class="step-badge-num">02</span>
-                            </p>
-
-                            <figure class="step-media">
-                                <img src="img/flow_2.png" alt="">
-                            </figure>
-
-                        
-                            <div class="step-textbox" role="note">
-                                <h3 class="step-title">毎日の学習</h3>
-                                <p class="step-desc">
-                                    プログラミングスキルの向上には毎日の学習が欠かせません。専属コーチと公式LINEでのやりとりをしながら、悩むことなく効率的に学習を進めていただきます。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="step" id="step-03">
-                        <div class="step-inner">
-                            <p class="step-badge">
-                                <span class="step-badge-label">STEP</span>
-                                <span class="step-badge-num">03</span>
-                            </p>
-
-                            
-                            <figure class="step-media">
-                                <img src="img/flow_3.png" alt="">
-                            </figure>
-
-                            
-                            <div class="step-textbox" role="note">
-                                <h3 class="step-title">週1回の授業</h3>
-                                <p class="step-desc">
-                                    週1回の専属コーチとの授業であなたの成長度合いや成長ポイントをチェック。課題で理解できなかった箇所もしっかり解説し、次回の授業までの課題を設定します。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="step" id="step-04">
-                        <div class="step-inner">
-                            <p class="step-badge">
-                                <span class="step-badge-label">STEP</span>
-                                <span class="step-badge-num">04</span>
-                            </p>
-
-                            
-                            <figure class="step-media">
-                                <img src="img/flow_4.png" alt="">
-                            </figure>
-
-                            
-                            <div class="step-textbox" role="note">
-                                <h3 class="step-title">学習を継続するサポート</h3>
-                                <p class="step-desc">
-                                    毎日の学習と授業を繰り返していきます。習慣化しスキルが身につけば、その後には案件獲得のフェーズに入っていきます。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="step" id="step-05">
-                        <div class="step-inner">
-                            
-                            <p class="step-badge">
-                                <span class="step-badge-label">STEP</span>
-                                <span class="step-badge-num">05</span>
-                            </p>
-
-                            <figure class="step-media">
-                                <img src="img/flow_5.png" alt="">
-                            </figure>
-
-                            <div class="step-textbox" role="note">
-                                <h3 class="step-title">案件獲得も徹底サポート</h3>
-                                <p class="step-desc">
-                                    スキルが身についた後は、案件獲得を目指して実際に動いていきます。営業の同行、代行もプロの営業マンが行いあなたの案件獲得をお手伝いします。
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </div> -->
-
-            <div class="flow-video wrapper">
-                <p class="flow-video-title">受講の様子を動画でご確認いただけます</p>
-                <!-- <video src="img/flow-video.png" controls="" playsinline="" muted="" preload="metadata" poster="img/flow-video.png"></video> -->
-
+                <div class="video-box">
+                    <video src="video/lesson-video.mp4" controls="" playsinline="" muted="" preload="metadata"
+                        poster="img/flow-video.png"></video>
+                </div>
             </div>
 
         </section>
@@ -374,6 +294,27 @@
                 <span class="en">Price</span>
                 <span class="ja">料金</span>
             </h2>
+            <div class="price-content">
+                <div class="price-left">
+                    <p class="price-title">6カ月間集中プログラム</p>
+                    <ul class="price-lists">
+                        <li><i class="fa fa-solid fa-calendar-days"></i>あなただけの学習スケジュールを作成</li>
+                        <li><i class="fa fa-regular fa-clock"></i>24時間質問対応</li>
+                        <li><i class="fa fa-regular fa-circle-check"></i>定期的な講義で苦手を克服</li>
+                        <li><i class="fa fa-solid fa-arrows-spin"></i>学習スケジュール作成と習慣化のサポート</li>
+                        <li><i class="fa fa-solid fa-person-chalkboard"></i>案件獲得までサポート</li>
+                    </ul>
+                </div>
+
+                <div class="price-right">
+                    <p class="price"><span class="all">総額</span>550,000円<span class="tax">(税込み)</span></p>
+                </div>
+            </div>
+            <div class="price-notes">
+                <p>※お支払い方法：銀行口座振り込み・各種クレジットカード</p>
+                <p>※分割払い可（クレジットカード払いの場合）</p>
+                <p>※詳しくはお問合せください</p>
+            </div>
         </section>
     </main>
 

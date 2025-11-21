@@ -11,7 +11,7 @@ body {
     font-size: 1.6rem;
     /*16px */
     color: #333;
-    font-family: "Yu Gothic", "游ゴシック", "YuGothic", sans-serif;
+    font-family: "Noto Sans JP", "Yu Gothic", "游ゴシック", "YuGothic", sans-serif;
     font-weight: 500;
     /* または normal */
     letter-spacing: 0.1em;
@@ -147,6 +147,60 @@ h3 {
 #nav .ja {
     font-size: 1rem;
     /* color: #F9F2EA; */
+}
+
+/*  LINEリンク  */
+
+.center-wrap {
+    position: relative;
+    width: 150px;
+    /* 好きな大きさに調整OK */
+    height: 300px;
+    margin: 0 auto;
+}
+
+.center-img {
+    width: 250px;
+    /* 中央の画像の大きさ */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.rotate-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    /* リングのサイズ */
+    height: 260px;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite;
+    z-index: 1;
+}
+
+.ring-img {
+    width: 100%;
+    height: 100%;
+}
+
+.center-wrap {
+    position: fixed;
+    bottom: 20px;
+    right: 70px;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 /*-------------------------------------------
@@ -301,6 +355,9 @@ support_サポート体制
 -------------------------------------------*/
 #support {
     margin-bottom: 80px;
+    background-color: #f4f7fb;
+    border-radius: 0 50px 0 50px;
+    padding-block: 80px;
 }
 
 #support .support-subtitile {
@@ -314,6 +371,7 @@ support_サポート体制
     align-items: center;
     margin-bottom: 20px;
     background-color: #F9F2EA;
+    border-radius: 20px;
 }
 
 .support-img {
@@ -322,6 +380,7 @@ support_サポート体制
 
 .support-img img {
     width: 100%;
+    border-radius: 20px 0 0 20px;
 }
 
 .support-text {
@@ -344,13 +403,6 @@ support_サポート体制
 .text {
     padding-block: 16px;
 }
-
-
-
-
-
-
-
 
 
 /* .support-point {
@@ -391,6 +443,7 @@ flow_受講の流れ
     /*確認用*/
     padding-block: 80px;
     margin-bottom: 80px;
+    border-radius: 0 50px 0 50px;
 }
 
 #flow .steps-list {
@@ -407,6 +460,7 @@ flow_受講の流れ
     display: flex;
     justify-content: center;
     padding-top: 5px;
+    margin-bottom: 80px;
 }
 
 .steps-list-up li {
@@ -434,21 +488,20 @@ flow_受講の流れ
     background-color: #fff;
     border: 1px solid #333;
     border-radius: 0 0 20px 20px;
-    padding: 20px;
+    padding: 16px;
     height: 200px;
 }
 
 .step-title {
     text-align: center;
-}
-
-.step-title {
     margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .step-desc {
     font-size: 1.4rem;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 /*STEP1～STEP5ここから*/
@@ -495,18 +548,119 @@ flow_受講の流れ
 /*-------------------------------------------
 flow-video_受講の様子を動画で確認
 -------------------------------------------*/
-/* .flow-video {
-    
-} */
+#flow-video {
+    margin-block: 100px;
+    text-align: center;
+}
 
+.flow-video-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+video {
+    max-width: 560px;
+    border-radius: 20px;
+}
+
+.video-card {
+    display: flex;
+    align-items: center;
+    background: #F69D51;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.video-card p {
+    color: #F9F2EA;
+}
+
+/* 左の変形ボックス */
+.video-label {
+    background: #657ebe;
+    padding: 40px 30px;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+    width: 600px;
+}
+
+/* 真ん中の線 */
+.video-divider {
+    width: 200px;
+    height: 1px;
+    background: #000;
+}
+
+.play-button::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 14px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: 22px;
+    top: 12px;
+}
 
 
 /*-------------------------------------------
 price_料金
 -------------------------------------------*/
+#price {
+    margin-bottom: 80px;
+}
+.price-content {
+    display: flex;
+    align-items: center;
+}
+.price-title {
+    margin-bottom: 24px;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    line-height: 2.4;
+}
+.price-left {
+    background-color: #F9F2EA;
+    width: 65%;
+    padding: 100px 0 100px 6%;
+}
+.price-left li{
+    margin-bottom: 5px;
+}
+.fa {
+    margin-right: 8px;
+    color: #657ebe;
+}
+.price-right {
+    background-color: #F69D51;
+    width: 48%;
+    height: 300px;
+    margin-left: -85px;
+    padding: 5%;
+}
 
+.all {
+    font-size: 2rem;
+    margin-right: 10px;
+    
+}
+.price-right .price {
+    font-size: 4rem;
+    border-bottom: 1px solid #000;
+    margin-top: 50px;
+}
+.tax {
+    font-size: 1.8rem;
+}
 
-
+.price-notes {
+    font-size: 1rem;
+}
 
 /*-------------------------------------------
 voice_受講生・卒業生の声・作品
@@ -518,6 +672,14 @@ voice_受講生・卒業生の声・作品
 /*-------------------------------------------
 Q&A_よくある質問
 -------------------------------------------*/
+
+.question-wrapper {
+    margin-bottom: 80px;
+    background-color: #f4f7fb;
+    border-radius: 50px 50px;
+    padding: 70px 40px;
+}
+
 .title-qa {
     text-align: center;
 }
@@ -694,6 +856,12 @@ Q&A_よくある質問
 }
 
 .inview-balloon {
+    transform: scale(0.1);
+    opacity: 0;
+}
+
+/* JSでつけるクラス。ここにアニメーションを書く */
+.balloon {
     animation: balloon 0.8s ease-out 0s 1 forwards;
 }
 
@@ -707,6 +875,116 @@ Q&A_よくある質問
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.move-area {
+    width: 100%;
+    overflow: hidden;
+    /* はみ出す部分を隠す */
+    position: relative;
+    height: 300px;
+    top: 40px;
+}
+
+.move-img {
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
+    right: -100px;
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+/* .move-img { animation-delay: 0s;}
+
+.move-area p { animation-delay: s;}
+
+.move-img2 { animation-delay: s;}
+
+.move-img3 { animation-delay: s;} */
+
+
+.move-area p {
+    position: absolute;
+    top: 60px;
+    font-size: 2.5rem;
+    display: block;
+    border: 3px solid #ef8f3a;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    right: -510px;
+
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+/* .move-area p{
+  position: relative;
+  padding: 2em;
+  border: 3px solid #ef8f3a;
+}*/
+.move-area p:before,
+.move-area p:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+}
+
+.move-area p:before {
+    top: -30px;
+    left: -440px;
+    border-style: solid;
+    border-color: transparent transparent #ef8f3a transparent;
+    border-width: 40px 0 30px 30px;
+}
+
+.move-area p:after {
+    top: -37px;
+    left: -425px;
+    /* right: ; */
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    border-width: 42px 0px 33px 35px;
+    z-index: 10;
+}
+
+.move-img2 {
+    width: 150px;
+    /* イラストサイズは自由に */
+    top: -30px;
+    position: absolute;
+    right: -660px;
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+.move-img3 {
+    width: 150px;
+    /* イラストサイズは自由に */
+    top: 40px;
+    position: absolute;
+    right: -790px;
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
+
+
+@keyframes goLeft {
+    0% {
+        transform: translateX(500px);
+        /* 左の外から */
+    }
+
+    100% {
+        transform: translateX(-190vw);
+        /* 画面右の外へ */
+    }
+
 }
 
 
@@ -727,6 +1005,15 @@ Q&A_よくある質問
 SP---スマホ表示ここから
 -------------------------------------------*/
 @media (max-width: 930px) {
+/*<h2 section-title>英語への指定*/
+    .section-title .en {
+    font-size: 5rem;
+    }
+/*<h2 section-title>日本語への指定*/
+    .section-title .ja {
+    font-size: 2rem;
+    }
+
     .wrapper {
         padding-inline: 3%;
     }
@@ -761,19 +1048,30 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-    .support-flex-items {
-        flex-direction: column;
-    }
-
-    .support-img {
-        width: 100%;
-    }
-
-    .support-text {
-        width: 100%;
-        padding-inline: 16px;
-    }
-
+.support-flex-items {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+.support-img {
+    width: 100%;
+}
+.support-img img {
+    border-radius: 20px 20px 0 0;
+}
+.text-heading {
+    text-align: center;
+}
+.text-heading span {
+margin-bottom: 8px;
+display: block;
+text-align: center;
+line-height: 2;
+}
+.support-text {
+    width: 100%;
+    padding: 20px 16px;
+}
 
 
     /*-------------------------------------------
@@ -792,13 +1090,15 @@ sp  flow_受講の流れ
     }
 
     .steps-list-up li {
-        width: 100%;
+        width: 90%;
         margin-bottom: 30px;
+        margin-inline:auto;
     }
 
     .steps-list-down li {
-        width: 100%;
+        width: 90%;
         margin-bottom: 30px;
+        margin-inline:auto;
     }
 
     .step-textbox {
@@ -806,18 +1106,20 @@ sp  flow_受講の流れ
     }
 
     .step-title {
-        font-size: 2.4rem;
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
     .step-desc {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        font-weight: normal;
     }
 
     .step-badge {
         top: 0;
         left: 0;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .step-badge-label {
@@ -828,13 +1130,63 @@ sp  flow_受講の流れ
         font-size: 2rem;
     }
 
+    /*-------------------------------------------
+flow-video_受講の様子を動画で確認
+-------------------------------------------*/
+video {
+    max-width: 300px;
+}
+.video-card {
+    flex-direction: column;
+}
+/* 真ん中の線 */
+.video-divider {
+  width: 1px;
+  height: 20px;
+}
+/* 上の変形ボックス */
+.video-label {
+  background: #657ebe;
+  padding: 24px 24px;
+  border-radius: 0px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  width: 280px;
+}
+.video-label p{
+    text-align: center;
+}
 
     /*-------------------------------------------
 sp  price_料金
 -------------------------------------------*/
-
-
-
+.price-content {
+    flex-direction: column;
+}
+.price-left {
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 0 20px 0 0;
+}
+.price-title {
+    line-height: 1.8;
+}
+.price-lists {
+    font-size: 1.4rem;
+}
+.price-right {
+    width: 100%;
+    height: 150px;
+    /* margin-top: 5px; */
+    margin-left: 0;
+    padding: 38px 30px;
+    border-radius: 0 0 0 20px;
+}
+.price-right .price {
+    font-size: 3rem;
+    line-height: 1.8;
+    display: inline-block;
+    margin-top: 0;
+}
 
     /*-------------------------------------------
 sp  voice_受講生・卒業生の声・作品
@@ -847,8 +1199,24 @@ sp  voice_受講生・卒業生の声・作品
 sp  Q&A_よくある質問
 -------------------------------------------*/
 
+    .question-answer {
+        padding: 3%;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    .question-answer ul {
+        display: block;
+    }
+
+    .question-answer ul li {
+        margin-bottom: 20px
+    }
 
 
+    .question-answer ul .content {
+        box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
+    }
 
     /*-------------------------------------------
 sp  フッター
