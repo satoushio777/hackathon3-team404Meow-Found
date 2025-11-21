@@ -150,7 +150,7 @@ h3 {
 }
 
 .center-img {
-    width: 300px;
+    width: 250px;
     /* 中央の画像の大きさ */
     position: absolute;
     top: 50%;
@@ -179,8 +179,8 @@ h3 {
 
 .center-wrap {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 20px;
+    right: 70px;
 }
 
 @keyframes spin {
