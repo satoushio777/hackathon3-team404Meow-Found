@@ -47,18 +47,21 @@ img {
 .section-title {
     padding-block: 20px;
 }
+
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
     display: block;
     text-align: center;
 }
+
 /*<h2 section-title>英語への指定*/
-.section-title  .en {
+.section-title .en {
     font-size: 6.4rem;
 }
+
 /*<h2 section-title>日本語への指定*/
-.section-title  .ja {
-    font-size: 3.2rem;
+.section-title .ja {
+    font-size: 2.4rem;
 }
 
 h3 {
@@ -80,11 +83,11 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding-inline: 3%;
     /* 左右に余白*/
     /* margin-top: 3%; */
-    margin: 20px 0 20px 0;
+    /* margin: 20px 0 20px 0; */
     position: fixed;
     /*1,2,3と合わせて全画面表示*/
     top: 0;
@@ -94,6 +97,9 @@ h3 {
     z-index: 15;
     /*3*/
     /* background: lightsalmon; */
+    background: #fff;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+    /* 影つけてもかわいいかも！ */
 }
 
 .site-title {
@@ -103,7 +109,12 @@ h3 {
 
 #nav {
     margin-left: auto;
-    background: #F69D51;/* 確認用 */
+    /* background: #F9F2EA; */
+    /* background: linear-gradient(135deg, #F69D51 0%, #F69D51 40%, #F9F2EA 100%); */
+    background: linear-gradient(to bottom, #F69D51 0%, #F69D51 10%, #F9F2EA 100%);
+
+
+    /* 確認用 */
     border-radius: 50px;
 }
 
@@ -120,24 +131,32 @@ h3 {
 }
 
 #nav .nav-menu li:hover {
-    border-bottom: 1.6px solid #333;
+    border-bottom: 1.6px solid #F69D51;
 }
 
 #nav ul li a span {
     display: block;
+    /* color: #F9F2EA; */
 }
 
 #nav .en {
     font-weight: bolder;
+    /* color: #6283C2; */
 }
 
 #nav .ja {
     font-size: 1rem;
+    /* color: #F9F2EA; */
 }
 
 /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
+.main-visual {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .main-visual img {
     margin-top: 20px;
 }
@@ -180,32 +199,36 @@ h3 {
 about_プロナビとは
 -------------------------------------------*/
 #about {
-    margin-bottom: 150px;
+    margin-top: 150px;
+    border: 1px solid red;
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
+.about-content h3 {
+    width: 62%;
+    padding-left: 10px;
 }
 
 .about-text {
-    width: 50%;
+    width: 63%;
+    padding-inline: 3%;
 }
 
 .about-img {
-    width: 40%;
+    width: 36%;
+}
+
+.about-inner {
+    display: flex;
+    margin-top: 20px;
 }
 
 #about h3 {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 #about .highright {
     color: #6283C2;
-}
-
-.about-text img {
-    margin-bottom: 20px;
 }
 
 .about-text p {
@@ -219,17 +242,58 @@ about_プロナビとは
 /*-------------------------------------------
 reason_選ばれる理由
 -------------------------------------------*/
-.reason-items {
+#reason {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.reason-item {
+    border-radius: 20px;
+    background-color: #F9F2EA;
+    padding: 40px 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.reason-inner {
     display: flex;
     justify-content: space-between;
 }
 
-.reason-item {
-    width: 30%;
-    border-radius: ;
+#reason .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6283C2;
+    /* font-family: "josefin sans"; */
 }
 
+#reason .number span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6283C2;
+}
 
+#reason h4 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reason-text {
+    font-weight: 500;
+    padding-inline: 20px;
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+.reason-img {
+    width: 37%;
+}
+
+/* reason サークル */
 
 
 /*-------------------------------------------
@@ -238,6 +302,7 @@ support_サポート体制
 #support {
     margin-bottom: 80px;
 }
+
 #support .support-subtitile {
     font-weight: bold;
     text-align: center;
@@ -250,26 +315,32 @@ support_サポート体制
     margin-bottom: 20px;
     background-color: #F9F2EA;
 }
+
 .support-img {
     width: 30%;
 }
+
 .support-img img {
     width: 100%;
 }
+
 .support-text {
     width: 70%;
     margin-inline: 30px;
 }
+
 .text-heading {
     font-weight: bold;
     padding-top: 10px;
     border-bottom: 1px solid #657ebe;
 }
+
 .text-heading span {
     margin-right: 16px;
     color: #657ebe;
     font-size: 2.4rem;
 }
+
 .text {
     padding-block: 16px;
 }
@@ -316,7 +387,8 @@ teacher_講師紹介
 flow_受講の流れ
 -------------------------------------------*/
 #flow {
-    background-color: #F9F2EA;/*確認用*/
+    background-color: #F9F2EA;
+    /*確認用*/
     padding-block: 80px;
     margin-bottom: 80px;
 }
@@ -330,6 +402,7 @@ flow_受講の流れ
     justify-content: center;
     margin-block: 25px;
 }
+
 .steps-list-down {
     display: flex;
     justify-content: center;
@@ -340,6 +413,7 @@ flow_受講の流れ
     width: 300px;
     padding-inline: 12px;
 }
+
 .steps-list-down li {
     width: 300px;
     padding-inline: 12px;
@@ -348,8 +422,10 @@ flow_受講の流れ
 .step-media {
     border: 1px solid #333;
     border-radius: 20px 20px 0 0;
-    position: relative;/*step-badgeの基準*/
+    position: relative;
+    /*step-badgeの基準*/
 }
+
 .step-media img {
     border-radius: 20px 20px 0 0;
 }
@@ -357,10 +433,11 @@ flow_受講の流れ
 .step-textbox {
     background-color: #fff;
     border: 1px solid #333;
-    border-radius:  0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
     padding: 20px;
     height: 200px;
 }
+
 .step-title {
     text-align: center;
 }
@@ -368,6 +445,7 @@ flow_受講の流れ
 .step-title {
     margin-bottom: 5px;
 }
+
 .step-desc {
     font-size: 1.4rem;
     margin: 10px;
@@ -375,22 +453,33 @@ flow_受講の流れ
 
 /*STEP1～STEP5ここから*/
 .step-badge {
-    width: 70px;            /* 円の直径 */
+    width: 70px;
+    /* 円の直径 */
     height: 70px;
-    background-color: #F69D51; /* 紫色 */
-    color: #fff;              /* 文字色 */
-    border-radius: 50%;       /* 円にする */
-    display: flex;            /* 中央寄せ */
-    flex-direction: column;   /* STEPと01を縦並び */
-    align-items: center;      /* 水平方向センター */
-    justify-content: center;  /* 垂直方向センター */
+    background-color: #F69D51;
+    /* 紫色 */
+    color: #fff;
+    /* 文字色 */
+    border-radius: 50%;
+    /* 円にする */
+    display: flex;
+    /* 中央寄せ */
+    flex-direction: column;
+    /* STEPと01を縦並び */
+    align-items: center;
+    /* 水平方向センター */
+    justify-content: center;
+    /* 垂直方向センター */
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
     position: absolute;
-    top: -25px;           /* ← 円の半径分だけ上にずらす */
-    left: -25px;          /* ← 左にずらす（好みに調整可） */
-    z-index: 2;           /* ← 画像より前に出す */
+    top: -25px;
+    /* ← 円の半径分だけ上にずらす */
+    left: -25px;
+    /* ← 左にずらす（好みに調整可） */
+    z-index: 2;
+    /* ← 画像より前に出す */
 }
 
 .step-badge-label {
@@ -400,6 +489,7 @@ flow_受講の流れ
 .step-badge-num {
     font-size: 1.4rem;
 }
+
 /*STEP1～STEP5ここまで*/
 
 /*-------------------------------------------
@@ -640,6 +730,7 @@ SP---スマホ表示ここから
     .wrapper {
         padding-inline: 3%;
     }
+
     h3 {
         font-size: 2rem;
     }
@@ -670,16 +761,18 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
-.support-flex-items {
-    flex-direction: column;
-}
-.support-img {
-    width: 100%;
-}
-.support-text {
-    width: 100%;
-    padding-inline: 16px;
-}
+    .support-flex-items {
+        flex-direction: column;
+    }
+
+    .support-img {
+        width: 100%;
+    }
+
+    .support-text {
+        width: 100%;
+        padding-inline: 16px;
+    }
 
 
 
@@ -693,39 +786,47 @@ sp  teacher_講師紹介
     /*-------------------------------------------
 sp  flow_受講の流れ
 -------------------------------------------*/
-    #flow .steps-list-up,.steps-list-down {
+    #flow .steps-list-up,
+    .steps-list-down {
         flex-direction: column;
     }
+
     .steps-list-up li {
         width: 100%;
         margin-bottom: 30px;
     }
+
     .steps-list-down li {
         width: 100%;
         margin-bottom: 30px;
     }
+
     .step-textbox {
         height: auto;
     }
+
     .step-title {
         font-size: 2.4rem;
     }
+
     .step-desc {
         font-size: 1.8rem;
     }
+
     .step-badge {
         top: 0;
         left: 0;
         width: 100px;
         height: 100px;
     }
-    .step-badge-label {
-    font-size: 2rem;
-}
 
-.step-badge-num {
-    font-size: 2rem;
-}
+    .step-badge-label {
+        font-size: 2rem;
+    }
+
+    .step-badge-num {
+        font-size: 2rem;
+    }
 
 
     /*-------------------------------------------

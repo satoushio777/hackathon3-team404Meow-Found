@@ -1,32 +1,34 @@
 $(function () {
+  // reason
 
 
-// Q&A
 
-    $(".openbtn1").click(function () {
-        $(".close-text").css("visibility", "visible");
-        $(this).parent(".close-text").css("visibility", "hidden");
-        $(".open-text").css("visibility", "hidden");
-        $(this).parents(".content").find(".open-text").css("visibility", "visible");
-    });
+  // Q&A
 
-    $(".openbtn2").click(function () {
-        $(this).parents(".open-text").css("visibility", "hidden");
-    });
+  $(".openbtn1").click(function () {
+    $(".close-text").css("visibility", "visible");
+    $(this).parent(".close-text").css("visibility", "hidden");
+    $(".open-text").css("visibility", "hidden");
+    $(this).parents(".content").find(".open-text").css("visibility", "visible");
+  });
 
-    $(".inview-balloon").each(function () {
+  $(".openbtn2").click(function () {
+    $(this).parents(".open-text").css("visibility", "hidden");
+  });
 
-      var scroll = $(window).scrollTop();
+  $(".inview-balloon").each(function () {
 
-      var target = $(this).offset().top;
+    var scroll = $(window).scrollTop();
 
-      var windowHeight = $(window).height();
+    var target = $(this).offset().top;
 
-      if (scroll > target - windowHeight + $(this).outerHeight()) {
-        // outerHeight()はpaddingを含めた高さを取得する
-        $(this).addClass("balloon");
-      }
-    });
+    var windowHeight = $(window).height();
+
+    if (scroll > target - windowHeight + $(this).outerHeight()) {
+      // outerHeight()はpaddingを含めた高さを取得する
+      $(this).addClass("balloon");
+    }
+  });
 
 
 
