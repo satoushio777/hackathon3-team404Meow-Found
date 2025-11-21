@@ -61,7 +61,7 @@ img {
 
 /*<h2 section-title>日本語への指定*/
 .section-title .ja {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 }
 
 h3 {
@@ -83,11 +83,11 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding-inline: 3%;
     /* 左右に余白*/
     /* margin-top: 3%; */
-    margin: 20px 0 20px 0;
+    /* margin: 20px 0 20px 0; */
     position: fixed;
     /*1,2,3と合わせて全画面表示*/
     top: 0;
@@ -97,6 +97,9 @@ h3 {
     z-index: 15;
     /*3*/
     /* background: lightsalmon; */
+    background: #fff;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+    /* 影つけてもかわいいかも！ */
 }
 
 .site-title {
@@ -106,7 +109,11 @@ h3 {
 
 #nav {
     margin-left: auto;
-    background: #F69D51;
+    /* background: #F9F2EA; */
+    /* background: linear-gradient(135deg, #F69D51 0%, #F69D51 40%, #F9F2EA 100%); */
+    background: linear-gradient(to bottom, #F69D51 0%, #F69D51 10%, #F9F2EA 100%);
+
+
     /* 確認用 */
     border-radius: 50px;
 }
@@ -124,19 +131,22 @@ h3 {
 }
 
 #nav .nav-menu li:hover {
-    border-bottom: 1.6px solid #333;
+    border-bottom: 1.6px solid #F69D51;
 }
 
 #nav ul li a span {
     display: block;
+    /* color: #F9F2EA; */
 }
 
 #nav .en {
     font-weight: bolder;
+    /* color: #6283C2; */
 }
 
 #nav .ja {
     font-size: 1rem;
+    /* color: #F9F2EA; */
 }
 
 /*  LINEリンク  */
@@ -213,6 +223,11 @@ h3 {
 /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
+.main-visual {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .main-visual img {
     margin-top: 20px;
 }
@@ -255,32 +270,36 @@ h3 {
 about_プロナビとは
 -------------------------------------------*/
 #about {
-    margin-bottom: 150px;
+    margin-top: 150px;
+    border: 1px solid red;
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
+.about-content h3 {
+    width: 62%;
+    padding-left: 10px;
 }
 
 .about-text {
-    width: 50%;
+    width: 63%;
+    padding-inline: 3%;
 }
 
 .about-img {
-    width: 40%;
+    width: 36%;
+}
+
+.about-inner {
+    display: flex;
+    margin-top: 20px;
 }
 
 #about h3 {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 #about .highright {
     color: #6283C2;
-}
-
-.about-text img {
-    margin-bottom: 20px;
 }
 
 .about-text p {
@@ -294,17 +313,58 @@ about_プロナビとは
 /*-------------------------------------------
 reason_選ばれる理由
 -------------------------------------------*/
-.reason-items {
+#reason {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.reason-item {
+    border-radius: 20px;
+    background-color: #F9F2EA;
+    padding: 40px 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.reason-inner {
     display: flex;
     justify-content: space-between;
 }
 
-.reason-item {
-    width: 30%;
-    border-radius: ;
+#reason .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6283C2;
+    /* font-family: "josefin sans"; */
 }
 
+#reason .number span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6283C2;
+}
 
+#reason h4 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reason-text {
+    font-weight: 500;
+    padding-inline: 20px;
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+.reason-img {
+    width: 37%;
+}
+
+/* reason サークル */
 
 
 /*-------------------------------------------
