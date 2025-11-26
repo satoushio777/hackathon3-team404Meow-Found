@@ -153,14 +153,14 @@ h3 {
 
 .center-wrap {
     position: relative;
-    width: 150px;
+    width: 200px;
     /* 好きな大きさに調整OK */
-    height: 300px;
-    margin: 0 auto;
+    height: 200px;
+
 }
 
 .center-img {
-    width: 250px;
+    width: 180px;
     /* 中央の画像の大きさ */
     position: absolute;
     top: 50%;
@@ -174,23 +174,23 @@ h3 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 250px;
+    width: 180px;
     /* リングのサイズ */
-    height: 260px;
+    height: 180px;
     transform: translate(-50%, -50%);
     animation: spin 10s linear infinite;
     z-index: 1;
 }
 
-.ring-img {
+/* .ring-img {
     width: 100%;
     height: 100%;
-}
+} */
 
 .center-wrap {
     position: fixed;
-    bottom: 20px;
-    right: 70px;
+    bottom: 50px;
+    right: 30px;
 
     /* 追加 */
 
@@ -218,6 +218,12 @@ h3 {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
+}
+
+/* ホバーしたら変化する */
+.center-wrap:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(3, 85, 250, 0.316));
 }
 
 /*-------------------------------------------
@@ -1022,12 +1028,10 @@ video {
 /* 左の変形ボックス */
 .video-label {
     /* background: #657ebe; */
-    background: linear-gradient(
-        135deg,
-        #657ebe,
-        #F9F2EA,
-        #F69D51
-    );
+    background: linear-gradient(135deg,
+            #657ebe,
+            #F9F2EA,
+            #F69D51);
     padding: 40px 30px;
     border-radius: 10px;
     clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
@@ -1136,9 +1140,10 @@ voice_受講生・卒業生の声・作品
     box-sizing: border-box;
     background-color: #F9F2EA;
     border-radius: 24px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     overflow: hidden;
-    margin: 0 10px;        /* カード同士のすき間 */
+    margin: 0 10px;
+    /* カード同士のすき間 */
     transition: transform .3s ease;
 }
 
@@ -1153,24 +1158,26 @@ voice_受講生・卒業生の声・作品
     color: #F69D51;
     padding-right: 5px;
 }
+
 /* テキスト部分 */
 #voice .item-text {
-  padding: 18px;
+    padding: 18px;
 }
 
 #voice .item-name {
-  margin-bottom: 10px;
-  font-weight: 700;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 #voice .initial {
-  color: #F69D51;
-  padding-right: 5px;
+    color: #F69D51;
+    padding-right: 5px;
 }
+
 /* センターモード用：真ん中だけ少し大きく */
 #voice .slide-items .slick-center {
-  transform: scale(1.05);
-  z-index: 1;
+    transform: scale(1.05);
+    z-index: 1;
 }
 
 /*受講生インタビュー動画*/
@@ -1406,7 +1413,7 @@ Q&A_よくある質問
     position: absolute;
     right: -90px;
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
+    animation: goLeft 10s linear infinite;
 }
 
 /* .move-img { animation-delay: 0s;}
@@ -1418,27 +1425,36 @@ Q&A_よくある質問
 .move-img3 { animation-delay: s;} */
 
 
-.move-area p {
+.move-img4 {
+    width: 250px;
+    /* イラストサイズは自由に */
     position: absolute;
-    top: 60px;
-    font-size: 2.5rem;
-    display: block;
-    border: 3px solid #ef8f3a;
-    font-weight: bold;
-    border-radius: 20px;
+    right: -300px;
+    /* 開始位置（画面外） */
+    animation: goLeft 10s linear infinite;
+}
+
+/* .move-area p { */
+    /* position: absolute; */
+    /* top: 60px;
+    font-size: 2.5rem; */
+    /* display: block;
+    border: 3px solid #ef8f3a; */
+    /* font-weight: bold; */
+    /* border-radius: 20px;
     padding: 10px 20px;
-    right: -510px;
+    right: -510px; */
 
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
-}
+    /* animation: goLeft 9s linear infinite;
+} */
 
 /* .move-area p{
   position: relative;
   padding: 2em;
   border: 3px solid #ef8f3a;
-}*/
-.move-area p:before,
+  }*/
+/* .move-area p:before,
 .move-area p:after {
     content: "";
     position: absolute;
@@ -1447,34 +1463,34 @@ Q&A_よくある質問
     width: 0;
     height: 0;
     margin: auto;
-}
+} */
 
-.move-area p:before {
+/* .move-area p:before {
     top: -30px;
     left: -440px;
     border-style: solid;
     border-color: transparent transparent #ef8f3a transparent;
     border-width: 40px 0 30px 30px;
-}
+} */
 
-.move-area p:after {
+/* .move-area p:after {
     top: -37px;
-    left: -425px;
+    left: -425px; */
     /* right: ; */
-    border-style: solid;
+    /* border-style: solid;
     border-color: transparent transparent #fff transparent;
     border-width: 42px 0px 33px 35px;
     z-index: 10;
-}
+} */
 
 .move-img2 {
     width: 150px;
     /* イラストサイズは自由に */
     top: -30px;
     position: absolute;
-    right: -660px;
+    right: -450px;
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
+    animation: goLeft 10s linear infinite;
 }
 
 .move-img3 {
@@ -1482,9 +1498,9 @@ Q&A_よくある質問
     /* イラストサイズは自由に */
     top: 40px;
     position: absolute;
-    right: -790px;
+    right: -600px;
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
+    animation: goLeft 10s linear infinite;
 }
 
 
@@ -1501,7 +1517,7 @@ Q&A_よくある質問
 
 
 
-
+}
 
 /*-------------------------------------------
 フッター
@@ -1511,13 +1527,18 @@ Q&A_よくある質問
     color: #fff;
     background-color: #F69D51;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
+    padding-bottom: 20px;
     font-size: 1rem;
+}
+
+#footer p {
+    margin-top: 20px;
 }
 
 /* フッタートップボタン */
 
-#navbavkToTop {
+#navbackToTop {
     width: 100%;
     display: block;
     background-color: #f8ab67;
@@ -1773,6 +1794,35 @@ sp  Q&A_よくある質問
 
     .question-answer ul .content {
         box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    /*  LINEリンク  サイズ変更*/
+
+    .center-wrap {
+        width: 100px;
+        /* 好きな大きさに調整OK */
+        height: 100px;
+    }
+
+    .center-img {
+        width: 80px;
+        /* 中央の画像の大きさ */
+        top: 50%;
+        left: 50%;
+    }
+
+    .rotate-ring {
+        top: 50%;
+        left: 50%;
+        width: 90px;
+        /* リングのサイズ */
+        height: 90px;
+    }
+
+    .center-wrap {
+        bottom: 20px;
+        right: 10px;
+
     }
 
     /*-------------------------------------------
