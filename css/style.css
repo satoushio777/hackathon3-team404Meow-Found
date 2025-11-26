@@ -51,7 +51,7 @@ img {
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 /*<h2 section-title>英語への指定*/
@@ -65,9 +65,8 @@ img {
 }
 
 h3 {
-    font-size: 2.4rem;
-    text-align: center;
-    margin: 40px 0 20px;
+    font-size: 2rem;
+    margin: 40px 0 60px;
 }
 
 /**********共通項目ここまで******************/
@@ -802,14 +801,18 @@ support_サポート体制
 -------------------------------------------*/
 #support {
     margin-bottom: 80px;
-    background-color: #f4f7fb;
+    /* background-color: #f7e2d1; */
+    background-color: #F9F2EA;
     border-radius: 0 50px 0 50px;
     padding-block: 80px;
+}
+#support .support-title {
+    color: #6283C2;
 }
 
 #support .support-subtitile {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
 }
 
@@ -817,7 +820,7 @@ support_サポート体制
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background-color: #F9F2EA;
+    background-color: #fff;
     border-radius: 20px;
 }
 
@@ -837,6 +840,7 @@ support_サポート体制
 
 .text-heading {
     font-weight: bold;
+    font-size: 2.4rem;
     padding-top: 10px;
     border-bottom: 1px solid #657ebe;
 }
@@ -875,9 +879,145 @@ support_サポート体制
 } */
 
 
-/*-------------------------------------------
+/*------------------------------------------- 
 teacher_講師紹介
 -------------------------------------------*/
+#teacher {
+    margin-bottom: 80px;
+    padding-block: 80px;
+    background-color: #f7e2d1;
+    border-radius: 0 50px 0 50px;
+}
+
+.teacher-content-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.teacher-content-item li {
+    width: 45%;
+    margin-bottom: 40px;
+}
+
+.teacher-content-img {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;/*li 下線の基準*/
+}
+
+.teacher-content-img img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+/*トップ講師さんの画像を右寄せ*/
+.teacher-content-item li:first-child img {
+    object-position: right center;  /* 「右寄りトリミング」＋「cover確定」 */
+}
+
+/*青木さんの画像を左寄せ*/
+.teacher-content-item li:last-child img {
+    object-fit: cover;
+    object-position: left center;  /* 「左寄りトリミング」＋「cover確定」 */
+}
+
+.teacher-content-img:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.teacher-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-block: 10px;
+    border-bottom: 1.5px solid #6283C2;
+}
+
+.teacher-title {
+    text-align: left;
+}
+
+
+/* --- モーダルの基本 --- */
+.teacher-modal-overlay {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 と同じ */
+    background: rgba(0, 0, 0, 0.6); /* 背景を暗くする */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    /* 最初は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* 表示状態 */
+.teacher-modal-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.teacher-modal-container {
+    max-width: 700px;
+    width: 90%;
+}
+
+.teacher-modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 24px 32px;
+    position: relative;
+}
+
+/* 上部のヘッダー（× close） */
+.teacher-modal-header {
+    text-align: right;
+}
+
+.teacher-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.close-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.close-text {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* テキスト部分 */
+.teacher-modal-body {
+    margin-top: 16px;
+}
+
+.teacher-modal-name {
+    margin-bottom: 10px;
+    color: #ef8f3a;
+}
+
+.teacher-text {
+    line-height: 1.8;
+    font-size: 1.4rem;
+}
+
 
 
 
@@ -1028,10 +1168,13 @@ video {
 /* 左の変形ボックス */
 .video-label {
     /* background: #657ebe; */
-    background: linear-gradient(135deg,
-            #657ebe,
-            #F9F2EA,
-            #F69D51);
+ 
+    background: linear-gradient(
+        135deg,
+        #657ebe,
+        #F9F2EA,
+        #F69D51
+    );
     padding: 40px 30px;
     border-radius: 10px;
     clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
@@ -1132,7 +1275,7 @@ voice_受講生・卒業生の声・作品
     /* margin: 0; */
     margin-bottom: 80px;
     padding: 0;
-    list-style: none;
+    /* list-style: none; */
 }
 
 /* 1枚のカード */
@@ -1167,6 +1310,7 @@ voice_受講生・卒業生の声・作品
 #voice .item-name {
     margin-bottom: 10px;
     font-weight: 700;
+    border-bottom: 2px solid #95baff;
 }
 
 #voice .initial {
@@ -1183,6 +1327,65 @@ voice_受講生・卒業生の声・作品
 /*受講生インタビュー動画*/
 #voice .video-card {
     margin-bottom: 80px;
+}
+
+/*-------------------------------------------
+Work_受講生作品
+-------------------------------------------*/
+/* #work {
+    border: 1px solid;
+} */
+
+.work2-contents {
+    margin-block: 80px;
+    /* border: 1px solid red; */
+}
+.work2-contents span {
+    color: #ef8f3a;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px #464343; /* 太さと淵の色 */
+
+}
+.work2-portnavi-text {
+    padding-block: 20px;
+    text-align: left;
+}
+
+/*スライダー設定*/
+#work .slide-items {
+    width: 100%;
+    height: 50%;
+    margin: auto;
+}
+.slide-items img {
+    width: 100%;
+    height: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+.slick-dots li button:before {
+    font-size: 18px;
+    top: 6px;
+}
+
+
+.work2-portnavi-frame-inner {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 比率 */
+    /*height: 116vh;   /* ← ここを好きな高さにする */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.work2-portnavi-frame-inner iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 
@@ -1514,7 +1717,7 @@ Q&A_よくある質問
         transform: translateX(-190vw);
         /* 画面右の外へ */
     }
-
+}
 
 
 }
@@ -1646,7 +1849,32 @@ sp  support_サポート体制
     /*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
+/* スマホ用に少し小さく */
+/* @media (max-width: 768px) { */
+    .teacher-content-item {
+        flex-direction: column;
+        align-items: center;
+}
 
+    .teacher-content-item li {
+        width: 80%;
+}
+
+    .teacher-content-img img {
+        width: 300px;
+        height: 300px;
+        /* width: 220px;
+        height: 220px; */
+    }
+
+    .teacher-modal-content {
+        padding: 16px 16px 24px;
+    }
+
+    .teacher-text {
+        font-size: 1.3rem;
+    }
+/* } */
 
 
 
@@ -1718,7 +1946,6 @@ sp  flow-video_受講の様子を動画で確認
 
     /* 上の変形ボックス */
     .video-label {
-        background: #657ebe;
         padding: 24px 24px;
         border-radius: 0px;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -1828,9 +2055,5 @@ sp  Q&A_よくある質問
     /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
-
-
-
-
 
 }
