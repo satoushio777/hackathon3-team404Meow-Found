@@ -51,7 +51,7 @@ img {
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 /*<h2 section-title>英語への指定*/
@@ -1189,6 +1189,7 @@ price_料金
 -------------------------------------------*/
 #price {
     margin-bottom: 80px;
+    padding-block: 80px;
 }
 
 .price-content {
@@ -2220,7 +2221,6 @@ sp  flow-video_受講の様子を動画で確認
 
     /* 上の変形ボックス */
     .video-label {
-        background: #657ebe;
         padding: 24px 24px;
         border-radius: 20px 20px 0 0;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
