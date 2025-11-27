@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header id="header" class="open">
+   <header id="header">
         <h1 class="site-title">
             <a href="index.html">
                 <img src="img/logo3.png" alt="pronavi-logo">
@@ -23,17 +23,29 @@
         </h1>
 
         <nav id="nav" class="active">
-            <!-- <img class="logo" src="img/logo.png" alt="pronavi-logo"> -->
+
+            <!-- スマホサイズで出現 -->
+            <a href="index.html">
+                <img class="logo" src="img/logo.png" alt="pronavi-logo">
+            </a>
+            
             <ul class="nav-menu">
-                <li><a href="index.html"><span class="en">ABOUT</span><span class="ja">Pronaviとは</span></a></li>
-                <li><a href="index.html"><span class="en">REASON</span><span class="ja">選ばれる理由</span></a></li>
-                <li><a href="#support"><span class="en">SUPPORT</span><span class="ja">サポート体制</span></a></li>
-                <li><a href="#teacher"><span class="en">TEACHER</span><span class="ja">講師紹介</span></a></li>
-                <li><a href="#flow"><span class="en">FLOW</span><span class="ja">受講の流れ</span></a></li>
-                <li><a href="#price"><span class="en">PRICE</span><span class="ja">料金</span></a></li>
-                <li><a href="voice.html"><span class="en">VOICE</span><span class="ja">受講生の声</span></a></li>
+                <li><a href="index.html"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
+                <li><a href="index.html#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
+                <li><a href="support.html"><span class="en">Support</span><span class="ja">サポート体制</span></a></li>
+                <li><a href="support.html#teacher"><span class="en">Teacher</span><span class="ja">講師紹介</span></a></li>
+                <li><a href="support.html#flow"><span class="en">Flow</span><span class="ja">受講の流れ</span></a></li>
+                <li><a href="support.html#price"><span class="en">Price</span><span class="ja">料金</span></a></li>
+                <li><a href="voice.html"><span class="en">Voice</span><span class="ja">受講生の声</span></a></li>
                 <li><a href="q&a.html"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li>
             </ul>
+
+            <!-- 最初隠す　スマホサイズで出現 -->
+            <!-- ★ NAV オープン時に見せたいボタン -->
+            <div class="reserve-btn reserve-btn-nav">
+                <a href="/googletag/">無料カウンセリングを予約する</a>
+            </div>
+
         </nav>
 
         <div class="hamburger">
@@ -42,8 +54,9 @@
             <span></span>
         </div>
 
+        
         <!-- ラインアクセスボタン -->
-       <div class="center-wrap">
+        <div class="center-wrap">
             <a href="/googletag/"><img src="img/LINE-LOGO2.png" class="center-img"></a>
 
             <div class="rotate-ring">

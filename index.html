@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header id="header" class="open">
+   <header id="header">
         <h1 class="site-title">
             <a href="index.html">
                 <img src="img/logo3.png" alt="pronavi-logo">
@@ -28,7 +28,12 @@
         </h1>
 
         <nav id="nav" class="active">
-            <!-- <img class="logo" src="img/logo.png" alt="pronavi-logo"> -->
+
+            <!-- スマホサイズで出現 -->
+            <a href="index.html">
+                <img class="logo" src="img/logo.png" alt="pronavi-logo">
+            </a>
+            
             <ul class="nav-menu">
                 <li><a href="#about"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
                 <li><a href="#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
@@ -39,6 +44,13 @@
                 <li><a href="voice.html"><span class="en">Voice</span><span class="ja">受講生の声</span></a></li>
                 <li><a href="q&a.html"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li>
             </ul>
+            
+            <!-- 最初隠す　スマホサイズで出現 -->
+            <!-- ★ NAV オープン時に見せたいボタン -->
+            <div class="reserve-btn reserve-btn-nav">
+                <a href="/googletag/">無料カウンセリングを予約する</a>
+            </div>
+
         </nav>
 
         <div class="hamburger">
@@ -48,14 +60,14 @@
         </div>
 
         <!-- ラインアクセスボタン -->
-       <div class="center-wrap">
+        <div class="center-wrap">
             <a href="/googletag/"><img src="img/LINE-LOGO2.png" class="center-img"></a>
 
             <div class="rotate-ring">
                 <img src="img/RIONGRING7.png" class="ring-img">
             </div>
         </div>
-        
+
     </header>
 
     <main>
@@ -360,15 +372,15 @@
 
 
     <footer id="footer">
-         <button id="navbackToTop" class="navFooterBackToTopText" aria-label="トップへ戻る">
-        <a href="#" id="ft-totop" class="totop">To Top</a>
+        <button id="navbackToTop" class="navFooterBackToTopText" aria-label="トップへ戻る">
+            <a href="#" id="ft-totop" class="totop">To Top</a>
         </button>
         <p>&copy;Pronavi & 404 Meow Found</p>
     </footer>
 
 
 
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- slick（CDN） -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- 自分のスクリプト -->
