@@ -1701,6 +1701,44 @@ Q&A_よくある質問
     }
 }
 
+
+.move-area {
+    display: block;
+    
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+}
+
+.move-area p {
+    color: #ef8f3a;
+    white-space: nowrap;
+    position: absolute;
+    top: 3px;
+    /* 上に上げる調整（必要なら変えてOK） */
+    right: 0;
+    transform: translateX(100%);
+    /* ← 右の外からスタート */
+    animation: flowLeft 30s linear infinite;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* 右 → 左 の流れ */
+@keyframes flowLeft {
+    0% {
+        transform: translateX(100%);
+        /* 右の外側（確実に画面外） */
+    }
+
+    100% {
+        transform: translateX(-150%);
+        /* 完全に左外へ消える */
+    }
+}
+
 /* 動くキャラクター達 */
 
 /* .move-area {
@@ -1971,13 +2009,12 @@ SP ヘッダー
 
     #nav ul {
         display: block;
-        padding: 30px;
+        padding: 5px;
     }
 
     #nav .nav-menu li {
         display: block;
         width: 300px;
-        margin: 0 auto;
     }
 
     /* #nav .nav-menu li:hover {
@@ -1988,11 +2025,11 @@ SP ヘッダー
 
 
     #nav .nav-menu {
-        margin: 30px;
+        margin: 20px 0px ;
     }
 
     #nav .nav-menu li {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     #nav .nav-menu a {
@@ -2086,7 +2123,7 @@ SP ヘッダー
     header.open .reserve-btn-nav {
         display: block;
         width: 350px;
-        margin-top: -60px;
+        /* margin-top: -60px; */
         text-align: center;
     }
 
@@ -2344,6 +2381,16 @@ sp  voice_受講生・卒業生の声・作品
     /*-------------------------------------------
 sp  Q&A_よくある質問
 -------------------------------------------*/
+
+    .inview-balloon .content {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .question-answer ul .content ,
+    .question-answer .open-text{
+        height: 350px;
+    }
 
     .question-answer {
         padding: 3%;
