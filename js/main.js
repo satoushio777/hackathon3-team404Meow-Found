@@ -1,24 +1,4 @@
 $(function () {
-  //Support
-
-  // 講師モーダル（jQuery版）
-  $(".teacher-content-img").on("click", function () {
-    // この講師の li の中のモーダルを取得
-    const $modal = $(this).closest("li").find(".teacher-modal-overlay");
-    $modal.addClass("is-active");
-  });
-
-  // × close ボタン
-  $(".js-close-teacher-modal").on("click", function () {
-    $(this).closest(".teacher-modal-overlay").removeClass("is-active");
-  });
-
-  // 黒背景クリックで閉じる
-  $(".teacher-modal-overlay").on("click", function (e) {
-    if ($(e.target).hasClass("teacher-modal-overlay")) {
-      $(this).removeClass("is-active");
-    }
-  });
 
   //Voice
   $('#voice .slide-items').slick({
@@ -33,36 +13,13 @@ $(function () {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, 
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  });
-
-  //Work
-  $("#work1 .slide-items").slick({
-    autoplay: true, // 自動再生
-    arrows: true, // 矢印
-    dots: true, // インジケーター
-    // ★ centerMode / centerPadding を全部消す
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
+          slidesToShow: 1 ,
         }
       }
     ]
@@ -160,20 +117,6 @@ $(function () {
       );
     });
   });
-
-  /*=================================================
-  ハンバーガ―メニュー
-  ===================================================*/
-  // ハンバーガーメニューをクリックした時
-  $(".hamburger").on("click", function () {
-    $("header").toggleClass("open");
-  });
-  // メニューのリンクをクリックした時
- 
-  $("#nav a").on("click", function () {
-    $("header").removeClass("open");
-  });
-
 
 
 

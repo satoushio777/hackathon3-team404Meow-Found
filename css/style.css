@@ -51,7 +51,7 @@ img {
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
     display: block;
-    text-align: left;
+    text-align: center;
 }
 
 /*<h2 section-title>英語への指定*/
@@ -65,8 +65,9 @@ img {
 }
 
 h3 {
-    font-size: 2rem;
-    margin: 40px 0 60px;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 40px 0 20px;
 }
 
 /**********共通項目ここまで******************/
@@ -801,19 +802,14 @@ support_サポート体制
 -------------------------------------------*/
 #support {
     margin-bottom: 80px;
-    /* background-color: #f7e2d1; */
-    background-color: #F9F2EA;
+    background-color: #f4f7fb;
     border-radius: 0 50px 0 50px;
     padding-block: 80px;
 }
 
-#support .support-title {
-    color: #6283C2;
-}
-
 #support .support-subtitile {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin-bottom: 60px;
 }
 
@@ -821,7 +817,7 @@ support_サポート体制
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #F9F2EA;
     border-radius: 20px;
 }
 
@@ -841,7 +837,6 @@ support_サポート体制
 
 .text-heading {
     font-weight: bold;
-    font-size: 2.4rem;
     padding-top: 10px;
     border-bottom: 1px solid #657ebe;
 }
@@ -880,151 +875,9 @@ support_サポート体制
 } */
 
 
-/*------------------------------------------- 
+/*-------------------------------------------
 teacher_講師紹介
 -------------------------------------------*/
-#teacher {
-    margin-bottom: 80px;
-    padding-block: 80px;
-    background-color: #f7e2d1;
-    border-radius: 0 50px 0 50px;
-}
-
-.teacher-content-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.teacher-content-item li {
-    width: 45%;
-    margin-bottom: 40px;
-}
-
-.teacher-content-img {
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    position: relative;
-    /*li 下線の基準*/
-}
-
-.teacher-content-img img {
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-}
-
-/*トップ講師さんの画像を右寄せ*/
-.teacher-content-item li:first-child img {
-    object-position: right center;
-    /* 「右寄りトリミング」＋「cover確定」 */
-}
-
-/*青木さんの画像を左寄せ*/
-.teacher-content-item li:last-child img {
-    object-fit: cover;
-    object-position: left center;
-    /* 「左寄りトリミング」＋「cover確定」 */
-}
-
-.teacher-content-img:hover {
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.teacher-name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-block: 10px;
-    border-bottom: 1.5px solid #6283C2;
-}
-
-.teacher-title {
-    text-align: left;
-}
-
-
-/* --- モーダルの基本 --- */
-.teacher-modal-overlay {
-    position: fixed;
-    inset: 0;
-    /* top:0; right:0; bottom:0; left:0 と同じ */
-    background: rgba(0, 0, 0, 0.6);
-    /* 背景を暗くする */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-
-    /* 最初は非表示 */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-/* 表示状態 */
-.teacher-modal-overlay.is-active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.teacher-modal-container {
-    max-width: 700px;
-    width: 90%;
-}
-
-.teacher-modal-content {
-    background: #fff;
-    border-radius: 10px;
-    padding: 24px 24px 32px;
-    position: relative;
-}
-
-/* 上部のヘッダー（× close） */
-.teacher-modal-header {
-    text-align: right;
-}
-
-.teacher-modal-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.close-icon {
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.close-text {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-/* テキスト部分 */
-.teacher-modal-body {
-    margin-top: 16px;
-}
-
-.teacher-modal-name {
-    margin-bottom: 10px;
-    color: #ef8f3a;
-}
-
-.teacher-text {
-    line-height: 1.8;
-    font-size: 1.4rem;
-}
-
 
 
 
@@ -1175,7 +1028,6 @@ video {
 /* 左の変形ボックス */
 .video-label {
     /* background: #657ebe; */
-
     background: linear-gradient(135deg,
             #657ebe,
             #F9F2EA,
@@ -1280,7 +1132,7 @@ voice_受講生・卒業生の声・作品
     /* margin: 0; */
     margin-bottom: 80px;
     padding: 0;
-    /* list-style: none; */
+    list-style: none;
 }
 
 /* 1枚のカード */
@@ -1315,7 +1167,6 @@ voice_受講生・卒業生の声・作品
 #voice .item-name {
     margin-bottom: 10px;
     font-weight: 700;
-    border-bottom: 2px solid #95baff;
 }
 
 #voice .initial {
@@ -1334,72 +1185,6 @@ voice_受講生・卒業生の声・作品
     margin-bottom: 80px;
 }
 
-/*-------------------------------------------
-Work_受講生作品
--------------------------------------------*/
-/* #work {
-    border: 1px solid;
-} */
-
-.work2-contents {
-    margin-block: 80px;
-    /* border: 1px solid red; */
-}
-
-.work2-contents span {
-    color: #ef8f3a;
-    font-weight: bolder;
-    -webkit-text-stroke: 0.5px #464343;
-    /* 太さと淵の色 */
-
-}
-
-.work2-portnavi-text {
-    padding-block: 20px;
-    text-align: left;
-}
-
-/*スライダー設定*/
-#work .slide-items {
-    width: 100%;
-    height: 50%;
-    margin: auto;
-}
-
-.slide-items img {
-    width: 100%;
-    height: 100%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: black;
-}
-
-.slick-dots li button:before {
-    font-size: 18px;
-    top: 6px;
-}
-
-
-.work2-portnavi-frame-inner {
-    position: relative;
-    padding-top: 56.25%;
-    /* 16:9 比率 */
-    /*height: 116vh;   /* ← ここを好きな高さにする */
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.work2-portnavi-frame-inner iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 
 
 
@@ -1409,17 +1194,16 @@ Q&A_よくある質問
 
 .question-wrapper {
     margin-bottom: 80px;
-    /* background-color: #f4f7fb; */
-    background-color: #F9F2EA;
+    background-color: #f4f7fb;
     border-radius: 50px 50px;
     padding: 70px 40px;
 }
 
-/* .title-qa {
+.title-qa {
     text-align: center;
-} */
+}
 
-/* .title-qa h2 {
+.title-qa h2 {
     color: #657ebe;
     font-family: "Righteous", sans-serif;
     font-style: normal;
@@ -1427,9 +1211,9 @@ Q&A_よくある質問
     font-weight: 800;
     opacity: 0.2;
     padding: 30px 0 5px 0;
-} */
+}
 
-/* .title-qa p {
+.title-qa p {
     display: block;
     color: #333;
     font-size: 2rem;
@@ -1438,23 +1222,22 @@ Q&A_よくある質問
     width: 200px;
     margin: 0 auto;
     font-weight: 800;
-} */
+}
 
-/* .li-title {
+.li-title {
     color: #333;
     font-size: 1.9rem;
     font-style: normal;
     margin-top: 30px;
-} */
+}
 
 .question-answer-inner {
-    /* max-width: 850px; */
-    /* margin-inline: auto; */
-    margin: 0 auto;
+    max-width: 850px;
+    margin-inline: auto;
 }
 
 .question-answer {
-    padding: 0px;
+    padding: 0px 30px;
 }
 
 .question-answer ul {
@@ -1547,7 +1330,7 @@ Q&A_よくある質問
     border-radius: 30px;
     height: 250px;
     width: 100%;
-    background-color: #6283C2;
+    background-color: #657ebe;
     display: grid;
     align-items: center;
 }
@@ -1591,48 +1374,6 @@ Q&A_よくある質問
     top: 10px;
 }
 
-/* btn変化追加 */
-/*====================================
-  丸ボタンをリアルに見せる（openbtn1／openbtn2 共通）
-====================================*/
-.question-answer .openbtn1 {
-    background: linear-gradient(145deg, #ffffff, #e3e8ff);
-    box-shadow:
-        4px 4px 8px rgba(0, 0, 0, 0.25),
-        -4px -4px 8px rgba(255, 255, 255, 0.8);
-    transition: all 0.15s ease;
-}
-
-.question-answer .open-text .openbtn2 {
-    background: linear-gradient(145deg, #657ebe, #e3e8ff);
-    box-shadow:
-        4px 4px 8px rgba(0, 0, 0, 0.25),
-        -4px -4px 8px rgba(255, 255, 255, 0.8);
-    transition: all 0.15s ease;
-
-}
-
-/* クリックしたとき沈む（押し込みアニメ） */
-.question-answer .openbtn1:active,
-.question-answer .open-text .openbtn2:active {
-    box-shadow:
-        inset 3px 3px 6px #657ebe(134, 4, 247, 0.25),
-        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
-    transform: translateY(2px) scale(0.95);
-}
-
-
-/* ホバーしたら変化する */
-.question-answer .openbtn1:hover {
-    transform: scale(1.20);
-}
-
-.question-answer .open-text .openbtn2:hover {
-    transform: scale(1.20);
-}
-
-
-
 .inview-balloon {
     transform: scale(0.1);
     opacity: 0;
@@ -1672,7 +1413,7 @@ Q&A_よくある質問
     position: absolute;
     right: -90px;
     /* 開始位置（画面外） */
-    animation: goLeft 10s linear infinite;
+    animation: goLeft 9s linear infinite;
 }
 
 /* .move-img { animation-delay: 0s;}
@@ -1684,36 +1425,27 @@ Q&A_よくある質問
 .move-img3 { animation-delay: s;} */
 
 
-.move-img4 {
-    width: 250px;
-    /* イラストサイズは自由に */
+.move-area p {
     position: absolute;
-    right: -300px;
-    /* 開始位置（画面外） */
-    animation: goLeft 10s linear infinite;
-}
-
-/* .move-area p { */
-/* position: absolute; */
-/* top: 60px;
-    font-size: 2.5rem; */
-/* display: block;
-    border: 3px solid #ef8f3a; */
-/* font-weight: bold; */
-/* border-radius: 20px;
+    top: 60px;
+    font-size: 2.5rem;
+    display: block;
+    border: 3px solid #ef8f3a;
+    font-weight: bold;
+    border-radius: 20px;
     padding: 10px 20px;
-    right: -510px; */
+    right: -510px;
 
-/* 開始位置（画面外） */
-/* animation: goLeft 9s linear infinite;
-} */
+    /* 開始位置（画面外） */
+    animation: goLeft 9s linear infinite;
+}
 
 /* .move-area p{
   position: relative;
   padding: 2em;
   border: 3px solid #ef8f3a;
-  }*/
-/* .move-area p:before,
+}*/
+.move-area p:before,
 .move-area p:after {
     content: "";
     position: absolute;
@@ -1722,34 +1454,34 @@ Q&A_よくある質問
     width: 0;
     height: 0;
     margin: auto;
-} */
+}
 
-/* .move-area p:before {
+.move-area p:before {
     top: -30px;
     left: -440px;
     border-style: solid;
     border-color: transparent transparent #ef8f3a transparent;
     border-width: 40px 0 30px 30px;
-} */
+}
 
-/* .move-area p:after {
+.move-area p:after {
     top: -37px;
-    left: -425px; */
-/* right: ; */
-/* border-style: solid;
+    left: -425px;
+    /* right: ; */
+    border-style: solid;
     border-color: transparent transparent #fff transparent;
     border-width: 42px 0px 33px 35px;
     z-index: 10;
-} */
+}
 
 .move-img2 {
     width: 150px;
     /* イラストサイズは自由に */
     top: -30px;
     position: absolute;
-    right: -460px;
+    right: -660px;
     /* 開始位置（画面外） */
-    animation: goLeft 10s linear infinite;
+    animation: goLeft 9s linear infinite;
 }
 
 .move-img3 {
@@ -1757,9 +1489,9 @@ Q&A_よくある質問
     /* イラストサイズは自由に */
     top: 40px;
     position: absolute;
-    right: -600px;
+    right: -790px;
     /* 開始位置（画面外） */
-    animation: goLeft 10s linear infinite;
+    animation: goLeft 9s linear infinite;
 }
 
 
@@ -1773,81 +1505,13 @@ Q&A_よくある質問
         transform: translateX(-190vw);
         /* 画面右の外へ */
     }
+
 }
 
 
-/* 地球の外枠：半分だけ見せる */
-.earth-wrap {
-    width: 100%;
-    height: 350px;
-    /* ←地球の半分が見える高さ */
-    overflow: hidden;
-    /* ←これが一番重要（下半分を隠す） */
-    position: relative;
-    margin-bottom: 0;
-    /* 必要なら調整 */
-}
-
-/* 回る地球本体 */
-.circleLand {
-    width: 900px;
-    height: 900px;
-    background: no-repeat center/cover;
-    border-radius: 50%;
-    animation: spinEarth 70s linear infinite;
-
-    /* 真ん中に配置 */
-    position: absolute;
-    left: 50%;
-    top: -50px;
-    /* ←地球の上半分だけが見える位置に調整 */
-    transform: translateX(-50%);
-}
-
-/* アニメーション */
-@keyframes spinEarth {
-    0% {
-        transform: translateX(-50%) rotate(0deg);
-    }
-
-    100% {
-        transform: translateX(-50%) rotate(360deg);
-    }
-}
-
-/* ランナーの軌道（円） */
-.runner-wrap {
-    position: absolute;
-    width: 900px;
-    height: 900px;
-    left: 50%;
-    /* top: -500px; */
-    transform: translateX(-50%);
-    animation: runnerOrbit 12s linear infinite;
-    /* ←円周に沿って回る */
-}
-
-/* ランナー画像 */
-.runner {
-    width: 120px;
-    position: absolute;
-    left: 50%;
-    top: -500;
-    /* 円の一番上からスタート */
-    transform: translateX(-50%);
-}
 
 
-/* 円周を1周する動き（逆回転も可能） */
-@keyframes runnerOrbit {
-    0% {
-        transform: translateX(-50%) rotate(0deg);
-    }
 
-    100% {
-        transform: translateX(-50%) rotate(-360deg);
-    }
-}
 
 /*-------------------------------------------
 フッター
@@ -1891,9 +1555,8 @@ Q&A_よくある質問
     color: #464343;
     border: 3px solid #f49c61;
     background: #f7e2d1;
-    transform: scale(1.20);
+    transform: scale(1.15);
 }
-
 
 /*-------------------------------------------
 SP---スマホ表示ここから
@@ -1922,149 +1585,7 @@ SP---スマホ表示ここから
     /*-------------------------------------------
 SP ヘッダー
 -------------------------------------------*/
-    /*ハンバーガー*/
-    /* transition 変化のスピード調整してる */
 
-    /* header {
-    padding-top: 10px;
-    padding-left: 50px;
-} */
-
-
-    header {
-        position: static;
-    }
-
-    .hamburger {
-        width: 80px;
-        height: 80px;
-        background-color: #f5c091;
-        border-radius: 50px;
-        position: fixed;
-        top: 10px;
-        right: 0;
-        z-index: 30;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .hamburger span {
-        width: 50%;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        left: 25%;
-        left: 25%;
-        transition: 0.3s;
-    }
-
-    .hamburger span:nth-child(1) {
-        top: 36%;
-    }
-
-    .hamburger span:nth-child(2) {
-        top: 50%;
-    }
-
-    .hamburger span:nth-child(3) {
-        top: 64%;
-    }
-
-    .hamburger:hover {
-        opacity: 0.7;
-    }
-
-    /*ナビ非表示 visibilty-hidden*/
-
-    #nav {
-        width: 100%;
-        height: 100vh;
-        background-color: #ff2a2a;
-        color: #fff;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 20;
-        text-align: center;
-        transition: all 0.6s ease;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-
-    /* ナビ表示 visibility-visible*/
-
-    .open #nav {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    #nav ul {
-        display: block;
-    }
-
-    #nav .nav-menu li:hover {
-        display: block;
-        width: 300px;
-        margin: 0 auto;
-    }
-
-
-    #nav .nav-menu {
-        margin: 50px;
-    }
-
-    #nav .nav-menu li {
-        margin-bottom: 20px;
-    }
-
-    #nav .nav-menu a {
-        color: #fff;
-        font-weight: bold;
-    }
-
-    #nav .btn {
-        width: 250px;
-        border: solid 1px #fff;
-        color: #fff;
-        display: inline-block;
-        font-weight: bold;
-        padding: 15px 0;
-        transition: 0.3s;
-        position: relative;
-    }
-
-    /* ナビボタンの影 */
-
-    #nav .btn::after {
-        position: absolute;
-        content: "";
-        width: 250px;
-        border-right: solid 1px #fff;
-        border-bottom: solid 1px #fff;
-        padding: 15px 0;
-        right: -6px;
-        bottom: -6px;
-    }
-
-    #nav .btn:hover {
-        background-color: #fff;
-    }
-
-    /* span変化する */
-
-    .open .hamburger span:nth-child(1) {
-        top: 47%;
-        background: #fff;
-        transform: rotate(-45deg);
-    }
-
-    .open .hamburger span:nth-child(2),
-    .open .hamburger span:nth-child(3) {
-        top: 47%;
-        background: #fff;
-        transform: rotate(45deg);
-    }
 
 
     /*-------------------------------------------
@@ -2120,33 +1641,7 @@ sp  support_サポート体制
     /*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
-    /* スマホ用に少し小さく */
-    /* @media (max-width: 768px) { */
-    .teacher-content-item {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .teacher-content-item li {
-        width: 80%;
-    }
-
-    .teacher-content-img img {
-        width: 300px;
-        height: 300px;
-        /* width: 220px;
-        height: 220px; */
-    }
-
-    .teacher-modal-content {
-        padding: 16px 16px 24px;
-    }
-
-    .teacher-text {
-        font-size: 1.3rem;
-    }
-
-    /* } */
 
 
 
@@ -2218,6 +1713,7 @@ sp  flow-video_受講の様子を動画で確認
 
     /* 上の変形ボックス */
     .video-label {
+        background: #657ebe;
         padding: 24px 24px;
         border-radius: 0px;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -2295,37 +1791,12 @@ sp  Q&A_よくある質問
         box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
     }
 
-    /*  LINEリンク  サイズ変更*/
-
-    .center-wrap {
-        width: 100px;
-        /* 好きな大きさに調整OK */
-        height: 100px;
-    }
-
-    .center-img {
-        width: 80px;
-        /* 中央の画像の大きさ */
-        top: 50%;
-        left: 50%;
-    }
-
-    .rotate-ring {
-        top: 50%;
-        left: 50%;
-        width: 90px;
-        /* リングのサイズ */
-        height: 90px;
-    }
-
-    .center-wrap {
-        bottom: 20px;
-        right: 10px;
-
-    }
-
     /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
+
+
+
+
 
 }
