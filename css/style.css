@@ -1374,6 +1374,47 @@ Q&A_よくある質問
     top: 10px;
 }
 
+/* btn変化追加 */
+/*====================================
+  丸ボタンをリアルに見せる（openbtn1／openbtn2 共通）
+====================================*/
+.question-answer .openbtn1 {
+    background: linear-gradient(145deg, #ffffff, #e3e8ff);
+    box-shadow:
+        4px 4px 8px rgba(0, 0, 0, 0.25),
+        -4px -4px 8px rgba(255, 255, 255, 0.8);
+    transition: all 0.15s ease;
+}
+
+.question-answer .open-text .openbtn2 {
+    background: linear-gradient(145deg, #657ebe, #e3e8ff);
+    box-shadow:
+        4px 4px 8px rgba(0, 0, 0, 0.25),
+        -4px -4px 8px rgba(255, 255, 255, 0.8);
+    transition: all 0.15s ease;
+
+}
+
+/* クリックしたとき沈む（押し込みアニメ） */
+.question-answer .openbtn1:active,
+.question-answer .open-text .openbtn2:active {
+    box-shadow:
+        inset 3px 3px 6px #657ebe(134, 4, 247, 0.25),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+    transform: translateY(2px) scale(0.95);
+}
+
+
+/* ホバーしたら変化する */
+.question-answer .openbtn1:hover {
+    transform: scale(1.20);
+}
+
+.question-answer .open-text .openbtn2:hover {
+    transform: scale(1.20);
+}
+
+
 .inview-balloon {
     transform: scale(0.1);
     opacity: 0;
@@ -1585,6 +1626,211 @@ SP---スマホ表示ここから
     /*-------------------------------------------
 SP ヘッダー
 -------------------------------------------*/
+    /*ハンバーガー*/
+    /* transition 変化のスピード調整してる */
+
+    /* header {
+    padding-top: 10px;
+    padding-left: 50px;
+} */
+
+
+    header {
+        position: static;
+    }
+
+    .hamburger {
+        width: 80px;
+        height: 80px;
+        background-color: #f5c091;
+        border-radius: 50px;
+        position: fixed;
+        top: 10px;
+        right: 0;
+        z-index: 30;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .hamburger span {
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 25%;
+        left: 25%;
+        transition: 0.3s;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 36%;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 50%;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 64%;
+    }
+
+    .hamburger:hover {
+        opacity: 0.7;
+    }
+
+    /*ナビ非表示 visibilty-hidden*/
+
+    #nav {
+        width: 100%;
+        height: 100vh;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        text-align: center;
+        transition: all 0.6s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+    /* ナビ表示 visibility-visible*/
+
+    .open #nav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #nav {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        /* ← 丸みを消して全画面に */
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        position: fixed;
+        /* ← 画面いっぱいに固定 */
+        z-index: 20;
+    }
+
+
+
+
+
+    #nav ul {
+        display: block;
+        padding: 30px;
+    }
+
+    #nav .nav-menu li {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    /* #nav .nav-menu li:hover {
+        border-bottom: 1px solid;
+
+
+    } */
+
+
+    #nav .nav-menu {
+        margin: 50px;
+    }
+
+    #nav .nav-menu li {
+        margin-bottom: 20px;
+    }
+
+    #nav .nav-menu a {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #nav .btn {
+        width: 250px;
+        border: solid 1px #fff;
+        color: #fff;
+        display: inline-block;
+        font-weight: bold;
+        padding: 15px 0;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    /* ナビボタンの影 */
+
+    #nav .btn::after {
+        position: absolute;
+        content: "";
+        width: 250px;
+        border-right: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+        padding: 15px 0;
+        right: -6px;
+        bottom: -6px;
+    }
+
+    #nav .btn:hover {
+        background-color: #fff;
+    }
+
+    /* span変化する */
+
+    .open .hamburger span:nth-child(1) {
+        top: 47%;
+        background: #fff;
+        transform: rotate(-45deg);
+    }
+
+    .open .hamburger span:nth-child(2),
+    .open .hamburger span:nth-child(3) {
+        top: 47%;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+
+    #nav .nav-menu li {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* 擬似要素で細い線を作る（最初は0） */
+    #nav .nav-menu li::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        /* 線の位置（好きに調整してOK！） */
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #fcfbfa;
+        /* あなたが使ってる色 */
+        transition: width 0.3s ease;
+    }
+
+    /* ホバーした時に100%まで伸びる */
+    #nav .nav-menu li:hover::after {
+        width: 100%;
+    }
+
+    #nav .open #reserveBtn {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    #nav.open #reserveBtn a {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 999px;
+        background: #f69d51;
+        color: #fff;
+        font-weight: bold;
+    }
 
 
 
@@ -1790,6 +2036,36 @@ sp  Q&A_よくある質問
     .question-answer ul .content {
         box-shadow: 6px 5px 11px 5px rgba(0, 0, 0, 0.25);
     }
+
+    /*  LINEリンク  サイズ変更*/
+
+    .center-wrap {
+        width: 100px;
+        /* 好きな大きさに調整OK */
+        height: 100px;
+    }
+
+    .center-img {
+        width: 80px;
+        /* 中央の画像の大きさ */
+        top: 50%;
+        left: 50%;
+    }
+
+    .rotate-ring {
+        top: 50%;
+        left: 50%;
+        width: 90px;
+        /* リングのサイズ */
+        height: 90px;
+    }
+
+    .center-wrap {
+        bottom: 20px;
+        right: 10px;
+
+    }
+
 
     /*-------------------------------------------
 sp  フッター
