@@ -98,7 +98,7 @@ $(function () {
     const winH = $(this).height();
     const footerTop = $footer.offset().top;
 
-    const over500 = scroll > 500;
+    const over500 = scroll > 100;
     const hitFooter = scroll + winH > footerTop;
 
     if (over500 && !hitFooter) {
