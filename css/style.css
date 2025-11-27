@@ -1458,7 +1458,7 @@ Q&A_よくある質問
 
 .question-wrapper {
     margin-bottom: 80px;
-    background-color: #f4f7fb;
+    background-color: #F9F2EA;
     border-radius: 50px 50px;
     padding: 70px 40px;
 }
@@ -1467,7 +1467,7 @@ Q&A_よくある質問
     text-align: center;
 }
 
-.title-qa h2 {
+/* .title-qa h2 {
     color: #657ebe;
     font-family: "Righteous", sans-serif;
     font-style: normal;
@@ -1475,9 +1475,9 @@ Q&A_よくある質問
     font-weight: 800;
     opacity: 0.2;
     padding: 30px 0 5px 0;
-}
+} */
 
-.title-qa p {
+/* .title-qa p {
     display: block;
     color: #333;
     font-size: 2rem;
@@ -1486,7 +1486,7 @@ Q&A_よくある質問
     width: 200px;
     margin: 0 auto;
     font-weight: 800;
-}
+} */
 
 .li-title {
     color: #333;
@@ -1551,7 +1551,7 @@ Q&A_よくある質問
 
 .question-answer .openbtn1 {
     position: relative;
-    border: 3px solid #657ebe;
+    border: 3px solid #F8C09A;
     cursor: pointer;
     width: 28px;
     height: 28px;
@@ -1566,7 +1566,7 @@ Q&A_よくある質問
     left: 6px;
     height: 3px;
     border-radius: 2px;
-    background: #657ebe;
+    background: #F8C09A;
     width: 45%;
 }
 
@@ -1594,7 +1594,7 @@ Q&A_よくある質問
     border-radius: 30px;
     height: 250px;
     width: 100%;
-    background-color: #657ebe;
+    background-color: #F8C09A;
     display: grid;
     align-items: center;
 }
@@ -1651,7 +1651,7 @@ Q&A_よくある質問
 }
 
 .question-answer .open-text .openbtn2 {
-    background: linear-gradient(145deg, #657ebe, #e3e8ff);
+    background: linear-gradient(145deg, #fb8907, #e3e8ff);
     box-shadow:
         4px 4px 8px rgba(0, 0, 0, 0.25),
         -4px -4px 8px rgba(255, 255, 255, 0.8);
@@ -1703,23 +1703,23 @@ Q&A_よくある質問
 
 /* 動くキャラクター達 */
 
-.move-area {
+/* .move-area {
     width: 100%;
-    overflow: hidden;
-    /* はみ出す部分を隠す */
-    position: relative;
+    overflow: hidden; */
+/* はみ出す部分を隠す */
+/* position: relative;
     height: 300px;
     top: 40px;
-}
+} */
 
-.move-img {
-    width: 150px;
-    /* イラストサイズは自由に */
-    position: absolute;
+/* .move-img {
+    width: 150px; */
+/* イラストサイズは自由に */
+/* position: absolute;
     right: -90px;
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
-}
+/* animation: goLeft 9s linear infinite;
+} */
 
 /* .move-img { animation-delay: 0s;}
 
@@ -1730,7 +1730,7 @@ Q&A_よくある質問
 .move-img3 { animation-delay: s;} */
 
 
-.move-area p {
+/* .move-area p {
     position: absolute;
     top: 60px;
     font-size: 2.5rem;
@@ -1742,15 +1742,14 @@ Q&A_よくある質問
     right: -510px;
 
     /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
-}
-
+/* animation: goLeft 9s linear infinite;
+} */
 /* .move-area p{
   position: relative;
   padding: 2em;
   border: 3px solid #ef8f3a;
 }*/
-.move-area p:before,
+/* .move-area p:before,
 .move-area p:after {
     content: "";
     position: absolute;
@@ -1773,50 +1772,45 @@ Q&A_よくある質問
     top: -37px;
     left: -425px;
     /* right: ; */
-    border-style: solid;
+/* border-style: solid;
     border-color: transparent transparent #fff transparent;
     border-width: 42px 0px 33px 35px;
     z-index: 10;
-}
+} */
 
-.move-img2 {
-    width: 150px;
-    /* イラストサイズは自由に */
+/* .move-img2 {
+    width: 150px; */
+/* イラストサイズは自由に
     top: -30px;
     position: absolute;
-    right: -660px;
-    /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
-}
+    right: -660px; */
+/* 開始位置（画面外） */
+/* animation: goLeft 9s linear infinite;
+} */
 
-.move-img3 {
-    width: 150px;
-    /* イラストサイズは自由に */
-    top: 40px;
+/* .move-img3 {
+    width: 150px; */
+/* イラストサイズは自由に */
+/* top: 40px;
     position: absolute;
-    right: -790px;
-    /* 開始位置（画面外） */
-    animation: goLeft 9s linear infinite;
-}
+    right: -790px; */
+/* 開始位置（画面外） */
+/* animation: goLeft 9s linear infinite;
+} */
 
 
-@keyframes goLeft {
+/* @keyframes goLeft {
     0% {
         transform: translateX(500px);
         /* 左の外から */
-    }
+/* } */
 
-    100% {
-        transform: translateX(-190vw);
-        /* 画面右の外へ */
-    }
+/* 100% {
+        transform: translateX(-190vw); */
+/* 画面右の外へ */
+/* }
 
-}
-
-
-
-
-
+} */
 
 /*-------------------------------------------
 フッター
@@ -1894,25 +1888,18 @@ SP ヘッダー
 -------------------------------------------*/
     /*ハンバーガー*/
     /* transition 変化のスピード調整してる */
-
-    /* header {
-    padding-top: 10px;
-    padding-left: 50px;
-} */
-
-
-    header {
+    /* ヘッダーのロゴ置いていく指示 */
+    #header {
         position: static;
     }
 
     .hamburger {
-        width: 80px;
-        height: 80px;
+        width: 85px;
+        height: 70px;
         background-color: #f5c091;
         border-radius: 50px;
         position: fixed;
-        top: 10px;
-        right: 0;
+        right: 10px;
         z-index: 30;
         cursor: pointer;
         transition: 0.3s;
@@ -1981,10 +1968,6 @@ SP ヘッダー
         /* ← 画面いっぱいに固定 */
         z-index: 20;
     }
-
-
-
-
 
     #nav ul {
         display: block;
@@ -2120,17 +2103,30 @@ SP ヘッダー
         display: block;
         width: 150px;
         border-radius: 10px;
-        margin: 20px;
+        margin: 15px;
+        padding: 12px;
+        /* ロゴまわりの余白 */
+        border: 4px solid #F6A764;
+        /* 柔らかいオレンジの太め枠 */
+        border-radius: 20px;
+        /* 角を丸く */
+        background: rgba(255, 255, 255, 0.3);
+        /* ほんのり白背景（柔らかさUP） */
+        box-shadow: 0 0 6px rgba(246, 167, 100, 0.4);
+        /* ほんのり光でふわっと */
     }
 
     #nav .logo:hover {
-        transform: scale(1.10);
-        filter: drop-shadow(0 0 12px rgba(3, 85, 250, 0.51));
+        transform: scale(1.03);
+        transition: 0.5s;
+        filter: drop-shadow(0 0 12px rgba(244, 186, 124, 0.288));
     }
 
-
-
-
+    .hamburger:hover {
+        opacity: 0.7;
+        transform: scale(1.03);
+        transition: 0.5s;
+    }
 
     /*-------------------------------------------
 sp  about_プロナビとは
@@ -2371,13 +2367,14 @@ sp  Q&A_よくある質問
     /*  LINEリンク  サイズ変更*/
 
     .center-wrap {
-        width: 100px;
+        width: 120px;
         /* 好きな大きさに調整OK */
-        height: 100px;
+        height: 120px;
+        z-index: 10;
     }
 
     .center-img {
-        width: 80px;
+        width: 100px;
         /* 中央の画像の大きさ */
         top: 50%;
         left: 50%;
@@ -2386,9 +2383,9 @@ sp  Q&A_よくある質問
     .rotate-ring {
         top: 50%;
         left: 50%;
-        width: 90px;
+        width: 100px;
         /* リングのサイズ */
-        height: 90px;
+        height: 100px;
     }
 
     .center-wrap {
