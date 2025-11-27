@@ -1,6 +1,5 @@
 $(function () {
   //Support
-
   // 講師モーダル（jQuery版）
   $(".teacher-content-img").on("click", function () {
     // この講師の li の中のモーダルを取得
@@ -20,7 +19,7 @@ $(function () {
     }
   });
 
-  //Voice
+  //Voice---スライダー
   $('#voice .slide-items').slick({
     infinite: true,           //スライダーのループ
     centerPadding: '20px',    // ★真ん中を広く見せる
@@ -50,6 +49,8 @@ $(function () {
     autoplay: true, // 自動再生
     arrows: true, // 矢印
     dots: true, // インジケーター
+    centerMode: true,
+    centerPadding: "30px",
     // ★ centerMode / centerPadding を全部消す
     slidesToShow: 3,
     responsive: [
