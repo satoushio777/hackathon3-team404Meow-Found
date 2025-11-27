@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="header" class="open">
+    <header id="header">
         <h1 class="site-title">
             <a href="index.html">
                 <img src="img/logo3.png" alt="pronavi-logo">
@@ -21,7 +21,12 @@
         </h1>
 
         <nav id="nav" class="active">
-            <!-- <img class="logo" src="img/logo.png" alt="pronavi-logo"> -->
+
+            <!-- スマホサイズで出現 -->
+            <a href="index.html">
+                <img class="logo" src="img/logo.png" alt="pronavi-logo">
+            </a>
+            
             <ul class="nav-menu">
                 <li><a href="index.html"><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
                 <li><a href="index.html#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
@@ -33,6 +38,11 @@
                 <li><a href="q&a.html"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li>
             </ul>
 
+            <!-- 最初隠す　スマホサイズで出現 -->
+            <!-- ★ NAV オープン時に見せたいボタン -->
+            <div class="reserve-btn reserve-btn-nav">
+                <a href="/googletag/">無料カウンセリングを予約する</a>
+            </div>
 
         </nav>
 

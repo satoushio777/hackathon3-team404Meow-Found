@@ -149,6 +149,15 @@ h3 {
     /* color: #F9F2EA; */
 }
 
+/* スマホサイズのナビ開くと見えるようにする */
+.reserve-btn-nav {
+    display: none;
+}
+
+#nav .logo {
+    display: none;
+}
+
 /*  LINEリンク  */
 
 .center-wrap {
@@ -812,8 +821,9 @@ support_サポート体制
     text-align: center;
     margin-bottom: 60px;
 }
+
 #support .support-subtitile .attention {
-background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
+    background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
 }
 
 .support-flex-items {
@@ -882,7 +892,8 @@ teacher_講師紹介
     cursor: pointer;
     background: transparent;
     border: none;
-    position: relative;/*li 下線の基準*/
+    position: relative;
+    /*li 下線の基準*/
 }
 
 .teacher-content-img img {
@@ -896,13 +907,15 @@ teacher_講師紹介
 
 /*トップ講師さんの画像を右寄せ*/
 .teacher-content-item li:first-child img {
-    object-position: right center;  /* 「右寄りトリミング」＋「cover確定」 */
+    object-position: right center;
+    /* 「右寄りトリミング」＋「cover確定」 */
 }
 
 /*青木さんの画像を左寄せ*/
 .teacher-content-item li:last-child img {
     object-fit: cover;
-    object-position: left center;  /* 「左寄りトリミング」＋「cover確定」 */
+    object-position: left center;
+    /* 「左寄りトリミング」＋「cover確定」 */
 }
 
 /* ホバーしたときに「浮かせる」 */
@@ -932,8 +945,10 @@ teacher_講師紹介
 /* --- モーダルの基本 --- */
 .teacher-modal-overlay {
     position: fixed;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 と同じ */
-    background: rgba(0, 0, 0, 0.6); /* 背景を暗くする */
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0 と同じ */
+    background: rgba(0, 0, 0, 0.6);
+    /* 背景を暗くする */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1324,9 +1339,11 @@ Work_受講生作品
 #work {
     margin-bottom: 80px;
 }
+
 #work1 {
     margin-block: 20px;
 }
+
 /*work1 スライダー設定ここから*/
 #work .slide-items {
     width: 100%;
@@ -1338,22 +1355,26 @@ Work_受講生作品
     width: 100%;
     height: 100%;
 }
+
 .slick-prev:before,
 .slick-next:before {
     color: black;
 }
+
 .slick-dots li button:before {
     font-size: 18px;
     top: 6px;
 }
+
 /*work1 スライダー設定ここまで*/
 
 /*work2 設定ここから*/
 .work2-contents {
     margin-block: 40px;
 }
+
 .work2-contents h3 {
-    margin:40px 0 20px;
+    margin: 40px 0 20px;
     font-size: 2.4rem;
 }
 
@@ -1362,15 +1383,19 @@ Work_受講生作品
     font-size: 4rem;
     font-weight: bolder;
     letter-spacing: 1rem;
-    -webkit-text-stroke: 0.5px #464343; /* 太さと淵の色 */
+    -webkit-text-stroke: 0.5px #464343;
+    /* 太さと淵の色 */
 
 }
+
 .work2-contents span {
     color: #ef8f3a;
     font-weight: bolder;
-    -webkit-text-stroke: 0.5px #464343; /* 太さと淵の色 */
+    -webkit-text-stroke: 0.5px #464343;
+    /* 太さと淵の色 */
 
 }
+
 .work2-portnavi-text {
     padding-block: 20px;
     text-align: left;
@@ -1378,16 +1403,17 @@ Work_受講生作品
 
 .work2-portnavi-frame-inner {
     position: relative;
-    padding-top: 56.25%; 
+    padding-top: 56.25%;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .work2-portnavi-frame-inner:hover {
     /* box-shadow: 0 8px 22px rgba(0,0,0,0.15); */
-    box-shadow: 0 8px 22px rgba(239, 143, 58, 0.35); /* ← うっすらオレンジ */
+    box-shadow: 0 8px 22px rgba(239, 143, 58, 0.35);
+    /* ← うっすらオレンジ */
     transform: translateY(-2px);
 }
 
@@ -1405,13 +1431,14 @@ Work_受講生作品
     position: absolute;
     bottom: 12px;
     right: 12px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 1.4rem;
     color: #ef8f3a;
     font-weight: 700;
-    pointer-events: none; /* aタグクリックの邪魔をしない */
+    pointer-events: none;
+    /* aタグクリックの邪魔をしない */
 }
 
 /* iframe */
@@ -1422,6 +1449,7 @@ Work_受講生作品
     height: 100%;
     border: none;
 }
+
 /*work2 設定ここまで*/
 
 /*-------------------------------------------
@@ -1861,7 +1889,7 @@ SP---スマホ表示ここから
     }
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 SP ヘッダー
 -------------------------------------------*/
     /*ハンバーガー*/
@@ -1977,7 +2005,7 @@ SP ヘッダー
 
 
     #nav .nav-menu {
-        margin: 50px;
+        margin: 30px;
     }
 
     #nav .nav-menu li {
@@ -2071,8 +2099,40 @@ SP ヘッダー
     }
 
 
+    /* NAVオープン時にメニューの下に表示 */
+    header.open .reserve-btn-nav {
+        display: block;
+        width: 350px;
+        margin-top: -60px;
+        text-align: center;
+    }
 
-/*-------------------------------------------
+    header.open .reserve-btn-nav a {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 999px;
+        background: #F69D51;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #nav .logo {
+        display: block;
+        width: 150px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    #nav .logo:hover {
+        transform: scale(1.10);
+        filter: drop-shadow(0 0 12px rgba(3, 85, 250, 0.51));
+    }
+
+
+
+
+
+    /*-------------------------------------------
 sp  about_プロナビとは
 -------------------------------------------*/
 
@@ -2080,7 +2140,7 @@ sp  about_プロナビとは
 
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  reason_選ばれる理由
 -------------------------------------------*/
 
@@ -2088,7 +2148,7 @@ sp  reason_選ばれる理由
 
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
     .support-flex-items {
@@ -2122,17 +2182,17 @@ sp  support_サポート体制
     }
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
     .teacher-content-item {
         flex-direction: column;
         align-items: center;
-}
+    }
 
     .teacher-content-item li {
         width: 50%;
-}
+    }
 
     .teacher-content-img img {
         width: 220px;
@@ -2142,6 +2202,7 @@ sp  teacher_講師紹介
     .teacher-modal-content {
         padding: 16px 16px 24px;
     }
+
     .teacher-modal-name {
         font-size: 2rem;
     }
@@ -2149,11 +2210,12 @@ sp  teacher_講師紹介
     .teacher-text {
         font-size: 1.4rem;
     }
-/* } */
+
+    /* } */
 
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  flow_受講の流れ
 -------------------------------------------*/
     #flow .steps-list-up,
@@ -2202,7 +2264,7 @@ sp  flow_受講の流れ
         font-size: 2rem;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  flow-video_受講の様子を動画で確認
 -------------------------------------------*/
     video {
@@ -2231,7 +2293,7 @@ sp  flow-video_受講の様子を動画で確認
         text-align: center;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  price_料金
 -------------------------------------------*/
     .price-content {
@@ -2268,21 +2330,22 @@ sp  price_料金
         margin-top: 0;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  voice_受講生・卒業生の声・作品
 -------------------------------------------*/
-#voice .slide-items li {
-      margin: 0 4px;   /* ←スマホだけ少し狭くする */
-  }
+    #voice .slide-items li {
+        margin: 0 4px;
+        /* ←スマホだけ少し狭くする */
+    }
 
-.slide-items img {
-    width: 100%;
-    height: auto;
-}
+    .slide-items img {
+        width: 100%;
+        height: auto;
+    }
 
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  Q&A_よくある質問
 -------------------------------------------*/
 
