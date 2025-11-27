@@ -31,10 +31,25 @@
                 <li><a href="support.html"><span class="en">Price</span><span class="ja">料金</span></a></li>
                 <li><a href="voice.html"><span class="en">Voice</span><span class="ja">受講生の声</span></a></li>
                 <li><a href="q&a.html"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li>
+                <!-- リンク解決しなかった場合始動 -->
+                <!-- <li><a href="#about><span class="en">About</span><span class="ja">Pronaviとは</span></a></li>
+                <li><a href="#reason"><span class="en">Reason</span><span class="ja">選ばれる理由</span></a></li>
+                <li><a href="#support"><span class="en">Support</span><span class="ja">サポート体制</span></a></li>
+                <li><a href="#teacher"><span class="en">Teacher</span><span class="ja">講師紹介</span></a></li>
+                <li><a href="#flow"><span class="en">Flow</span><span class="ja">受講の流れ</span></a></li>
+                <li><a href="#price"><span class="en">Price</span><span class="ja">料金</span></a></li>
+                <li><a href="#voice"><span class="en">Voice</span><span class="ja">受講生の声</span></a></li>
+                <li><a href="#q&a"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li> -->
             </ul>
 
 
         </nav>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- ラインアクセスボタン -->
         <!-- <div class="circleButton-visibl">
@@ -56,32 +71,31 @@
         </div>
 
 
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        
     </header>
 
     <main>
-        <section class="question-answer">
+        <section id=q&a class="question-answer">
+            <div class="wrapper">
 
+                <h2 class="section-title">
+                    <span class="en">Q & A</span>
+                    <span class="ja">よくある質問</span>
+                </h2>
 
-            <h2 class="section-title">
-                <span class="en">Q & A</span>
-                <span class="ja">よくある質問</span>
-            </h2>
+                <div class="move-area">
+                    <img src="img/kyouko.jpg" class="move-img">
+                    <!-- <p>＋ボタンをクリックしてね＾＾</p> -->
+                    <img src="img/Q&Aclick.png" class="move-img4">
+                    <img src="img/haramao.jpg" class="move-img2">
+                    <img src="img/mami.jpg" class="move-img3">
+                </div>
+                <!-- <p class="li-title">プロナビについて</p> -->
+                <div class="question-answer-inner">
 
-            <div class="move-area">
-                <img src="img/kyouko.jpg" class="move-img">
-                <!-- <p>＋ボタンをクリックしてね＾＾</p> -->
-                <img src="img/Q&Aclick.png" class="move-img4">
-                <img src="img/haramao.jpg" class="move-img2">
-                <img src="img/mami.jpg" class="move-img3">
-            </div>
-            <!-- <p class="li-title">プロナビについて</p> -->
-            <div class="question-answer-inner">
-                <div class="wrapper">
+                    <!--  <div class="wrapper"> -->
+                    <!-- ↑もし車のキャラ端から端まで走らせたかったらここに上にある６５行目"wrapper"移動する -->
+
                     <div class="question-wrapper">
 
                         <ul>
@@ -415,13 +429,23 @@
             </div>
             <!-- </div> -->
         </section>
+
+
+        <!-- 回る広告  サークルランド -->
+
+        <div class="earth-wrap">
+            <div class="circleLand">
+                <img src="img/kurukuru.png" alt="回る円">
+            </div>
+            <div class="runner-wrap">
+                <img src="img/kyouko kurkuru.png" class="runner">
+            </div>
+        </div>
+
     </main>
-
-   
-
     <footer id="footer">
-         <button id="navbackToTop" class="navFooterBackToTopText" aria-label="トップへ戻る">
-        <a href="#" id="ft-totop" class="totop">To Top</a>
+        <button id="navbackToTop" class="navFooterBackToTopText" aria-label="トップへ戻る">
+            <a href="#" id="ft-totop" class="totop">To Top</a>
         </button>
         <p>&copy;Pronavi & 404 Meow Found</p>
     </footer>
