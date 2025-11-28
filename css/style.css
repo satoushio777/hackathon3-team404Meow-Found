@@ -66,7 +66,7 @@ img {
 
 h3 {
     font-size: 2.4rem;
-    text-align: center;
+    text-align: left;
     margin: 40px 0 20px;
 }
 
@@ -811,14 +811,15 @@ support_サポート体制
 -------------------------------------------*/
 #support {
     margin-bottom: 80px;
-    background-color: #f4f7fb;
+    background-color: #f9f2ea;
+    /* background-color: #f4f7fb; */
     border-radius: 0 50px 0 50px;
     padding-block: 80px;
 }
 
 #support .support-subtitile {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
 }
 
@@ -829,8 +830,8 @@ support_サポート体制
 .support-flex-items {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    background-color: #F9F2EA;
+    margin-bottom: 36px;
+    background-color: #fff;
     border-radius: 20px;
 }
 
@@ -1269,6 +1270,7 @@ price_料金
 /*-------------------------------------------
 voice_受講生・卒業生の声・作品
 -------------------------------------------*/
+/*---スライダーここから---*/
 /* リスト自体のリセット */
 #voice .slide-items {
     /* margin: 0; */
@@ -1323,16 +1325,25 @@ voice_受講生・卒業生の声・作品
     transform: scale(1.05);
     z-index: 1;
 }
+/*---スライダーここまで---*/
+
+/*---受講生インタビューここから---*/
+
+/*動画が載せれないのでアニメーションで代替 ここから*/
+
+/*動画が載せれないのでアニメーションで代替 ここまで*/
+
+
 
 /*受講生インタビュー動画*/
-#voice .video-card {
+/* #voice .video-card {
     margin-bottom: 80px;
 }
-
 #voice .video-box img {
     border-radius: 20px;
-}
+} */
 
+/*---受講生インタビューここまで---*/
 /*-------------------------------------------
 Work_受講生作品
 -------------------------------------------*/
@@ -1900,6 +1911,11 @@ SP---スマホ表示ここから
 -------------------------------------------*/
 /* @media (max-width: 768px) { */
 @media (max-width: 930px) {
+    
+    /*共通指示ここから*/
+    main {
+        margin-top: 0;
+    }
 
     /*<h2 section-title>英語への指定*/
     .section-title .en {
@@ -1919,7 +1935,7 @@ SP---スマホ表示ここから
         font-size: 2rem;
         margin: 20px 0 30px;
     }
-
+    /*共通指示ここまで*/
 
     /*-------------------------------------------
 SP ヘッダー
@@ -1927,6 +1943,7 @@ SP ヘッダー
     /*ハンバーガー*/
     /* transition 変化のスピード調整してる */
     /* ヘッダーのロゴ置いていく指示 */
+
     #header {
         position: static;
     }
@@ -2184,6 +2201,11 @@ sp  reason_選ばれる理由
     /*-------------------------------------------
 sp  support_サポート体制
 -------------------------------------------*/
+    #support {
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
     .support-flex-items {
         flex-direction: column;
         width: 90%;
