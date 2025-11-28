@@ -161,6 +161,104 @@ $(function () {
     });
   });
 
+  // reason
+
+
+
+  /* ===============================
+   section-title 左からスライドイン
+  ================================ */
+  $(function () {
+    const $win = $(window);
+    const $titles = $('.section-title'); // 全部の.section-titleが対象
+
+    function showTitleOnScroll() {
+      const scroll = $win.scrollTop();
+      const winH = $win.height();
+
+      $titles.each(function () {
+        const $t = $(this);               // 今ループ中の .section-title
+        const top = $t.offset().top;
+
+        if (scroll > top - winH * 0.8) {
+          $t.find('.en').addClass('is-show');
+          $t.find('.ja').addClass('is-show');
+        }
+      });
+    }
+
+    showTitleOnScroll();
+    $win.on('scroll', showTitleOnScroll);
+  });
+
+
+  /* ===============================
+   trouble_item 左右スライドイン
+================================ */
+  $(function () {
+    const $win = $(window);
+    const $items = $('.trouble_item');
+
+    // 左右交互にクラス付ける（左→右→左）
+    $items.each(function (i) {
+      if (i % 2 === 0) {
+        $(this).addClass('left-in');   // 偶数（1,3,5...）→左
+      } else {
+        $(this).addClass('right-in');  // 奇数（2,4,6...）→右
+      }
+    });
+
+    function showItemsOnScroll() {
+      const scroll = $win.scrollTop();
+      const winH = $win.height();
+
+      $items.each(function () {
+        const $el = $(this);
+        const top = $el.offset().top;
+
+        if (scroll > top - winH * 0.8) {
+          $el.addClass('is-show');
+        }
+      });
+    }
+
+    showItemsOnScroll();
+    $win.on('scroll', showItemsOnScroll);
+  });
+
+  /* ===============================
+   reason-item 順番フェードイン
+  ================================ */
+  $(function () {
+    const $win = $(window);
+    const $items = $('.reason-item');
+
+    function showReasonItems() {
+      const scroll = $win.scrollTop();
+      const winH = $win.height();
+
+      $items.each(function (i) {
+        const $el = $(this);
+        if ($el.hasClass('is-show')) return; // もう表示済みなら何もしない
+
+        const top = $el.offset().top;
+
+        // 画面の8割くらい上に来たら発火
+        if (scroll > top - winH * 0.8) {
+          setTimeout(function () {
+            $el.addClass('is-show');
+          }, i * 600); // 0ms → 600ms → 1200ms
+        }
+      });
+    }
+
+    // 読み込み時 & スクロール時にチェック
+    showReasonItems();
+    $win.on('scroll', showReasonItems);
+  });
+
+
+
 
 
 });
