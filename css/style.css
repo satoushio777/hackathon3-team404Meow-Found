@@ -1394,6 +1394,7 @@ voice_受講生・卒業生の声・作品
     transform: scale(1.05);
     z-index: 1;
 }
+
 /*---スライダーここまで---*/
 
 /*---受講生インタビューここから---*/
@@ -1787,7 +1788,7 @@ Q&A_よくある質問
 
 .move-area {
     display: block;
-    
+
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -1826,20 +1827,20 @@ Q&A_よくある質問
 
 /* .move-area {
     width: 100%;
-    overflow: hidden; */
-/* はみ出す部分を隠す */
-/* position: relative;
+    overflow: hidden;
+    /* はみ出す部分を隠す */
+    /* position: relative;
     height: 300px;
     top: 40px;
 } */
 
-/* .move-img {
-    width: 150px; */
-/* イラストサイズは自由に */
-/* position: absolute;
+.move-img {
+    width: 150px;
+    /* イラストサイズは自由に */
+    position: absolute;
     right: -90px;
     /* 開始位置（画面外） */
-/* animation: goLeft 9s linear infinite;
+    animation: goLeft 9s linear infinite;
 } */
 
 /* .move-img { animation-delay: 0s;}
@@ -2056,7 +2057,7 @@ SP---スマホ表示ここから
 -------------------------------------------*/
 /* @media (max-width: 768px) { */
 @media (max-width: 930px) {
-    
+
     /*共通指示ここから*/
     main {
         margin-top: 0;
@@ -2081,6 +2082,7 @@ SP---スマホ表示ここから
         font-size: 2rem;
         margin: 20px 0 30px;
     }
+
     /*共通指示ここまで*/
 
     /*-------------------------------------------
@@ -2206,6 +2208,7 @@ sp  お悩み
         max-width: 260px;
         margin-bottom: 10px;
     }
+
     /*ハンバーガー*/
     /* transition 変化のスピード調整してる */
     /* ヘッダーのロゴ置いていく指示 */
@@ -2308,7 +2311,7 @@ sp  お悩み
 
 
     #nav .nav-menu {
-        margin: 20px 0px ;
+        margin: 20px 0px;
     }
 
     #nav .nav-menu li {
@@ -2936,8 +2939,8 @@ sp  Q&A_よくある質問
         background-repeat: no-repeat;
     }
 
-    .question-answer ul .content ,
-    .question-answer .open-text{
+    .question-answer ul .content,
+    .question-answer .open-text {
         height: 350px;
     }
 
