@@ -21,7 +21,6 @@ main {
     margin-top: 100px;
 }
 
-
 li {
     list-style: none;
 }
@@ -36,7 +35,6 @@ img {
     object-fit: cover;
     vertical-align: bottom;
 }
-
 
 .wrapper {
     max-width: 1000px;
@@ -71,11 +69,7 @@ h3 {
     text-align: left;
     margin: 40px 0 20px;
 }
-
 /**********共通項目ここまで******************/
-
-
-
 
 /*-------------------------------------------
 ヘッダー
@@ -114,12 +108,8 @@ h3 {
     /* background: #F9F2EA; */
     /* background: linear-gradient(135deg, #F69D51 0%, #F69D51 40%, #F9F2EA 100%); */
     background: linear-gradient(to bottom, #F69D51 0%, #F69D51 10%, #F9F2EA 100%);
-
-
-    /* 確認用 */
     border-radius: 50px;
 }
-
 
 #nav ul {
     display: flex;
@@ -219,7 +209,6 @@ h3 {
     pointer-events: auto;
     /* 表示中だけクリック可 */
 }
-
 
 @keyframes spin {
     0% {
@@ -887,8 +876,6 @@ youtube メディア紹介
     /* border: 1px solid red; */
 }
 
-
-
 /*-------------------------------------------
 support_サポート体制
 -------------------------------------------*/
@@ -917,7 +904,6 @@ background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
 
 .support-flex-items {
 display: flex;
-flex-direction: column;
 align-items: center;
 margin-bottom: 36px;
 background-color: #fff;
@@ -952,8 +938,9 @@ font-size: 2.4rem;
 }
 
 .text {
-padding-block: 16px;
+padding-block: 8px 16px;
 }
+
 /*------------------------------------------- 
 teacher_講師紹介
 -------------------------------------------*/
@@ -1009,7 +996,7 @@ teacher_講師紹介
 
 /* ホバーしたときに「浮かせる」 */
 .teacher-content-img:hover img {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     box-shadow: 0 16px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -1030,7 +1017,6 @@ teacher_講師紹介
     text-align: left;
 }
 
-
 /* --- モーダルの基本 --- */
 .teacher-modal-overlay {
     position: fixed;
@@ -1042,7 +1028,6 @@ teacher_講師紹介
     align-items: center;
     justify-content: center;
     z-index: 9999;
-
     /* 最初は非表示 */
     opacity: 0;
     visibility: hidden;
@@ -1063,7 +1048,7 @@ teacher_講師紹介
 }
 
 .teacher-modal-content {
-    background-color: #f49c61;
+    background-color: #f8ab67;
     /* background: #fff; */
     border-radius: 10px;
     padding: 24px 24px 32px;
@@ -1220,7 +1205,6 @@ flow_受講の流れ
 .step-badge-num {
     font-size: 1.4rem;
 }
-
 /*STEP1～STEP5ここまで*/
 
 /*-------------------------------------------
@@ -1245,7 +1229,6 @@ border-radius: 20px;
 display: flex;
 align-items: center;
 background: #f8ab67;
-/* background: #F69D51; */
 padding: 40px;
 border-radius: 20px;
 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -1290,7 +1273,6 @@ left: 22px;
 top: 12px;
 }
 
-
 /*-------------------------------------------
 price_料金
 -------------------------------------------*/
@@ -1330,7 +1312,7 @@ price_料金
 }
 
 .price-right {
-    background-color: #F69D51;
+    background-color: #f8ab67;
     width: 48%;
     height: 300px;
     margin-left: -85px;
@@ -1416,7 +1398,6 @@ voice_受講生・卒業生の声・作品
     transform: scale(1.05);
     z-index: 1;
 }
-
 /*---スライダーここまで---*/
 
 /*---受講生インタビューここから---*/
@@ -1435,7 +1416,7 @@ gap: 20px;
 position: relative; /* ← 追加：基準になる親 */
 }
 
-/*---------動画が載せれないのでアニメーションで代替 ここから-------------------------------*/
+/*---動画が載せれないのでアニメーションで代替 ここから---*/
 .video-fade {
 /* display: inline-block;/*.fadeのボーダーの範囲を画像と一致させる*/
 /* listのリセット */
@@ -1456,7 +1437,6 @@ inset: 0; /* top:0; right:0; bottom:0; left:0 と同じ */
 opacity: 0;
 animation: video-fade 50s infinite linear;
 display: flex;
-
 }
 
 .video-fade img {
@@ -1466,10 +1446,7 @@ border-radius: 20px;
 display: block;
 }
 
-/*
-1枚目の画像のアニメーション実行タイミングを設定
-「animation-delay: 0s;」ですぐに実行
-*/
+/*アニメーション実行タイミングを設定*/
 .video-fade li:nth-child(1) {animation-delay: 0s;}
 .video-fade li:nth-child(2) {animation-delay: 5s;}
 .video-fade li:nth-child(3) {animation-delay: 10s;}
@@ -1494,7 +1471,7 @@ display: block;
 12% { opacity: 0; } /* 完全に消える */
 100% { opacity: 0; } /* 残りの時間はずっと0（他の画像のターン） */
 }
-/*---動画が載せれないのでアニメーションで代替 ここまで------------------------------------------*/
+/*---動画が載せれないのでアニメーションで代替 ここまで-----------*/
 
 
 /*受講生インタビュー動画*/
@@ -1504,13 +1481,14 @@ margin-bottom: 80px;
 #voice .video-box img {
 border-radius: 20px;
 } */
-
 /*---受講生インタビューここまで---*/
+
 /*-------------------------------------------
 Work_受講生作品
 -------------------------------------------*/
 #work {
     margin-bottom: 80px;
+    padding-top: 80px;
 }
 
 #work1 {
@@ -1524,24 +1502,20 @@ Work_受講生作品
     margin: auto;
 }
 
-
 .slide-items img {
     width: 100%;
     height: 100%;
 }
-
 
 .slick-prev:before,
 .slick-next:before {
     color: black;
 }
 
-
 .slick-dots li button:before {
     font-size: 18px;
     top: 6px;
 }
-
 /*work1 スライダー設定ここまで*/
 
 /*work2 設定ここから*/
@@ -1627,26 +1601,6 @@ transform: translateY(0);
 transform: translateY(-5px);
 }
 }
-/*
-.work2-portnavi-text2:hover::after {
-background-color: #fb8907;
-} */
-
-/* 行ごとに開始時間をずらす */
-/* .work2-portnavi-text2:nth-child(1) { animation-delay: 0s; } */
-/* .work2-portnavi-text2:nth-child(2) { animation-delay: 0.7s; }
-.work2-portnavi-text2:nth-child(3) { animation-delay: 0.9s; } */
-
-/* 右外 → 左外へ */
-/* @keyframes portnaviGoLeft {
-0% {
-transform: translateX(100%);
-}
-100% {
-transform: translateX(-120%);
-}
-}*/
-
 /*-----アニメーションここまで*/
 
 
@@ -1714,27 +1668,6 @@ Q&A_よくある質問
 .title-qa {
     text-align: center;
 }
-
-/* .title-qa h2 {
-    color: #657ebe;
-    font-family: "Righteous", sans-serif;
-    font-style: normal;
-    font-size: 8rem;
-    font-weight: 800;
-    opacity: 0.2;
-    padding: 30px 0 5px 0;
-} */
-
-/* .title-qa p {
-    display: block;
-    color: #333;
-    font-size: 2rem;
-    font-style: normal;
-    border-bottom: solid 1px;
-    width: 200px;
-    margin: 0 auto;
-    font-weight: 800;
-} */
 
 .li-title {
     color: #333;
@@ -1842,7 +1775,7 @@ Q&A_よくある質問
     border-radius: 30px;
     height: 250px;
     width: 100%;
-    background-color: #F8C09A;
+    background-color: #F8ab67;
     display: grid;
     align-items: center;
 }
@@ -1987,17 +1920,6 @@ Q&A_よくある質問
     }
 }
 
-/* 動くキャラクター達 */
-
-/* .move-area {
-    width: 100%;
-    overflow: hidden;
-    /* はみ出す部分を隠す */
-/* position: relative;
-    height: 300px;
-    top: 40px;
-} */
-
 .move-img {
     width: 150px;
     /* イラストサイズは自由に */
@@ -2006,96 +1928,6 @@ Q&A_よくある質問
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
-
-*/
-/* .move-img { animation-delay: 0s;}
-
-.move-area p { animation-delay: s;}
-
-.move-img2 { animation-delay: s;}
-
-.move-img3 { animation-delay: s;} */
-
-
-/* .move-area p {
-    position: absolute;
-    top: 60px;
-    font-size: 2.5rem;
-    display: block;
-    border: 3px solid #ef8f3a;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 10px 20px;
-    right: -510px;
-
-    /* 開始位置（画面外） */
-/* animation: goLeft 9s linear infinite;
-} */
-/* .move-area p{
-  position: relative;
-  padding: 2em;
-  border: 3px solid #ef8f3a;
-}*/
-/* .move-area p:before,
-.move-area p:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    margin: auto;
-}
-
-.move-area p:before {
-    top: -30px;
-    left: -440px;
-    border-style: solid;
-    border-color: transparent transparent #ef8f3a transparent;
-    border-width: 40px 0 30px 30px;
-}
-
-.move-area p:after {
-    top: -37px;
-    left: -425px;
-    /* right: ; */
-/* border-style: solid;
-    border-color: transparent transparent #fff transparent;
-    border-width: 42px 0px 33px 35px;
-    z-index: 10;
-} */
-
-/* .move-img2 {
-    width: 150px; */
-/* イラストサイズは自由に
-    top: -30px;
-    position: absolute;
-    right: -660px; */
-/* 開始位置（画面外） */
-/* animation: goLeft 9s linear infinite;
-} */
-
-/* .move-img3 {
-    width: 150px; */
-/* イラストサイズは自由に */
-/* top: 40px;
-    position: absolute;
-    right: -790px; */
-/* 開始位置（画面外） */
-/* animation: goLeft 9s linear infinite;
-} */
-
-
-/* @keyframes goLeft {
-    0% {
-        transform: translateX(500px);
-        /* 左の外から */
-/* } */
-
-/* 100% {
-        transform: translateX(-190vw); */
-/* 画面右の外へ */
-/* }
 
 /* ===============================
   Animation
@@ -2247,7 +2079,6 @@ SP---スマホ表示ここから
         font-size: 2rem;
         margin: 20px 0 30px;
     }
-
     /*共通指示ここまで*/
 
     /*-------------------------------------------
@@ -2380,6 +2211,7 @@ sp  お悩み
 
     #header {
         position: static;
+        height: 80px;
     }
 
     .hamburger {
@@ -2918,9 +2750,10 @@ sp  かかしさん　いるかさん　SNS
         margin: 12px auto;
     }
 
-
-    /* ------------------------------------------- sp support_サポート体制 -------------------------------------------*/
-    */ .support-flex-items {
+/*-------------------------------------------
+sp  support_サポート
+-------------------------------------------*/
+    .support-flex-items {
         flex-direction: column;
         width: 90%;
         margin: 0 auto 50px auto;
@@ -2940,6 +2773,7 @@ sp  かかしさん　いるかさん　SNS
 
     .text-heading span {
         margin-bottom: 8px;
+        margin-right: 0;
         display: block;
         text-align: center;
         line-height: 2;
@@ -2947,11 +2781,11 @@ sp  かかしさん　いるかさん　SNS
 
     .support-text {
         width: 100%;
-        padding: 20px 16px;
+        padding: 5px 16px 20px;
     }
 
 
-    /*-------------------------------------------
+/*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
     .teacher-content-item {
@@ -2980,11 +2814,7 @@ sp  teacher_講師紹介
         font-size: 1.4rem;
     }
 
-    /* } */
-
-
-
-    /*-------------------------------------------
+/*-------------------------------------------
 sp  flow_受講の流れ
 -------------------------------------------*/
     #flow .steps-list-up,
@@ -3033,7 +2863,7 @@ sp  flow_受講の流れ
         font-size: 2rem;
     }
 
-    /*-------------------------------------------
+/*-------------------------------------------
 sp  flow-video_受講の様子を動画で確認
 -------------------------------------------*/
     video {
@@ -3112,8 +2942,6 @@ sp  voice_受講生・卒業生の声・作品
         height: auto;
     }
 
-
-
     /*-------------------------------------------
 sp  Q&A_よくある質問
 -------------------------------------------*/
@@ -3182,9 +3010,6 @@ sp  Q&A_よくある質問
 /*-------------------------------------------
 sp  フッター
 -------------------------------------------*/
-
-
-
 
 
 }
