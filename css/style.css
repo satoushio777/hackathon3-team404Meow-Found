@@ -26,7 +26,7 @@ li {
 }
 
 a {
-    color: #333;
+    color: #444444;
     text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ img {
 
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
-    display: block;
+    /* display: block; */
     text-align: left;
 }
 
@@ -2714,7 +2714,7 @@ sp  かかしさん　いるかさん　SNS
         max-width: 260px;
     }
 
-    .gm-img img {
+    .gm-photo {
         width: 100%;
     }
 
