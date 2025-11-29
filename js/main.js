@@ -368,8 +368,6 @@ $(function () {
   });
 
 
-
-
   /*=================================================
   ハンバーガ―メニュー
   ===================================================*/
@@ -382,29 +380,6 @@ $(function () {
   $("#nav a").on("click", function () {
     $("header").removeClass("open");
   });
-
-
-  // $(function () {
-  // const originalParent = $("#reserveBtn").parent();  // 元の親を覚えておく
-
-  // $(".hamburger").on("click", function () {
-  //   $("header").toggleClass("open");
-
-  //   if ($("header").hasClass("open")) {
-  //     // ★ NAVメニューの"下"に移動
-  //     $("#nav").after($("#reserveBtn"));
-  //   } else {
-  //     // ★ メニュー閉じたら元の場所に戻す
-  //     originalParent.append($("#reserveBtn"));
-  //   }
-  // });
-
-  // // メニューのリンククリックで閉じる処理があればそこにも戻す
-  // $("#nav a").on("click", function () {
-  //   $("header").removeClass("open");
-  //   originalParent.append($("#reserveBtn"));
-  // });
-
 
 
 });
