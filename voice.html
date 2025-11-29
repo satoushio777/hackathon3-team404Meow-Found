@@ -42,11 +42,10 @@
                 <li><a href="q&a.html"><span class="en">Q&A</span><span class="ja">よくある質問</span></a></li>
             </ul>
 
-            <!-- 最初隠す　スマホサイズで出現 -->
+            <!-- 最初隠す スマホサイズで出現 -->
             <!-- ★ NAV オープン時に見せたいボタン -->
             <div class="reserve-btn reserve-btn-nav">
-                <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" target="_blank"
-                    rel="noopener noreferrer">無料カウンセリングを予約する</a>
+                <a href="/googletag/">無料カウンセリングを予約する</a>
             </div>
 
         </nav>
@@ -60,8 +59,7 @@
 
         <!-- ラインアクセスボタン -->
         <div class="center-wrap">
-            <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" target="_blank" rel="noopener noreferrer"><img
-                    src="img/LINE-LOGO2.png" class="center-img"></a>
+            <a href="/googletag/"><img src="img/LINE-LOGO2.png" class="center-img"></a>
 
             <div class="rotate-ring">
                 <img src="img/RIONGRING7.png" class="ring-img">
@@ -143,13 +141,8 @@
 
                 <div class="video-divider"></div>
 
-                <!-- <div class="video-box">
-                    <img src="img/flow-video.png" alt="受講生インタビュー動画のサムネイル">
-                </div> -->
-
-                <ul class="fade">
-                    <li><img src="img/flow-video.png" alt="受講生インタビュー動画のサムネイル"></li>
-                    <!-- <li><img src="img/video_img_1.png" alt="受講生インタビュー1"></li>
+                <ul class="video-fade">
+                    <li><img src="img/video_img_1.png" alt="受講生インタビュー1"></li>
                     <li><img src="img/video_img_2.png" alt="受講生インタビュー2"></li>
                     <li><img src="img/video_img_3.png" alt="受講生インタビュー3"></li>
                     <li><img src="img/video_img_4.png" alt="受講生インタビュー4"></li>
@@ -158,7 +151,7 @@
                     <li><img src="img/video_img_7.png" alt="受講生インタビュー7"></li>
                     <li><img src="img/video_img_8.png" alt="受講生インタビュー8"></li>
                     <li><img src="img/video_img_9.png" alt="受講生インタビュー9"></li>
-                    <li><img src="img/video_img_10.png" alt="受講生インタビュー10"></li> -->
+                    <li><img src="img/video_img_10.png" alt="受講生インタビュー10"></li>
                 </ul>
 
             </div>
@@ -166,7 +159,7 @@
         <!--Student--卒業生作品-->
         <section id="work" class="wrapper">
             <h2 class="section-title">
-                <span class="en">Work</span>
+                <span class="en">WORK</span>
                 <span class="ja">受講生の実績・オリジナルサイト</span>
             </h2>
             <!--卒業生の実績スライド-->
@@ -185,17 +178,21 @@
 
             <!--受講生制作サイト PROTNAVI-->
             <div class="work2-contents">
-                <img src="img/Frame 6.png" alt="アンダーライン">
                 <h3 class="work2">オリジナルサイト<span class="portnavi-title">PORTNAVI</span></h3>
 
                 <div class="work2-portnavi-frame">
-                    <p class="work2-portnavi-text">
-                        受講生が制作したWebサイトの実例は、<br>作品ギャラリーサイト<span>PortNavi</span>で公開しています！
-                    </p>
+                    <!-- <p class="work2-portnavi-text">
+受講生が制作したWebサイトの実例は、<br>作品ギャラリーサイト<span>PortNavi</span>で公開しています！
+</p> -->
+                    <div class="work2-portnavi-move">
+                        <p class="work2-text"> 受講生が制作したWebサイトの実例は<br>
+                            作品ギャラリーサイト<span>PortNavi</span>で公開しています！</p>
+                        <div class="work2-portnavi-text2">Click</div>
+                    </div>
 
                     <div class="work2-portnavi-frame-inner link-cover">
                         <a href="https://pronavi-board.noe-p.com/" target="_blank" class="portnavi-link-area">
-                            <span class="portnavi-link-text">▶ PortNaviを見る</span>
+                            <!-- <span class="portnavi-link-text">▶ クリックしてみてね!</span> -->
                         </a>
                         <iframe src="https://pronavi-board.noe-p.com/" loading="lazy"
                             title="PortNavi 卒業制作サイトギャラリー"></iframe>
@@ -213,8 +210,6 @@
         <p>&copy;Pronavi & 404 Meow Found</p>
     </footer>
 
-
-    <!--slick は現状 jQuery 3.7 系より 3.6 系との相性の方が良いので、3.6.0 を使っている方がトラブルは少ない-->
     <!-- jQuery（CDN） -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- slick（CDN） -->
