@@ -27,7 +27,7 @@ li {
 }
 
 a {
-    color: #333;
+    color: #444444;
     text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ img {
 
 /*<h2 section-title>spanの改行指示*/
 .section-title span {
-    display: block;
+    /* display: block; */
     text-align: left;
 }
 
@@ -1857,7 +1857,7 @@ Q&A_よくある質問
     animation: goLeft 9s linear infinite;
 }
 
-*/
+
 /* .move-img { animation-delay: 0s;}
 
 .move-area p { animation-delay: s;}
@@ -1946,6 +1946,7 @@ Q&A_よくある質問
         transform: translateX(-190vw); */
 /* 画面右の外へ */
 /* }
+
 
 /* ===============================
   Animation
@@ -2732,7 +2733,7 @@ sp  かかしさん　いるかさん　SNS
         max-width: 260px;
     }
 
-    .gm-img img {
+    .gm-photo {
         width: 100%;
     }
 
