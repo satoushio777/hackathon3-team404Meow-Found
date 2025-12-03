@@ -69,6 +69,7 @@ h3 {
     text-align: left;
     margin: 40px 0 20px;
 }
+
 /**********共通項目ここまで******************/
 
 /*-------------------------------------------
@@ -880,65 +881,65 @@ youtube メディア紹介
 support_サポート体制
 -------------------------------------------*/
 #support {
-margin-bottom: 80px;
-background-color: #f9f2ea;
-/* background-color: #f4f7fb; */
-border-radius: 0 50px 0 50px;
-padding-block: 30px;
+    margin-bottom: 80px;
+    background-color: #f9f2ea;
+    /* background-color: #f4f7fb; */
+    border-radius: 0 50px 0 50px;
+    padding-block: 30px;
 }
 
 #support h3 {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 #support .support-subtitile {
-font-weight: bold;
-text-align: left;
-margin-top: 20px;
-margin-bottom: 60px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 #support .support-subtitile .attention {
-background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
+    background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
 }
 
 .support-flex-items {
-display: flex;
-align-items: center;
-margin-bottom: 36px;
-background-color: #fff;
-border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+    background-color: #fff;
+    border-radius: 20px;
 }
 
 .support-img {
-width: 30%;
+    width: 30%;
 }
 
 .support-img img {
-width: 100%;
-border-radius: 20px 0 0 20px;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
 }
 
 .support-text {
-width: 70%;
-margin-inline: 30px;
+    width: 70%;
+    margin-inline: 30px;
 }
 
 .text-heading {
-font-weight: bold;
-font-size: 2rem;
-padding-top: 10px;
-border-bottom: 1px solid #657ebe;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 10px;
+    border-bottom: 1px solid #657ebe;
 }
 
 .text-heading span {
-margin-right: 16px;
-color: #657ebe;
-font-size: 2.4rem;
+    margin-right: 16px;
+    color: #657ebe;
+    font-size: 2.4rem;
 }
 
 .text {
-padding-block: 8px 16px;
+    padding-block: 8px 16px;
 }
 
 /*------------------------------------------- 
@@ -1205,72 +1206,74 @@ flow_受講の流れ
 .step-badge-num {
     font-size: 1.4rem;
 }
+
 /*STEP1～STEP5ここまで*/
 
 /*-------------------------------------------
 flow-video_受講の様子を動画で確認
 -------------------------------------------*/
 #flow-video {
-margin-block: 100px;
-text-align: center;
+    margin-block: 100px;
+    text-align: center;
 }
 
 .flow-video-title {
-font-size: 2rem;
-margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 video {
-max-width: 560px;
-border-radius: 20px;
+    max-width: 560px;
+    border-radius: 20px;
 }
 
 .video-card {
-display: flex;
-align-items: center;
-background: #f8ab67;
-padding: 40px;
-border-radius: 20px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-gap: 20px;
+    display: flex;
+    align-items: center;
+    background: #f8ab67;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
 .video-card p {
-color: #333;
+    color: #333;
 }
+
 .video-card img {
-border-radius: 20px;
+    border-radius: 20px;
 }
 
 /* 左の変形ボックス */
 .video-label {
-background: linear-gradient(135deg,
-#657ebe,
-#F9F2EA,
-#F69D51);
-padding: 40px 30px;
-border-radius: 10px;
-clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
-width: 400px;
+    background: linear-gradient(135deg,
+            #657ebe,
+            #F9F2EA,
+            #F69D51);
+    padding: 40px 30px;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+    width: 400px;
 }
 
 /* 真ん中の線 */
 .video-divider {
-width: 200px;
-height: 1px;
-background: #000;
+    width: 200px;
+    height: 1px;
+    background: #000;
 }
 
 .play-button::before {
-content: "";
-width: 0;
-height: 0;
-border-left: 14px solid white;
-border-top: 8px solid transparent;
-border-bottom: 8px solid transparent;
-position: absolute;
-left: 22px;
-top: 12px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 14px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: 22px;
+    top: 12px;
 }
 
 /*-------------------------------------------
@@ -1398,6 +1401,7 @@ voice_受講生・卒業生の声・作品
     transform: scale(1.05);
     z-index: 1;
 }
+
 /*---スライダーここまで---*/
 
 /*---受講生インタビューここから---*/
@@ -1406,71 +1410,133 @@ position: relative;
 } */
 
 #voice .video-card {
-display: flex;
-align-items: center;
-background: #f8ab67;
-padding: 40px;
-border-radius: 20px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-gap: 20px;
-position: relative; /* ← 追加：基準になる親 */
+    display: flex;
+    align-items: center;
+    background: #f8ab67;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    position: relative;
+    /* ← 追加：基準になる親 */
 }
 
 /*---動画が載せれないのでアニメーションで代替 ここから---*/
 .video-fade {
-/* display: inline-block;/*.fadeのボーダーの範囲を画像と一致させる*/
-/* listのリセット */
-list-style: none;
-margin: 0;
-padding: 0;
+    /* display: inline-block;/*.fadeのボーダーの範囲を画像と一致させる*/
+    /* listのリセット */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-position: relative;
-display: block; /* flex内で普通のブロック要素に */
-width: 100%;
-margin-left: auto; /* 左のラベルの右側に配置 */
-aspect-ratio: 16 / 9;
+    position: relative;
+    display: block;
+    /* flex内で普通のブロック要素に */
+    width: 100%;
+    margin-left: auto;
+    /* 左のラベルの右側に配置 */
+    aspect-ratio: 16 / 9;
 }
 
 .video-fade li {
-position: absolute;
-inset: 0; /* top:0; right:0; bottom:0; left:0 と同じ */
-opacity: 0;
-animation: video-fade 50s infinite linear;
-display: flex;
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0 と同じ */
+    opacity: 0;
+    animation: video-fade 50s infinite linear;
+    display: flex;
 }
 
 .video-fade img {
-width: 100%;
-height: auto;
-border-radius: 20px;
-display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
 }
 
 /*アニメーション実行タイミングを設定*/
-.video-fade li:nth-child(1) {animation-delay: 0s;}
-.video-fade li:nth-child(2) {animation-delay: 5s;}
-.video-fade li:nth-child(3) {animation-delay: 10s;}
-.video-fade li:nth-child(4) {animation-delay: 15s;}
-.video-fade li:nth-child(5) {animation-delay: 20s;}
-.video-fade li:nth-child(6) {animation-delay: 25s;}
-.video-fade li:nth-child(7) {animation-delay: 30s;}
-.video-fade li:nth-child(8) {animation-delay: 35s;}
-.video-fade li:nth-child(9) {animation-delay: 40s;}
-.video-fade li:nth-child(10) {animation-delay: 45s;}
+.video-fade li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.video-fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.video-fade li:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.video-fade li:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.video-fade li:nth-child(5) {
+    animation-delay: 20s;
+}
+
+.video-fade li:nth-child(6) {
+    animation-delay: 25s;
+}
+
+.video-fade li:nth-child(7) {
+    animation-delay: 30s;
+}
+
+.video-fade li:nth-child(8) {
+    animation-delay: 35s;
+}
+
+.video-fade li:nth-child(9) {
+    animation-delay: 40s;
+}
+
+.video-fade li:nth-child(10) {
+    animation-delay: 45s;
+}
 
 /* ハッカソン受講生インタビューアニメーション（残像は切り替え付近だけ） */
 @keyframes video-fade {
-/* 50秒のうち「0〜10%」= 5秒分が1枚の担当ゾーン
+    /* 50秒のうち「0〜10%」= 5秒分が1枚の担当ゾーン
 その中だけ表示＆残像を出して、それ以外は完全に0にする */
 
-0% { opacity: 0; } /* 完全に消えてスタート */
-2% { opacity: 0.2; } /* うっすら事前に浮かび上がる（残像演出） */
-4% { opacity: 1; } /* しっかり表示 */
-8% { opacity: 1; } /* 表示キープ */
-10% { opacity: 0.2; } /* フェードアウトしながら残像 */
-12% { opacity: 0; } /* 完全に消える */
-100% { opacity: 0; } /* 残りの時間はずっと0（他の画像のターン） */
+    0% {
+        opacity: 0;
+    }
+
+    /* 完全に消えてスタート */
+    2% {
+        opacity: 0.2;
+    }
+
+    /* うっすら事前に浮かび上がる（残像演出） */
+    4% {
+        opacity: 1;
+    }
+
+    /* しっかり表示 */
+    8% {
+        opacity: 1;
+    }
+
+    /* 表示キープ */
+    10% {
+        opacity: 0.2;
+    }
+
+    /* フェードアウトしながら残像 */
+    12% {
+        opacity: 0;
+    }
+
+    /* 完全に消える */
+    100% {
+        opacity: 0;
+    }
+
+    /* 残りの時間はずっと0（他の画像のターン） */
 }
+
 /*---動画が載せれないのでアニメーションで代替 ここまで-----------*/
 
 
@@ -1516,39 +1582,40 @@ Work_受講生作品
     font-size: 18px;
     top: 6px;
 }
+
 /*work1 スライダー設定ここまで*/
 
 /*work2 設定ここから*/
 .work2-contents {
-margin-block: 40px;
-padding: 50px 30px;
-background-color: #eef4ff;
-border-radius: 0 50px 0 50px;
+    margin-block: 40px;
+    padding: 50px 30px;
+    background-color: #eef4ff;
+    border-radius: 0 50px 0 50px;
 }
 
 .work2-contents h3 {
-margin: 20px 0 20px;
-font-size: 2.4rem;
+    margin: 20px 0 20px;
+    font-size: 2.4rem;
 }
 
 .work2-contents .portnavi-title {
-color: #ef8f3a;
-font-size: 4rem;
-font-weight: bolder;
-letter-spacing: 1rem;
--webkit-text-stroke: 0.5px #464343;
+    color: #ef8f3a;
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 1rem;
+    -webkit-text-stroke: 0.5px #464343;
 }
 
 .work2-contents span {
-color: #ef8f3a;
-font-weight: bolder;
--webkit-text-stroke: 0.5px #464343;
+    color: #ef8f3a;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px #464343;
 }
 
 .work2-text {
-text-align: center;
-font-size: 1.8rem;
-padding-block: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-block: 20px;
 }
 
 /* .work2-portnavi-text {
@@ -1559,99 +1626,106 @@ text-align: left;
 /*-----アニメーションここから*/
 /* PortNavi テキストを流すエリア */
 .work2-portnavi-move {
-position: relative;
-width: 100%;
-overflow: hidden;
-margin-bottom: 20px; /* 下の枠と余白 */
-padding-block: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* 下の枠と余白 */
+    padding-block: 10px;
 }
 
 /* 1行ずつ右→左へスライドさせる */
 .work2-portnavi-text2 {
-display: block;
-white-space: nowrap;
-font-size: 1.8rem;
-font-weight: 700;
-color: #ef8f3a;
-text-align: center;
-animation: portnaviGoLeft 20s linear infinite;
-position: relative;
-margin-bottom: 16px;
+    display: block;
+    white-space: nowrap;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ef8f3a;
+    text-align: center;
+    animation: portnaviGoLeft 20s linear infinite;
+    position: relative;
+    margin-bottom: 16px;
 }
 
 .work2-portnavi-text2::after {
-content: "";
-display: block;
-width: 0;
-height: 0;
-position: absolute;
-top: 120%;
-left: 50%;
-transform: translateX(-50%);
-border-left: 15px solid transparent;
-border-right: 15px solid transparent;
-border-top: 15px solid #ef8f3a;
-/* animation: bounce 0.6s infinite alternate; */
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #ef8f3a;
+    /* animation: bounce 0.6s infinite alternate; */
 }
+
 @keyframes bounce {
-0% {
-transform: translateY(0);
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
 }
-100% {
-transform: translateY(-5px);
-}
-}
+
 /*-----アニメーションここまで*/
 
 
 
 .work2-portnavi-frame-inner {
-position: relative;
-padding-top: 56.25%;
-overflow: hidden;
-border-radius: 12px;
-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .work2-portnavi-frame-inner:hover {
-/* box-shadow: 0 8px 22px rgba(0,0,0,0.15); */
-box-shadow: 0 8px 22px rgba(239, 143, 58, 0.35);/* ← うっすらオレンジ */
-transform: translateY(-10px);
+    /* box-shadow: 0 8px 22px rgba(0,0,0,0.15); */
+    box-shadow: 0 8px 22px rgba(239, 143, 58, 0.35);
+    /* ← うっすらオレンジ */
+    transform: translateY(-10px);
 }
 
 /* クリック可能な透明レイヤー */
 .portnavi-link-area {
-position: absolute;
-inset: 0;
-z-index: 10;
-cursor: pointer;
-text-decoration: none;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* 下部のリンクテキスト */
 .portnavi-link-text {
-position: absolute;
-top: 5%;
-right: 10px;
-background: rgba(255, 134, 54, 0.5);
-/* background: rgba(255, 255, 255, 0.9); */
-padding: 6px 12px;
-border-radius: 6px;
-font-size: 2rem;
-color: #f5c091;
-font-weight: 700;
-pointer-events: none;/* aタグクリックの邪魔をしない */
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    background: rgba(255, 134, 54, 0.5);
+    /* background: rgba(255, 255, 255, 0.9); */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 2rem;
+    color: #f5c091;
+    font-weight: 700;
+    pointer-events: none;
+    /* aタグクリックの邪魔をしない */
 }
 
 /* iframe */
 .work2-portnavi-frame-inner iframe {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-border: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
+
 /*work2 設定ここまで*/
 
 /*-------------------------------------------
@@ -1885,11 +1959,11 @@ Q&A_よくある質問
 
 .move-area {
     display: block;
-
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 30px;
+    margin-bottom: 30px;
 }
 
 .move-area p {
@@ -1902,7 +1976,7 @@ Q&A_よくある質問
     transform: translateX(100%);
     /* ← 右の外からスタート */
     animation: flowLeft 30s linear infinite;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     line-height: 1;
 }
@@ -1924,7 +1998,7 @@ Q&A_よくある質問
     width: 150px;
     /* イラストサイズは自由に */
     position: absolute;
-    right: -90px;
+    right: -40px;
     /* 開始位置（画面外） */
     animation: goLeft 9s linear infinite;
 }
@@ -2079,6 +2153,7 @@ SP---スマホ表示ここから
         font-size: 2rem;
         margin: 20px 0 30px;
     }
+
     /*共通指示ここまで*/
 
     /*-------------------------------------------
@@ -2421,9 +2496,9 @@ sp  お悩み
 
     #nav .logo {
         display: block;
-        width: 150px;
+        width: 180px;
         border-radius: 10px;
-        margin: 15px;
+        margin: 8x;
         padding: 12px;
         /* ロゴまわりの余白 */
         border: 4px solid #F6A764;
@@ -2750,7 +2825,7 @@ sp  かかしさん　いるかさん　SNS
         margin: 12px auto;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  support_サポート
 -------------------------------------------*/
     .support-flex-items {
@@ -2785,7 +2860,7 @@ sp  support_サポート
     }
 
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  teacher_講師紹介
 -------------------------------------------*/
     .teacher-content-item {
@@ -2814,7 +2889,7 @@ sp  teacher_講師紹介
         font-size: 1.4rem;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  flow_受講の流れ
 -------------------------------------------*/
     #flow .steps-list-up,
@@ -2863,7 +2938,7 @@ sp  flow_受講の流れ
         font-size: 2rem;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 sp  flow-video_受講の様子を動画で確認
 -------------------------------------------*/
     video {
