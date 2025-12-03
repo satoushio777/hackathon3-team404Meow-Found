@@ -2077,6 +2077,20 @@ Q&A_よくある質問
 }
 
 
+/* ===============================
+   support-flex-items 順番フェードイン
+================================ */
+.support-flex-items {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.support-flex-items.is-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /*-------------------------------------------
 フッター
