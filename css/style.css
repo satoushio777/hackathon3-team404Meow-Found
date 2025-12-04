@@ -231,13 +231,11 @@ h3 {
 メインビジュアル
 -------------------------------------------*/
 .mainvisual-pc {
-    /* max-width: 1200px; */
     position: relative;
     text-align: right;
 }
 
 .mainvisual-pc img {
-    /* margin-top: 20px; */
     width: 82%;
     display: inline-block;
     border-radius: 9999px 0 0 0;
@@ -281,11 +279,11 @@ h3 {
     border-radius: 0 100px 0 0;
 }
 
-.mainvisual-contents p {
+.mainvisual-contents .mv-description {
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 16px auto;
 }
 
 .reserve-btn {
@@ -394,27 +392,45 @@ about_プロナビとは
 #about {
     margin-block: 50px 150px;
     padding-top: 50px;
-    /* border: 1px solid red; */
 }
 
 .about-text {
     width: 63%;
     padding-inline: 3%;
+    /* border: 1px solid red; */
 }
 
 .attention {
-    /* display: inline-block; */
     background: linear-gradient(transparent 70%,
             rgba(245, 180, 124, 0.45) 0%);
 }
 
+#about .underline-img {
+    width: 100%;
+    max-width: none;
+    display: block;
+    margin: 8px 0 0 -2%;
+}
+
+
+
 .about-img {
     width: 36%;
+}
 
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .about-text {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .about-img-sp {
@@ -423,6 +439,7 @@ about_プロナビとは
 
 .about-inner {
     display: flex;
+    align-items: stretch;
     margin-top: 20px;
 }
 
@@ -2193,13 +2210,11 @@ SP ヘッダー
     }
 
     .mainvisual-contents {
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
         left: 0;
-        /* transform: translateX(-50%); */
         max-width: 70%;
         width: 70%;
-        /* margin: 0 auto 40px; */
         padding: 16px 16px 20px;
         border-radius: 24px 24px 0 0;
         text-align: center;
@@ -2207,11 +2222,13 @@ SP ヘッダー
             0 10px 28px rgba(246, 157, 81, 0.25),
             0 2px 6px rgba(0, 0, 0, 0.10);
         z-index: 2;
-        /* border: 1px solid red; */
     }
 
-    .mainvisual-contents p {
-        margin-top: 16px;
+    .mainvisual-contents .mv-description {
+        margin-bottom: 16px;
+        font-size: 1.2rem;
+        max-width: 30rem;
+
     }
 
     .batch {
