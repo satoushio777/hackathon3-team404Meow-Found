@@ -205,6 +205,39 @@ $(function () {
 
 
   //Support
+  /* ===============================
+   support-flex-items 順番フェードイン
+  ================================ */
+  $(function () {
+    const $win = $(window);
+    const $items = $('.support-flex-items');
+
+    function showReasonItems() {
+      const scroll = $win.scrollTop();
+      const winH = $win.height();
+
+      $items.each(function (i) {
+        const $el = $(this);
+        if ($el.hasClass('is-show')) return; // もう表示済みなら何もしない
+
+        const top = $el.offset().top;
+
+        // 画面の8割くらい上に来たら発火
+        if (scroll > top - winH * 0.8) {
+          setTimeout(function () {
+            $el.addClass('is-show');
+          }, i * 600); // 0ms → 600ms → 1200ms
+        }
+      });
+    }
+
+    // 読み込み時 & スクロール時にチェック
+    showReasonItems();
+    $win.on('scroll', showReasonItems);
+  });
+
+
+
   // 講師モーダル（jQuery版）
   $(".teacher-content-img").on("click", function () {
     // この講師の li の中のモーダルを取得
