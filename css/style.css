@@ -1407,68 +1407,63 @@ voice_受講生・卒業生の声・作品
     z-index: 1;
 }
 
-/*矢印ここから*/
-.slick-prev,
-.slick-next {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
-    z-index: 20;
+/* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
+.slide-items .slick-prev,
+.slide-items .slick-next {
+  position: absolute;
+  top: 35%;                 /* ← 少し下へ。55%〜60%が理想の見え方 */
+  transform: translateY(-50%);
+  width: 70px;             /* ← 元の画像のサイズに合わせる（必要なら変更） */
+  height: 120px;
+  cursor: pointer;
+  z-index: 5;
 }
 
-/* 左右の位置 カードを内側に寄せる*/
-.slick-prev { left: 10px; }
-.slick-next { right: 10px; }
-
-/* ---------------------------
-slick のデフォルト矢印を消す（必須）
---------------------------- */
-.slick-prev::before,
-.slick-next::before {
-    content: "";
-    font-size: 0 !important;
-    color: transparent !important;
-    font-family: none !important;
+/* ▼ 左右の位置（内側に寄せる） */
+.slide-items .slick-prev {
+  left: 3px;               /* ← 右の画像と同じように内側へ */
 }
 
-/* ---------------------------
-ここで「画像」を表示する（重要）
---------------------------- */
-.slick-prev::after,
-.slick-next::after {
-    content: "";
-    position: absolute;
-    inset: 0;               /* 親要素いっぱいに画像表示 */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.slide-items .slick-next {
+  right: 3px;
 }
 
-/* 左矢印画像 */
-.slick-prev::after {
-  background-image: url("../img/student/left-arrow.png");   /* ←ここにあなたの画像 */
+/* ▼ デフォルト矢印消す（必須） */
+.slide-items .slick-prev::before,
+.slide-items .slick-next::before {
+  content: "";
+  font-size: 0 !important;
+  color: transparent !important;
 }
 
-/* 右矢印画像 */
-.slick-next::after {
-  background-image: url("../img/student/right-arrow.png");  /* ←ここにあなたの画像 */
+/* ▼ オレンジの矢印画像（そのまま） */
+.slide-items .slick-prev::after,
+.slide-items .slick-next::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* クリック時の変化 */
-.slick-prev:active,
-.slick-next:active {
-    transform: translateY(-50%) scale(0.9);
+.slide-items .slick-prev::after {
+  background-image: url("../img/left-arrow.png");
 }
 
-/* 好きなサイズに */
-.slick-prev ,
-.slick-next {
-    width: 150px;
-    height: 150px;
+.slide-items .slick-next::after {
+  background-image: url("../img/right-arrow.png");
 }
+
+.slide-items .slick-prev:hover {
+opacity: 0.8;
+}
+
+.slide-items .slick-next:hover {
+opacity: 0.8;
+}
+
+
 
 
 /*---スライダーここまで---*/
@@ -2351,7 +2346,7 @@ sp  お悩み
         border-radius: 50px;
         position: fixed;
         right: 10px;
-        z-index: 30;
+        z-index: 40;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -2391,7 +2386,7 @@ sp  お悩み
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 20;
+        z-index: 40;
         text-align: center;
         transition: all 0.6s ease;
         opacity: 0;
@@ -2417,7 +2412,7 @@ sp  お悩み
         top: 0;
         position: fixed;
         /* ← 画面いっぱいに固定 */
-        z-index: 20;
+        z-index: 40;
     }
 
     #nav ul {
@@ -3073,6 +3068,13 @@ sp  voice_受講生・卒業生の声・作品
         width: 100%;
         height: auto;
     }
+
+    /* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
+.slide-items .slick-prev,
+.slide-items .slick-next {
+  top: 35%;                 /* ← 少し下へ。55%〜60%が理想の見え方 */
+  width: 50px;             /* ← 元の画像のサイズに合わせる（必要なら変更） */
+}
 
     /*-------------------------------------------
 sp  Q&A_よくある質問
