@@ -1420,6 +1420,68 @@ voice_受講生・卒業生の声・作品
     z-index: 1;
 }
 
+/*矢印ここから*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* 左右の位置 */
+.slick-prev { left: 10px; }
+.slick-next { right: 10px; }
+
+/* ---------------------------
+slick のデフォルト矢印を消す（必須）
+--------------------------- */
+.slick-prev::before,
+.slick-next::before {
+    content: "";
+    font-size: 0 !important;
+    color: transparent !important;
+    font-family: none !important;
+}
+
+/* ---------------------------
+ここで「画像」を表示する（重要）
+--------------------------- */
+.slick-prev::after,
+.slick-next::after {
+    content: "";
+    position: absolute;
+    inset: 0;               /* 親要素いっぱいに画像表示 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 左矢印画像 */
+.slick-prev::after {
+  background-image: url("../img/student/left-arrow.png");   /* ←ここにあなたの画像 */
+}
+
+/* 右矢印画像 */
+.slick-next::after {
+  background-image: url("../img/student/right-arrow.png");  /* ←ここにあなたの画像 */
+}
+
+/* 押したとき */
+.slick-prev:active,
+.slick-next:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.slick-prev ,
+.slick-next {
+    width: 150px;   /* 好きなサイズに */
+    height: 150px;
+}
+
 /*---スライダーここまで---*/
 
 /*---受講生インタビューここから---*/
