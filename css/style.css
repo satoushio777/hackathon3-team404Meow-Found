@@ -44,7 +44,6 @@ img {
 
 .section-title {
     padding-block: 20px;
-    /* border: 1px solid red; */
 }
 
 /*<h2 section-title>spanの改行指示*/
@@ -96,7 +95,6 @@ h3 {
     /* background: lightsalmon; */
     background: #fff;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
-    /* 影つけてもかわいいかも！ */
 }
 
 .site-title {
@@ -355,13 +353,11 @@ h3 {
 .trouble_inner {
     max-width: 1000px;
     margin: 100px auto;
-    /* border: 1px solid blue; */
 }
 
 .trouble_item {
     display: flex;
     align-items: center;
-    /* border: 1px solid red; */
     margin-block: 40px;
 }
 
@@ -374,7 +370,6 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
     padding: 0 20px;
-    /* border: 1px solid red; */
 }
 
 .trouble_item:nth-child(2) {
@@ -397,7 +392,6 @@ about_プロナビとは
 .about-text {
     width: 63%;
     padding-inline: 3%;
-    /* border: 1px solid red; */
 }
 
 .attention {
@@ -411,8 +405,6 @@ about_プロナビとは
     display: block;
     margin: 8px 0 0 -2%;
 }
-
-
 
 .about-img {
     width: 36%;
@@ -468,7 +460,6 @@ reason_選ばれる理由
     position: relative;
     overflow: hidden;
     background-color: transparent;
-    /* border: 1px solid red; */
 }
 
 
@@ -507,7 +498,6 @@ reason_選ばれる理由
     font-weight: 500;
     padding-inline: 20px;
     width: 60%;
-    /* border: 1px solid red; */
 }
 
 .reason-img-pc {
@@ -891,7 +881,6 @@ youtube メディア紹介
     width: 30px;
     height: 30px;
     object-fit: contain;
-    /* border: 1px solid red; */
 }
 
 /*-------------------------------------------
@@ -900,7 +889,6 @@ support_サポート体制
 #support {
     margin-bottom: 80px;
     background-color: #f9f2ea;
-    /* background-color: #f4f7fb; */
     border-radius: 0 50px 0 50px;
     padding-block: 30px;
 }
@@ -909,14 +897,14 @@ support_サポート体制
     margin-bottom: 0;
 }
 
-#support .support-subtitile {
+#support .support-subtitle {
     font-weight: bold;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 60px;
 }
 
-#support .support-subtitile .attention {
+#support .support-subtitle .attention {
     background: linear-gradient(transparent 70%, rgba(245, 180, 124, 0.45) 0%);
 }
 
@@ -1224,7 +1212,6 @@ flow_受講の流れ
 .step-badge-num {
     font-size: 1.4rem;
 }
-
 /*STEP1～STEP5ここまで*/
 
 /*-------------------------------------------
@@ -1424,7 +1411,7 @@ voice_受講生・卒業生の声・作品
 .slick-prev,
 .slick-next {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     width: 300px;
     height: 300px;
@@ -1432,7 +1419,7 @@ voice_受講生・卒業生の声・作品
     z-index: 20;
 }
 
-/* 左右の位置 */
+/* 左右の位置 カードを内側に寄せる*/
 .slick-prev { left: 10px; }
 .slick-next { right: 10px; }
 
@@ -1470,17 +1457,19 @@ slick のデフォルト矢印を消す（必須）
   background-image: url("../img/student/right-arrow.png");  /* ←ここにあなたの画像 */
 }
 
-/* 押したとき */
+/* クリック時の変化 */
 .slick-prev:active,
 .slick-next:active {
     transform: translateY(-50%) scale(0.9);
 }
 
+/* 好きなサイズに */
 .slick-prev ,
 .slick-next {
-    width: 150px;   /* 好きなサイズに */
+    width: 150px;
     height: 150px;
 }
+
 
 /*---スライダーここまで---*/
 
@@ -1616,7 +1605,6 @@ position: relative;
 
     /* 残りの時間はずっと0（他の画像のターン） */
 }
-
 /*---動画が載せれないのでアニメーションで代替 ここまで-----------*/
 
 
@@ -1698,23 +1686,14 @@ Work_受講生作品
     padding-block: 20px;
 }
 
-/* .work2-portnavi-text {
-padding-block: 30px;
-text-align: left;
-} */
-
-/*-----アニメーションここから*/
-/* PortNavi テキストを流すエリア */
+/* Portnaviのリンク */
 .work2-portnavi-move {
-    position: relative;
     width: 100%;
-    overflow: hidden;
     margin-bottom: 20px;
-    /* 下の枠と余白 */
-    padding-block: 10px;
+    padding-block: 10px;/* 下の枠と余白 */
 }
 
-/* 1行ずつ右→左へスライドさせる */
+/* テキストの装飾 */
 .work2-portnavi-text2 {
     display: block;
     white-space: nowrap;
@@ -1722,7 +1701,6 @@ text-align: left;
     font-weight: 700;
     color: #ef8f3a;
     text-align: center;
-    animation: portnaviGoLeft 20s linear infinite;
     position: relative;
     margin-bottom: 16px;
 }
@@ -1741,20 +1719,6 @@ text-align: left;
     border-top: 15px solid #ef8f3a;
     /* animation: bounce 0.6s infinite alternate; */
 }
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-5px);
-    }
-}
-
-/*-----アニメーションここまで*/
-
-
 
 .work2-portnavi-frame-inner {
     position: relative;
@@ -1787,7 +1751,6 @@ text-align: left;
     top: 5%;
     right: 10px;
     background: rgba(255, 134, 54, 0.5);
-    /* background: rgba(255, 255, 255, 0.9); */
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 2rem;
@@ -1805,7 +1768,6 @@ text-align: left;
     height: 100%;
     border: none;
 }
-
 /*work2 設定ここまで*/
 
 /*-------------------------------------------
@@ -2365,7 +2327,6 @@ sp  お悩み
         height: auto;
         line-height: 1.5;
         padding-inline: 10px;
-        /* border: 1px solid red; */
     }
 
     .trouble_item img {
@@ -2471,8 +2432,6 @@ sp  お悩み
 
     /* #nav .nav-menu li:hover {
         border-bottom: 1px solid;
-
-
     } */
 
 
@@ -2622,17 +2581,21 @@ sp  about_プロナビとは
 -------------------------------------------*/
     #about {
         margin-block: 40px 60px;
-        /* border: 1px solid red; */
     }
 
     .about-img {
         display: none;
+        border-radius: 8px;
     }
 
     .about-img-sp {
         display: block;
         padding-inline: 10px;
         margin-bottom: 10px;
+    }
+
+    .about-img-sp img {
+        border-radius: 8px;
     }
 
     .about-inner {
@@ -3173,12 +3136,5 @@ sp  Q&A_よくある質問
         right: 10px;
 
     }
-
-
-    /*-------------------------------------------
-/*-------------------------------------------
-sp  フッター
--------------------------------------------*/
-
 
 }
