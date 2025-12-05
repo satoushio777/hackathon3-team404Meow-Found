@@ -201,12 +201,8 @@ $(function () {
 
 
 
-
-
-
-  //Support
   /* ===============================
-   support-flex-items 順番フェードイン
+  support-flex-items 順番フェードイン
   ================================ */
   $(function () {
     const $win = $(window);
@@ -237,8 +233,9 @@ $(function () {
   });
 
 
-
-  // 講師モーダル（jQuery版）
+  /* ===============================
+  support-teacher 講師モーダル
+  ================================ */
   $(".teacher-content-img").on("click", function () {
     // この講師の li の中のモーダルを取得
     const $modal = $(this).closest("li").find(".teacher-modal-overlay");
@@ -257,12 +254,15 @@ $(function () {
     }
   });
 
-  //Voice---スライダー
+  /* ===============================
+  voice 受講生の声スライダー
+  ================================ */
   $('#voice .slide-items').slick({
     infinite: true,           //スライダーのループ
     centerPadding: '20px',    // ★真ん中を広く見せる
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true, // 自動再生
     arrows: true,
     dots: true,
     // ★ centerMode / centerPadding を全部消す
@@ -282,7 +282,9 @@ $(function () {
     ]
   });
 
-  //Work
+  /* ===============================
+  WORK1 受講生の実績_スライダー
+  ================================ */
   $("#work1 .slide-items").slick({
     autoplay: true, // 自動再生
     arrows: true, // 矢印
@@ -308,9 +310,9 @@ $(function () {
   });
 
 
-
-  // Q&A
-
+  /* ===============================
+  Q&A 
+  ================================ */
   $(".openbtn1").click(function () {
     $(".close-text").css("visibility", "visible");
     $(this).parent(".close-text").css("visibility", "hidden");
