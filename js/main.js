@@ -61,6 +61,9 @@ $(function () {
     $win.on('scroll', showItemsOnScroll);
   });
 
+
+
+
   /* ===============================
    reason-item 順番フェードイン
   ================================ */
@@ -91,6 +94,7 @@ $(function () {
     showReasonItems();
     $win.on('scroll', showReasonItems);
   });
+
 
   // ============================= 
   // スクロールで円を拡大 → detail手前で終了
@@ -417,5 +421,57 @@ $(function () {
   });
 
 
+  // ============================= 
+  // section title下のライン
+  // =============================
+
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const lines = document.querySelectorAll(".section-line");
+
+  //   const observer = new IntersectionObserver((entries, obs) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("is-show");
+  //         obs.unobserve(entry.target); // 一度だけ動けばOKなら外す
+  //       }
+  //     });
+  //   }, {
+  //     threshold: 0.4, // 4割くらい見えたら発火
+  //   });
+
+  //   lines.forEach((line) => observer.observe(line));
+  // });
+
 });
+
+
+// =============================
+// section-title 下のライン（スクロール連動版）
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const lines = document.querySelectorAll(".section-line");
+  console.log("★ 見つかった section-line の数:", lines.length);
+
+  if (!lines.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        console.log("★ 監視中:", entry.target, "交差？", entry.isIntersecting);
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-show");
+          obs.unobserve(entry.target); // 一度ついたら監視終了
+        }
+      });
+    },
+    {
+      threshold: 1, // 40%見えたら発火
+    }
+  );
+
+  lines.forEach((line) => observer.observe(line));
+});
+
+
 
