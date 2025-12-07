@@ -55,6 +55,7 @@ img {
 /*<h2 section-title>英語への指定*/
 .section-title .en {
     font-size: 6.4rem;
+
 }
 
 /*<h2 section-title>日本語への指定*/
@@ -526,6 +527,25 @@ reason_選ばれる理由
     z-index: -1;
 }
 
+.section-title-wrap {
+    display: inline-block;
+}
+
+.section-title-wrap .section-line {
+    width: 0;
+    height: 5px;
+    background-color: #6283C2;
+    border-radius: 2px;
+    transition: width 1.2s ease-out;
+}
+
+.section-title-wrap .section-line.is-show {
+    width: 100%;
+}
+
+#reason .section-title-wrap .section-line {
+    background-color: #F9F2EA;
+}
 
 /*-------------------------------------------
 reason 詳細 detail
@@ -673,6 +693,10 @@ news 新着情報
     margin-bottom: 100px;
 }
 
+/* #news .section-title-wrap .section-line {
+    background-color: #6283C2;
+} */
+
 .news-list {
     display: flex;
     flex-wrap: wrap;
@@ -686,14 +710,14 @@ news 新着情報
     text-align: center;
     margin-block: 10px;
     padding-block: 10px;
-    border-bottom: 3px solid #F69D51;
+    border-bottom: 3px dotted #F69D51;
 }
 
 .news-list dd {
     width: 75%;
     margin-block: 10px;
     padding-block: 10px;
-    border-bottom: 3px solid #F69D51;
+    border-bottom: 3px dotted #F69D51;
 }
 
 /*-------------------------------------------
@@ -892,6 +916,7 @@ support_サポート体制
     border-radius: 0 50px 0 50px;
     padding-block: 30px;
 }
+
 
 #support h3 {
     margin-bottom: 0;
@@ -1120,6 +1145,10 @@ flow_受講の流れ
     display: flex;
 }
 
+#flow .steps {
+    padding-top: 30px;
+}
+
 .steps-list-up {
     display: flex;
     justify-content: center;
@@ -1212,6 +1241,7 @@ flow_受講の流れ
 .step-badge-num {
     font-size: 1.4rem;
 }
+
 /*STEP1～STEP5ここまで*/
 
 /*-------------------------------------------
@@ -1292,6 +1322,7 @@ price_料金
 .price-content {
     display: flex;
     align-items: center;
+    padding-top: 30px;
 }
 
 .price-title {
@@ -1356,7 +1387,7 @@ voice_受講生・卒業生の声・作品
 #voice .slide-items {
     /* margin: 0; */
     margin-bottom: 80px;
-    padding: 0;
+    padding: 30px 0 0;
     list-style: none;
 }
 
@@ -1410,57 +1441,60 @@ voice_受講生・卒業生の声・作品
 /* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
 .slide-items .slick-prev,
 .slide-items .slick-next {
-  position: absolute;
-  top: 35%;                 /* ← 少し下へ。55%〜60%が理想の見え方 */
-  transform: translateY(-50%);
-  width: 70px;             /* ← 元の画像のサイズに合わせる（必要なら変更） */
-  height: 120px;
-  cursor: pointer;
-  z-index: 5;
+    position: absolute;
+    top: 40%;
+    /* ← 少し下へ。55%〜60%が理想の見え方 */
+    transform: translateY(-50%);
+    width: 70px;
+    /* ← 元の画像のサイズに合わせる（必要なら変更） */
+    height: 120px;
+    cursor: pointer;
+    z-index: 5;
 }
 
 /* ▼ 左右の位置（内側に寄せる） */
 .slide-items .slick-prev {
-  left: 3px;               /* ← 右の画像と同じように内側へ */
+    left: 3px;
+    /* ← 右の画像と同じように内側へ */
 }
 
 .slide-items .slick-next {
-  right: 3px;
+    right: 3px;
 }
 
 /* ▼ デフォルト矢印消す（必須） */
 .slide-items .slick-prev::before,
 .slide-items .slick-next::before {
-  content: "";
-  font-size: 0 !important;
-  color: transparent !important;
+    content: "";
+    font-size: 0 !important;
+    color: transparent !important;
 }
 
 /* ▼ オレンジの矢印画像（そのまま） */
 .slide-items .slick-prev::after,
 .slide-items .slick-next::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .slide-items .slick-prev::after {
-  background-image: url("../img/left-arrow.png");
+    background-image: url("../img/left-arrow.png");
 }
 
 .slide-items .slick-next::after {
-  background-image: url("../img/right-arrow.png");
+    background-image: url("../img/right-arrow.png");
 }
 
 .slide-items .slick-prev:hover {
-opacity: 0.8;
+    opacity: 0.8;
 }
 
 .slide-items .slick-next:hover {
-opacity: 0.8;
+    opacity: 0.8;
 }
 
 
@@ -1600,6 +1634,7 @@ position: relative;
 
     /* 残りの時間はずっと0（他の画像のターン） */
 }
+
 /*---動画が載せれないのでアニメーションで代替 ここまで-----------*/
 
 
@@ -1622,6 +1657,7 @@ Work_受講生作品
 
 #work1 {
     margin-block: 20px;
+    padding-top: 20px;
 }
 
 /*work1 スライダー設定ここから*/
@@ -1685,7 +1721,8 @@ Work_受講生作品
 .work2-portnavi-move {
     width: 100%;
     margin-bottom: 20px;
-    padding-block: 10px;/* 下の枠と余白 */
+    padding-block: 10px;
+    /* 下の枠と余白 */
 }
 
 /* テキストの装飾 */
@@ -1763,6 +1800,7 @@ Work_受講生作品
     height: 100%;
     border: none;
 }
+
 /*work2 設定ここまで*/
 
 /*-------------------------------------------
@@ -1770,7 +1808,7 @@ Q&A_よくある質問
 -------------------------------------------*/
 
 .question-wrapper {
-    margin-bottom: 80px;
+    margin: 30px 0 80px;
     background-color: #F9F2EA;
     border-radius: 50px 50px;
     padding: 70px 40px;
@@ -2154,7 +2192,7 @@ Q&A_よくある質問
     background-color: #f8ab67;
     text-align: center;
     margin: 0;
-    padding: 1px 0;
+    padding: 3px 0;
     margin-top: 0px;
 }
 
@@ -2165,6 +2203,7 @@ Q&A_よくある質問
     border-radius: 20px;
     width: 150px;
     margin: 5px auto;
+    padding-block: 8px;
 }
 
 .totop:hover {
@@ -3070,11 +3109,13 @@ sp  voice_受講生・卒業生の声・作品
     }
 
     /* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
-.slide-items .slick-prev,
-.slide-items .slick-next {
-  top: 35%;                 /* ← 少し下へ。55%〜60%が理想の見え方 */
-  width: 50px;             /* ← 元の画像のサイズに合わせる（必要なら変更） */
-}
+    .slide-items .slick-prev,
+    .slide-items .slick-next {
+        top: 35%;
+        /* ← 少し下へ。55%〜60%が理想の見え方 */
+        width: 50px;
+        /* ← 元の画像のサイズに合わせる（必要なら変更） */
+    }
 
     /*-------------------------------------------
 sp  Q&A_よくある質問
