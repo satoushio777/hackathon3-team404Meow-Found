@@ -263,7 +263,7 @@ $(function () {
   ================================ */
   $('#voice .slide-items').slick({
     infinite: true,           //スライダーのループ
-    centerPadding: '20px',    // ★真ん中を広く見せる
+    // centerPadding: '20px',    // ★真ん中を広く見せる
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true, // 自動再生
@@ -419,28 +419,6 @@ $(function () {
   $("#nav a").on("click", function () {
     $("header").removeClass("open");
   });
-
-
-  // ============================= 
-  // section title下のライン
-  // =============================
-
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   const lines = document.querySelectorAll(".section-line");
-
-  //   const observer = new IntersectionObserver((entries, obs) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("is-show");
-  //         obs.unobserve(entry.target); // 一度だけ動けばOKなら外す
-  //       }
-  //     });
-  //   }, {
-  //     threshold: 0.4, // 4割くらい見えたら発火
-  //   });
-
-  //   lines.forEach((line) => observer.observe(line));
-  // });
 
 });
 
