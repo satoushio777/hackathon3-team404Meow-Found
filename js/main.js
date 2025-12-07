@@ -263,7 +263,7 @@ $(function () {
   ================================ */
   $('#voice .slide-items').slick({
     infinite: true,           //スライダーのループ
-    // centerPadding: '20px',    // ★真ん中を広く見せる
+    centerPadding: '20px',    // ★真ん中を広く見せる
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true, // 自動再生

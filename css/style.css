@@ -1433,7 +1433,7 @@ voice_受講生・卒業生の声・作品
 }
 
 /* センターモード用：真ん中だけ少し大きく */
-#voice .slide-items .slick-center {
+.slide-items .slick-center {
     transform: scale(1.05);
     z-index: 1;
 }
@@ -1442,7 +1442,7 @@ voice_受講生・卒業生の声・作品
 .slide-items .slick-prev,
 .slide-items .slick-next {
     position: absolute;
-    top: 40%;
+    top: 35%;
     /* ← 少し下へ。55%〜60%が理想の見え方 */
     transform: translateY(-50%);
     width: 70px;
@@ -1496,7 +1496,6 @@ voice_受講生・卒業生の声・作品
 .slide-items .slick-next:hover {
     opacity: 0.8;
 }
-
 
 
 
@@ -3096,25 +3095,27 @@ sp  price_料金
     }
 
     /*-------------------------------------------
-sp  voice_受講生・卒業生の声・作品
--------------------------------------------*/
+    sp  voice_受講生・卒業生の声・作品
+    -------------------------------------------*/
     #voice .slide-items li {
         margin: 0 4px;
         /* ←スマホだけ少し狭くする */
     }
 
-    .slide-items img {
+    #voice .slide-items img {
         width: 100%;
         height: auto;
     }
 
     /* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
-    .slide-items .slick-prev,
-    .slide-items .slick-next {
+    #voice .slick-prev,
+    #voice .slick-next {
         top: 35%;
         /* ← 少し下へ。55%〜60%が理想の見え方 */
         width: 50px;
+
         /* ← 元の画像のサイズに合わせる（必要なら変更） */
+
     }
 
     /*-------------------------------------------
