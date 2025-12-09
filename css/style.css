@@ -3094,11 +3094,11 @@ sp  price_料金
     }
 
     /* ▼ 矢印ボタン：位置合わせのみ調整 ▼ */
-    #voice .slick-prev,
-    #voice .slick-next {
-        top: 35%;
+    .slide-items .slick-prev,
+    .slide-items .slick-next {
+        top: 45%;
         /* ← 少し下へ。55%〜60%が理想の見え方 */
-        width: 50px;
+        width: 40px;
 
         /* ← 元の画像のサイズに合わせる（必要なら変更） */
 
