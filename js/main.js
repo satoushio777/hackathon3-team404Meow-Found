@@ -293,8 +293,6 @@ $(function () {
     autoplay: true, // 自動再生
     arrows: true, // 矢印
     dots: true, // インジケーター
-    centerMode: true,
-    centerPadding: "30px",
     // ★ centerMode / centerPadding を全部消す
     slidesToShow: 3,
     responsive: [
