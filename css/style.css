@@ -1796,7 +1796,7 @@ Q&A_よくある質問
     margin: 30px 0 80px;
     background-color: #F9F2EA;
     border-radius: 50px 50px;
-    padding: 70px 40px;
+    padding: 10px 40px;
 }
 
 .title-qa {
@@ -1823,7 +1823,7 @@ Q&A_よくある質問
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
     padding-top: 5%;
 }
 
@@ -3118,18 +3118,13 @@ sp  Q&A_よくある質問
         height: 350px;
     }
 
-    .question-answer {
-        padding: 3%;
-        padding-top: 20px;
-        padding-bottom: 60px;
-    }
-
     .question-answer ul {
         display: block;
+        padding-top: 10%;
     }
 
     .question-answer ul li {
-        margin-bottom: 20px
+        margin-bottom: 40px
     }
 
 
