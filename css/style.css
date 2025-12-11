@@ -217,16 +217,30 @@ h3 {
 /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
-.mainvisual-pc {
+.mainvisual {
     position: relative;
     text-align: right;
 }
 
 .mainvisual-pc img {
-    width: 82%;
-    display: inline-block;
+    width: 100%;
+    display: block;
     border-radius: 9999px 0 0 0;
 }
+
+/* 下だけぼかし（フェード） */
+.mainvisual-pc::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+    /* ぼかす範囲 */
+    background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
 
 .mainvisual-sp {
     display: none;
@@ -258,7 +272,7 @@ h3 {
 }
 
 .mainvisual-contents {
-    max-width: 540px;
+    max-width: 500px;
     background-color: #ffffff;
     position: absolute;
     bottom: 0;
@@ -2236,7 +2250,7 @@ SP---スマホ表示ここから
 SP ヘッダー
 -------------------------------------------*/
     .mainvisual {
-        position: relative;
+        /* position: relative; */
         height: calc(100dvh-100px);
         overflow: hidden;
     }
@@ -2248,6 +2262,7 @@ SP ヘッダー
     .mainvisual-sp {
         display: block;
         height: 100%;
+        width: 100%;
     }
 
     .mainvisual-sp img {
@@ -2263,24 +2278,28 @@ SP ヘッダー
         text-align: center;
         padding-left: 0;
         margin: 16px 16px 0;
-        left: 0;
-        top: 33%;
+        left: -4%;
+        top: 30%;
         color: #F69D51;
     }
 
     .mainvisual-contents {
         /* position: absolute; */
         /* bottom: 0; */
+        position: static;
         left: 0;
-        max-width: 70%;
-        width: 70%;
+        /* max-width: 70%; */
+        max-width: 100%;
+        /* width: 70%; */
+        width: 100%;
         padding: 16px 16px 20px;
         border-radius: 24px 24px 0 0;
         text-align: center;
-        box-shadow:
+        /* box-shadow:
             0 10px 28px rgba(246, 157, 81, 0.25),
             0 2px 6px rgba(0, 0, 0, 0.10);
-        z-index: 2;
+        z-index: 2; */
+        margin: 0 auto;
     }
 
     .mainvisual-contents .mv-description {
