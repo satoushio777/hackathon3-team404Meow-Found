@@ -220,12 +220,27 @@ h3 {
 .mainvisual {
     position: relative;
     text-align: right;
+    
+}
+
+/* .mainvisual-pc {
+    min-height: 100dvh;
+} */
+
+/* .mainvisual-pc {
+height: 100vh;
+} */
+
+
+mainvisual-pc {
+    height: clamp(500px, 80vh, 900px); 
 }
 
 .mainvisual-pc img {
     width: 100%;
     display: block;
     border-radius: 9999px 0 0 0;
+    object-fit: cover;
 }
 
 /* 下だけぼかし（フェード） */
@@ -247,7 +262,9 @@ h3 {
 }
 
 .mainvisual-title {
-    font-size: 4.5rem;
+    /* font-size: 4.5rem; */
+     /* ★ここ変える★ */
+    font-size: clamp(2.4rem, 3.3vw, 4.5rem);
     font-weight: 500;
     font-family: "Zen Kurenaido";
     line-height: 1.6;
@@ -2249,9 +2266,11 @@ SP---スマホ表示ここから
     /*-------------------------------------------
 SP ヘッダー
 -------------------------------------------*/
+    
     .mainvisual {
         /* position: relative; */
-        height: calc(100dvh-100px);
+        /* height: calc(100dvh-100px); */
+        
         overflow: hidden;
     }
 
